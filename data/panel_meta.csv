@@ -1,0 +1,22 @@
+panel_id,platform,panel_name,species,modality,technology,n_targets,n_human_mapped,mapping_rate,note
+AMPLI_COMP_V3,Illumina AmpliSeq,AmpliSeq Comprehensive Panel v3 (DNA),Human,DNA,Bulk targeted sequencing,161,161,1.0,DNA (mutation/CNV) panel - not an expression panel
+AMPLI_H_TX,Illumina AmpliSeq,AmpliSeq Transcriptome Human Gene Expression,Human,RNA,Bulk targeted sequencing,20800,19786,0.953,
+COSMX_H6K,NanoString CosMx,CosMx Human 6K Discovery,Human,RNA,"Imaging, in situ",6415,6338,0.988,
+COSMX_HIO,NanoString CosMx,CosMx Human Immuno-Oncology add-on (100),Human,RNA,"Imaging, in situ",105,104,0.99,
+COSMX_HUCC,NanoString CosMx,CosMx Human Universal Cell Characterization (1K),Human,RNA,"Imaging, in situ",1117,1108,0.992,
+COSMX_MNEURO,NanoString CosMx,CosMx Mouse Neuroscience (1K),Mouse,RNA,"Imaging, in situ",1027,1001,0.986,
+COSMX_MNEURO_PROT,NanoString CosMx,CosMx Mouse Neuroscience Protein panel,Mouse,Protein,"Imaging, in situ",57,54,1.0,protein targets mapped to their genes
+COSMX_MUCC,NanoString CosMx,CosMx Mouse Universal Cell Characterization (1K),Mouse,RNA,"Imaging, in situ",1011,985,0.997,
+FOLI_hPS2,Foli-seq (Wang Lab),Foli-seq FOLI_hPS2,Human,RNA,Fecal exfoliome targeted multiplex PCR,543,543,1.0,"Foli-seq human panel, Huang et al. 2025 Table S8"
+FOLI_mPS3,Foli-seq (Wang Lab),Foli-seq FOLI_mPS3,Mouse,RNA,Fecal exfoliome targeted multiplex PCR,582,535,0.985,"Foli-seq mouse panel, Huang et al. 2025 Table S2 (ERCC spike-ins removed)"
+GEOMX_DOG_CCA,NanoString GeoMx,GeoMx Canine Cancer Atlas,Dog,RNA,ROI profiling (DSP),1980,1944,0.987,
+GEOMX_H_CTA,NanoString GeoMx,GeoMx Cancer Transcriptome Atlas,Human,RNA,ROI profiling (DSP),1907,1890,0.991,
+GEOMX_H_WTA,NanoString GeoMx,GeoMx Human Whole Transcriptome Atlas,Human,RNA,ROI profiling (DSP),19505,19392,0.994,
+GEOMX_M_WTA,NanoString GeoMx,GeoMx Mouse Whole Transcriptome Atlas v2,Mouse,RNA,ROI profiling (DSP),22151,17551,0.877,
+IDT_XGEN_PANCANCER,IDT xGen,xGen Pan-Cancer hybridization panel (DNA),Human,DNA,Bulk targeted sequencing,127,126,0.992,DNA (mutation/CNV) panel - not an expression panel
+MER_M_BRAINTRAIN,Vizgen MERSCOPE,MERSCOPE Mouse Brain Training (128),Mouse,RNA,"Imaging, in situ (MERFISH)",128,128,1.0,
+MER_M_PAN,Vizgen MERSCOPE,MERSCOPE 815 Pan-Mouse,Mouse,RNA,"Imaging, in situ (MERFISH)",815,805,0.999,
+MER_M_PANNEURO,Vizgen MERSCOPE,MERSCOPE 815 Mouse PanNeuro,Mouse,RNA,"Imaging, in situ (MERFISH)",815,812,0.998,
+XEN_H5K,10x Xenium,Xenium Prime 5K Pan-Tissue & Pathways (Human),Human,RNA,"Imaging, in situ",5001,5000,1.0,
+XEN_M5K,10x Xenium,Xenium Prime 5K Pan-Tissue & Pathways (Mouse),Mouse,RNA,"Imaging, in situ",5006,4949,0.997,
+MER_H_IO,Vizgen MERSCOPE,MERSCOPE 815 Immuno-Oncology (Human),Human,RNA,"Imaging, in situ (MERFISH)",0,0,,"files in zip are empty (0-byte CSV, blank XLSX)"

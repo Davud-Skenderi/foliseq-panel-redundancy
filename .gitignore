@@ -1,0 +1,10 @@
+external/
+__pycache__/
+*.pyc
+data/_symbol_cache.pkl
+data/genesets.pkl
+data/metacell_labels.pkl
+data/expr_*.parquet
+data/consensus_corr.npy
+data/consensus_cnt.npy
+.DS_Store
