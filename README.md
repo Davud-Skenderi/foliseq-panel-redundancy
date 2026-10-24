@@ -1,6 +1,6 @@
 # Spatial panel redundancy and Foli-seq
 
-Which genes should future Foli-seq panels target? This repository compares the gene panels of commercial
+This repo compares the gene panels of commercial
 spatial transcriptomics platforms (10x Xenium, NanoString CosMx and GeoMx, Vizgen MERSCOPE, plus Illumina
 AmpliSeq and IDT xGen for reference) with the current Foli-seq panels (mouse mPS3, human hPS2; Huang et al.,
 *Nature Biotechnology* 2025). It looks for **consistency, redundancy and gaps** at the pathway level, then uses
