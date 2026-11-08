@@ -1,0 +1,334 @@
+gene,10x Xenium,NanoString CosMx,Vizgen MERSCOPE,NanoString GeoMx,n_vendors,on_mPS3,on_hPS2,on_FoliSeq,hallmark_sets
+ACVR1B,1,1,1,1,4,1,1,1,il6_jak_stat3_signaling; inflammatory_response; p53_pathway
+ACVR2A,1,1,1,1,4,1,1,1,allograft_rejection; inflammatory_response; uv_response_dn
+ALCAM,1,1,1,1,4,0,0,0,cholesterol_homeostasis; il2_stat5_signaling
+ANGPT1,1,1,1,1,4,0,0,0,adipogenesis
+APC,1,1,1,1,4,0,1,1,mitotic_spindle; tgf_beta_signaling
+APP,1,1,1,1,4,0,0,0,angiogenesis; apical_surface; apoptosis; myogenesis; p53_pathway
+AR,1,1,1,1,4,0,0,0,bile_acid_metabolism; estrogen_response_early
+ARG1,1,1,1,1,4,0,0,0,kras_signaling_up; xenobiotic_metabolism
+ASCL1,1,1,1,1,4,0,0,0,estrogen_response_late
+ATF3,1,1,1,1,4,0,0,0,apoptosis; cholesterol_homeostasis; hypoxia; p53_pathway; tnfa_signaling_via_nfkb; unfolded_protein_response; uv_response_up
+ATM,1,1,1,1,4,0,0,0,
+AXL,1,1,1,1,4,0,0,0,inflammatory_response
+BAX,1,1,1,1,4,0,1,1,apoptosis; oxidative_phosphorylation; p53_pathway
+BCL2,1,1,1,1,4,0,1,1,estrogen_response_early; estrogen_response_late; hypoxia; il2_stat5_signaling
+BID,1,1,1,1,4,0,0,0,apoptosis; uv_response_up
+BIRC3,1,1,1,1,4,0,1,1,apoptosis; kras_signaling_up; tnfa_signaling_via_nfkb
+BIRC5,1,1,1,1,4,0,0,0,e2f_targets; g2m_checkpoint; mitotic_spindle
+BLK,1,1,1,1,4,0,0,0,
+BMP2,1,1,1,1,4,1,1,1,apoptosis; il2_stat5_signaling; kras_signaling_up; p53_pathway; tgf_beta_signaling; tnfa_signaling_via_nfkb; uv_response_up
+BMP5,1,1,1,1,4,0,0,0,
+BST1,1,1,1,1,4,0,0,0,
+BTK,1,1,1,1,4,0,0,0,
+C3,1,1,1,1,4,1,0,1,adipogenesis; coagulation; complement; heme_metabolism
+C5,1,1,1,1,4,1,0,1,kras_signaling_dn
+C5AR1,1,1,1,1,4,0,0,0,inflammatory_response
+CASP8,1,1,1,1,4,0,0,0,apoptosis; interferon_alpha_response; interferon_gamma_response
+CCL11,1,1,1,1,4,1,1,1,allograft_rejection
+CCL13,1,1,1,1,4,1,1,1,allograft_rejection
+CCL15,1,1,1,1,4,0,1,1,
+CCL17,1,1,1,1,4,1,1,1,inflammatory_response
+CCL19,1,1,1,1,4,1,1,1,allograft_rejection
+CCL20,1,1,1,1,4,1,1,1,inflammatory_response; kras_signaling_up; tnfa_signaling_via_nfkb
+CCL22,1,1,1,1,4,1,1,1,allograft_rejection; inflammatory_response
+CCL8,1,1,1,1,4,1,1,1,
+CCND1,1,1,1,1,4,0,0,0,androgen_response; apoptosis; estrogen_response_early; estrogen_response_late; g2m_checkpoint; notch_signaling; tnfa_signaling_via_nfkb
+CCR1,1,1,1,1,4,1,1,1,allograft_rejection; il6_jak_stat3_signaling
+CCR2,1,1,1,1,4,1,1,1,allograft_rejection
+CCR7,1,1,1,1,4,1,1,1,inflammatory_response
+CD14,1,1,1,1,4,0,1,1,apoptosis; il6_jak_stat3_signaling; inflammatory_response
+CD19,1,1,1,1,4,0,1,1,
+CD209,1,1,1,1,4,0,0,0,apical_junction
+CD22,1,1,1,1,4,0,0,0,
+CD244,1,1,1,1,4,0,0,0,
+CD27,1,1,1,1,4,1,1,1,
+CD274,1,1,1,1,4,0,0,0,apical_junction; interferon_gamma_response
+CD28,1,1,1,1,4,0,1,1,allograft_rejection
+CD300A,1,1,1,1,4,0,0,0,
+CD33,1,1,1,1,4,1,0,1,
+CD34,1,1,1,1,4,0,0,0,apical_junction
+CD36,1,1,1,1,4,0,0,0,adipogenesis; complement; fatty_acid_metabolism; il6_jak_stat3_signaling; myogenesis; xenobiotic_metabolism
+CD37,1,1,1,1,4,0,0,0,kras_signaling_up
+CD38,1,1,1,1,4,0,0,0,apoptosis; il6_jak_stat3_signaling; interferon_gamma_response
+CD3D,1,1,1,1,4,0,0,0,allograft_rejection
+CD3E,1,1,1,1,4,0,0,0,allograft_rejection
+CD3G,1,1,1,1,4,0,0,0,allograft_rejection
+CD4,1,1,1,1,4,1,1,1,allograft_rejection
+CD40,1,1,1,1,4,1,1,1,allograft_rejection; inflammatory_response; interferon_gamma_response
+CD44,1,1,1,1,4,1,1,1,apoptosis; epithelial_mesenchymal_transition; estrogen_response_early; estrogen_response_late; glycolysis; il2_stat5_signaling; il6_jak_stat3_signaling; tnfa_signaling_via_nfkb
+CD47,1,1,1,1,4,0,0,0,allograft_rejection; interferon_alpha_response
+CD48,1,1,1,1,4,0,0,0,il2_stat5_signaling; inflammatory_response
+CD53,1,1,1,1,4,0,0,0,
+CD55,1,1,1,1,4,1,0,1,complement; inflammatory_response
+CD59,1,1,1,1,4,0,0,0,complement; epithelial_mesenchymal_transition
+CD6,1,1,1,1,4,0,0,0,
+CD68,1,1,1,1,4,0,1,1,
+CD69,1,1,1,1,4,0,0,0,apoptosis; inflammatory_response; interferon_gamma_response; tnfa_signaling_via_nfkb
+CD80,1,1,1,1,4,1,1,1,allograft_rejection; kras_signaling_dn; tnfa_signaling_via_nfkb
+CD83,1,1,1,1,4,0,0,0,il2_stat5_signaling; tnfa_signaling_via_nfkb
+CD84,1,1,1,1,4,0,0,0,
+CD86,1,1,1,1,4,1,1,1,allograft_rejection; apical_junction; il2_stat5_signaling; interferon_gamma_response
+CD8A,1,1,1,1,4,0,0,0,allograft_rejection
+CD8B,1,1,1,1,4,0,0,0,allograft_rejection
+CDH1,1,1,1,1,4,0,0,0,apical_junction; estrogen_response_late; tgf_beta_signaling
+CDH11,1,1,1,1,4,0,0,0,apical_junction; epithelial_mesenchymal_transition
+CDH5,1,1,1,1,4,0,0,0,
+CDKN1A,1,1,1,1,4,0,1,1,apoptosis; e2f_targets; hypoxia; inflammatory_response; interferon_gamma_response; mtorc1_signaling; myogenesis; p53_pathway; pi3k_akt_mtor_signaling; tnfa_signaling_via_nfkb
+CEBPA,1,1,1,1,4,0,0,0,p53_pathway
+CENPF,1,1,1,1,4,0,0,0,g2m_checkpoint; mitotic_spindle
+CHEK2,1,1,1,1,4,0,0,0,e2f_targets
+CLEC14A,1,1,1,1,4,0,0,0,
+CLEC4A,1,1,1,1,4,0,0,0,kras_signaling_up
+CLEC7A,1,1,1,1,4,0,1,1,
+CMKLR1,1,1,1,1,4,0,0,0,inflammatory_response; interferon_gamma_response; kras_signaling_up
+COL17A1,1,1,1,1,4,0,0,0,apical_junction
+COL1A1,1,1,1,1,4,0,0,0,epithelial_mesenchymal_transition; myogenesis; uv_response_dn
+COL4A5,1,1,1,1,4,0,0,0,
+COL5A2,1,1,1,1,4,0,0,0,angiogenesis; epithelial_mesenchymal_transition; uv_response_dn
+COL6A3,1,1,1,1,4,1,0,1,epithelial_mesenchymal_transition; myogenesis
+COMP,1,1,1,1,4,0,0,0,coagulation; epithelial_mesenchymal_transition
+CSF1,1,1,1,1,4,1,1,1,allograft_rejection; il2_stat5_signaling; il6_jak_stat3_signaling; inflammatory_response; interferon_alpha_response; tnfa_signaling_via_nfkb
+CSF1R,1,1,1,1,4,1,1,1,
+CSF2RB,1,1,1,1,4,1,1,1,il6_jak_stat3_signaling; interferon_gamma_response
+CSF3R,1,1,1,1,4,1,1,1,il6_jak_stat3_signaling; inflammatory_response
+CTNNB1,1,1,1,1,4,0,0,0,apoptosis; cholesterol_homeostasis; tgf_beta_signaling; wnt_beta_catenin_signaling
+CTSG,1,1,1,1,4,0,0,0,
+CX3CL1,1,1,1,1,4,1,1,1,apical_junction; apical_surface; inflammatory_response
+CX3CR1,1,1,1,1,4,1,1,1,
+CXCL1,1,1,1,1,4,1,1,1,complement; epithelial_mesenchymal_transition; il6_jak_stat3_signaling; tnfa_signaling_via_nfkb
+CXCL10,1,1,1,1,4,1,1,1,il2_stat5_signaling; il6_jak_stat3_signaling; inflammatory_response; interferon_alpha_response; interferon_gamma_response; kras_signaling_up; tnfa_signaling_via_nfkb
+CXCL12,1,1,1,1,4,1,1,1,epithelial_mesenchymal_transition; estrogen_response_early; estrogen_response_late
+CXCL13,1,1,1,1,4,1,1,1,allograft_rejection; il6_jak_stat3_signaling
+CXCL14,1,1,1,1,4,1,1,1,estrogen_response_late
+CXCL16,1,1,1,1,4,1,1,1,cholesterol_homeostasis
+CXCR2,1,1,1,1,4,1,1,1,
+CXCR3,1,1,1,1,4,1,1,1,allograft_rejection
+CXCR4,1,1,1,1,4,1,1,1,glycolysis; hypoxia; kras_signaling_up; mtorc1_signaling; pi3k_akt_mtor_signaling
+CXCR5,1,1,1,1,4,1,1,1,
+CXCR6,1,1,1,1,4,1,1,1,inflammatory_response
+CYBB,1,1,1,1,4,0,0,0,inflammatory_response
+DDIT3,1,1,1,1,4,0,0,0,apoptosis; hypoxia; mtorc1_signaling; p53_pathway; pi3k_akt_mtor_signaling
+DLL1,1,1,1,1,4,0,0,0,notch_signaling; wnt_beta_catenin_signaling
+DLL4,1,1,1,1,4,0,0,0,
+DNMT3A,1,1,1,1,4,0,0,0,
+DPP4,1,1,1,1,4,0,0,0,coagulation; complement; pancreas_beta_cells
+DST,1,1,1,1,4,0,0,0,epithelial_mesenchymal_transition; mitotic_spindle; protein_secretion
+DUSP1,1,1,1,1,4,0,0,0,hypoxia; tnfa_signaling_via_nfkb; uv_response_dn
+DUSP6,1,1,1,1,4,0,0,0,coagulation; complement; kras_signaling_up
+EFNA1,1,1,1,1,4,0,0,0,hypoxia; tnfa_signaling_via_nfkb
+EFNA5,1,1,1,1,4,0,0,0,apical_surface; g2m_checkpoint
+EGFR,1,1,1,1,4,1,1,1,allograft_rejection; apical_junction; glycolysis; hypoxia; pi3k_akt_mtor_signaling; protein_secretion
+ELANE,1,1,1,1,4,0,0,0,allograft_rejection
+ENG,1,1,1,1,4,0,0,0,kras_signaling_up; tgf_beta_signaling
+ENTPD1,1,1,1,1,4,0,0,0,
+EPHA2,1,1,1,1,4,0,0,0,p53_pathway; xenobiotic_metabolism
+EPOR,1,1,1,1,4,1,1,1,heme_metabolism
+ESR1,1,1,1,1,4,0,0,0,xenobiotic_metabolism
+ETS1,1,1,1,1,4,0,0,0,allograft_rejection; hypoxia; kras_signaling_up
+ETV1,1,1,1,1,4,0,0,0,kras_signaling_up
+ETV4,1,1,1,1,4,0,0,0,il2_stat5_signaling; kras_signaling_up
+EZH2,1,1,1,1,4,0,0,0,e2f_targets; g2m_checkpoint; spermatogenesis
+F13A1,1,1,1,1,4,0,0,0,kras_signaling_up
+FAS,1,1,1,1,4,1,1,1,allograft_rejection; apoptosis; epithelial_mesenchymal_transition; il6_jak_stat3_signaling; interferon_gamma_response; p53_pathway; xenobiotic_metabolism
+FCGR3A,1,1,1,1,4,1,1,1,
+FCN1,1,1,1,1,4,0,0,0,complement
+FGF1,1,1,1,1,4,0,0,0,
+FGF13,1,1,1,1,4,0,0,0,p53_pathway
+FGF9,1,1,1,1,4,0,0,0,kras_signaling_up
+FGFR1,1,1,1,1,4,0,0,0,angiogenesis
+FGFR2,1,1,1,1,4,0,0,0,
+FGFR3,1,1,1,1,4,0,0,0,estrogen_response_late; kras_signaling_dn
+FLT1,1,1,1,1,4,1,1,1,
+FLT3LG,1,1,1,1,4,0,1,1,il2_stat5_signaling
+FN1,1,1,1,1,4,0,0,0,coagulation; complement; epithelial_mesenchymal_transition
+FYN,1,1,1,1,4,0,0,0,coagulation; complement; uv_response_dn
+FZD1,1,1,1,1,4,0,0,0,notch_signaling; wnt_beta_catenin_signaling
+FZD3,1,1,1,1,4,0,0,0,
+FZD4,1,1,1,1,4,0,0,0,adipogenesis
+FZD6,1,1,1,1,4,0,0,0,
+GATA2,1,1,1,1,4,0,0,0,
+GATA3,1,1,1,1,4,1,0,1,apical_surface; complement
+GIMAP4,1,1,1,1,4,0,0,0,
+GLUD1,1,1,1,1,4,0,0,0,oxidative_phosphorylation
+GZMA,1,1,1,1,4,1,0,1,allograft_rejection; complement; interferon_gamma_response
+GZMB,1,1,1,1,4,1,0,1,allograft_rejection; complement
+HCK,1,1,1,1,4,1,0,1,
+HDAC5,1,1,1,1,4,0,0,0,myogenesis; wnt_beta_catenin_signaling
+HEY1,1,1,1,1,4,0,0,0,hedgehog_signaling; wnt_beta_catenin_signaling
+HIF1A,1,1,1,1,4,0,0,0,allograft_rejection; g2m_checkpoint; inflammatory_response; interferon_gamma_response
+HLA-DMB,1,1,1,1,4,0,0,0,allograft_rejection
+HPGD,1,1,1,1,4,0,0,0,androgen_response; fatty_acid_metabolism
+HSPA1A,1,1,1,1,4,0,0,0,complement
+ICAM1,1,1,1,1,4,1,1,1,allograft_rejection; apical_junction; inflammatory_response; interferon_gamma_response; tnfa_signaling_via_nfkb; uv_response_up
+ICAM2,1,1,1,1,4,0,0,0,apical_junction
+ICOS,1,1,1,1,4,0,0,0,il2_stat5_signaling
+ICOSLG,1,1,1,1,4,0,1,1,allograft_rejection; inflammatory_response; tnfa_signaling_via_nfkb
+IFIT1,1,1,1,1,4,0,0,0,interferon_gamma_response; unfolded_protein_response
+IFITM1,1,1,1,1,4,1,0,1,inflammatory_response; interferon_alpha_response
+IFNAR1,1,1,1,1,4,1,1,1,il6_jak_stat3_signaling; inflammatory_response
+IFNAR2,1,1,1,1,4,1,1,1,allograft_rejection; interferon_gamma_response
+IFNGR1,1,1,1,1,4,1,1,1,adipogenesis; allograft_rejection; apoptosis; il2_stat5_signaling; il6_jak_stat3_signaling
+IFNGR2,1,1,1,1,4,1,1,1,allograft_rejection; il6_jak_stat3_signaling; inflammatory_response; tgf_beta_signaling; tnfa_signaling_via_nfkb
+IGF1,1,1,1,1,4,0,1,1,myogenesis; xenobiotic_metabolism
+IGF1R,1,1,1,1,4,0,0,0,estrogen_response_early; il2_stat5_signaling; uv_response_dn
+IGF2R,1,1,1,1,4,0,0,0,apoptosis; il2_stat5_signaling; protein_secretion
+IGFBP3,1,1,1,1,4,0,0,0,epithelial_mesenchymal_transition; glycolysis; hypoxia; kras_signaling_up; myogenesis
+IL13RA1,1,1,1,1,4,1,1,1,glycolysis; il6_jak_stat3_signaling
+IL15,1,1,1,1,4,1,1,1,allograft_rejection; epithelial_mesenchymal_transition; inflammatory_response; interferon_alpha_response; interferon_gamma_response
+IL16,1,1,1,1,4,1,0,1,allograft_rejection
+IL17RA,1,1,1,1,4,1,1,1,il6_jak_stat3_signaling
+IL18,1,1,1,1,4,1,1,1,allograft_rejection; apoptosis; inflammatory_response; tnfa_signaling_via_nfkb
+IL1B,1,1,1,1,4,1,1,1,allograft_rejection; apoptosis; il6_jak_stat3_signaling; inflammatory_response; kras_signaling_up; tnfa_signaling_via_nfkb
+IL1R1,1,1,1,1,4,1,1,1,il6_jak_stat3_signaling; inflammatory_response; xenobiotic_metabolism
+IL1RAP,1,1,1,1,4,1,1,1,
+IL1RN,1,1,1,1,4,1,0,1,
+IL2,1,1,1,1,4,1,1,1,allograft_rejection
+IL2RB,1,1,1,1,4,1,1,1,allograft_rejection; apical_surface; il2_stat5_signaling; inflammatory_response; interferon_gamma_response
+IL2RG,1,1,1,1,4,1,1,1,allograft_rejection; apical_surface; il6_jak_stat3_signaling; kras_signaling_up; pi3k_akt_mtor_signaling
+IL33,1,1,1,1,4,1,0,1,kras_signaling_up
+IL34,1,1,1,1,4,1,0,1,
+IL4R,1,1,1,1,4,0,1,1,allograft_rejection; il2_stat5_signaling; il6_jak_stat3_signaling; inflammatory_response; interferon_alpha_response; interferon_gamma_response
+IL6R,1,1,1,1,4,0,1,1,
+IL6ST,1,1,1,1,4,1,1,1,estrogen_response_early; estrogen_response_late; il6_jak_stat3_signaling; tnfa_signaling_via_nfkb; uv_response_up
+IL7R,1,1,1,1,4,1,1,1,inflammatory_response; kras_signaling_up; tnfa_signaling_via_nfkb
+IRF4,1,1,1,1,4,0,0,0,allograft_rejection; il2_stat5_signaling; interferon_gamma_response
+ISG15,1,1,1,1,4,1,0,1,interferon_alpha_response; interferon_gamma_response
+ISG20,1,1,1,1,4,0,0,0,apoptosis; estrogen_response_late; glycolysis; hypoxia; interferon_alpha_response; interferon_gamma_response
+ITGA1,1,1,1,1,4,0,0,0,
+ITGA5,1,1,1,1,4,0,0,0,epithelial_mesenchymal_transition; inflammatory_response
+ITGA8,1,1,1,1,4,0,0,0,
+ITGAE,1,1,1,1,4,0,0,0,il2_stat5_signaling
+ITGAL,1,1,1,1,4,0,1,1,allograft_rejection
+ITGAM,1,1,1,1,4,0,1,1,complement
+ITGAV,1,1,1,1,4,0,0,0,androgen_response; angiogenesis; epithelial_mesenchymal_transition; il2_stat5_signaling
+ITGAX,1,1,1,1,4,0,1,1,
+ITGB6,1,1,1,1,4,0,0,0,
+ITGB8,1,1,1,1,4,0,0,0,inflammatory_response
+ITK,1,1,1,1,4,0,0,0,allograft_rejection
+JAG1,1,1,1,1,4,0,0,0,angiogenesis; cholesterol_homeostasis; notch_signaling; tnfa_signaling_via_nfkb; wnt_beta_catenin_signaling
+JAK2,1,1,1,1,4,1,1,1,allograft_rejection; complement; estrogen_response_early; estrogen_response_late; interferon_gamma_response
+KDR,1,1,1,1,4,1,1,1,
+KIT,1,1,1,1,4,1,1,1,uv_response_dn
+KITLG,1,1,1,1,4,0,1,1,
+KLRB1,1,1,1,1,4,0,0,0,
+LAG3,1,1,1,1,4,0,0,0,
+LAIR1,1,1,1,1,4,0,0,0,
+LAMP3,1,1,1,1,4,0,0,0,inflammatory_response; interferon_alpha_response
+LCK,1,1,1,1,4,0,1,1,allograft_rejection; bile_acid_metabolism; complement; inflammatory_response; pi3k_akt_mtor_signaling
+LGALS9,1,1,1,1,4,0,0,0,
+LIF,1,1,1,1,4,1,1,1,allograft_rejection; il2_stat5_signaling; inflammatory_response; kras_signaling_up; p53_pathway; tnfa_signaling_via_nfkb
+LIFR,1,1,1,1,4,1,1,1,adipogenesis; androgen_response
+LRP2,1,1,1,1,4,0,0,0,
+LYN,1,1,1,1,4,0,0,0,allograft_rejection; apical_surface; complement; inflammatory_response; uv_response_up
+MAF,1,1,1,1,4,0,0,0,androgen_response
+MAPK14,1,1,1,1,4,0,0,0,apical_junction; g2m_checkpoint; uv_response_dn
+MARCO,1,1,1,1,4,1,0,1,inflammatory_response
+MERTK,1,1,1,1,4,0,0,0,androgen_response; glycolysis
+MET,1,1,1,1,4,1,1,1,glycolysis; inflammatory_response; uv_response_dn
+MKI67,1,1,1,1,4,0,1,1,e2f_targets; g2m_checkpoint
+MMP7,1,1,1,1,4,1,0,1,coagulation
+MMP9,1,1,1,1,4,1,0,1,allograft_rejection; apical_junction; coagulation; kras_signaling_up
+MPO,1,1,1,1,4,1,1,1,reactive_oxygen_species_pathway
+MRC1,1,1,1,1,4,0,0,0,
+MS4A1,1,1,1,1,4,0,0,0,
+MSH2,1,1,1,1,4,0,0,0,e2f_targets; peroxisome
+MST1R,1,1,1,1,4,0,0,0,
+MUC1,1,1,1,1,4,1,1,1,estrogen_response_early; il2_stat5_signaling
+MYC,1,1,1,1,4,0,1,1,e2f_targets; estrogen_response_early; g2m_checkpoint; il2_stat5_signaling; inflammatory_response; myc_targets_v1; myc_targets_v2; tnfa_signaling_via_nfkb; uv_response_dn; wnt_beta_catenin_signaling
+NCAM1,1,1,1,1,4,0,0,0,myogenesis
+NCF4,1,1,1,1,4,0,1,1,allograft_rejection
+NFKB1,1,1,1,1,4,1,1,1,inflammatory_response; interferon_gamma_response; tnfa_signaling_via_nfkb; uv_response_dn
+NGFR,1,1,1,1,4,1,1,1,
+NLRC5,1,1,1,1,4,0,0,0,interferon_gamma_response
+NOTCH1,1,1,1,1,4,0,0,0,myogenesis; notch_signaling; p53_pathway; wnt_beta_catenin_signaling
+NOTCH2,1,1,1,1,4,0,0,0,epithelial_mesenchymal_transition; g2m_checkpoint; mitotic_spindle; notch_signaling; uv_response_dn
+NOTCH3,1,1,1,1,4,0,0,0,notch_signaling
+NR3C1,1,1,1,1,4,0,0,0,heme_metabolism; hypoxia; uv_response_dn
+NRP1,1,1,1,1,4,0,0,0,angiogenesis; hedgehog_signaling; il2_stat5_signaling; kras_signaling_up; uv_response_dn
+NTRK2,1,1,1,1,4,0,0,0,
+OAS3,1,1,1,1,4,0,0,0,interferon_gamma_response
+PCK1,1,1,1,1,4,0,1,1,hypoxia
+PCNA,1,1,1,1,4,0,1,1,dna_repair; e2f_targets; myc_targets_v1; p53_pathway
+PDGFA,1,1,1,1,4,1,1,1,angiogenesis; p53_pathway
+PDGFB,1,1,1,1,4,1,1,1,coagulation; complement; hypoxia
+PDGFRA,1,1,1,1,4,1,1,1,
+PDGFRB,1,1,1,1,4,1,1,1,apoptosis; epithelial_mesenchymal_transition; uv_response_dn
+PECAM1,1,1,1,1,4,0,0,0,apical_junction; coagulation; kras_signaling_up
+POU2AF1,1,1,1,1,4,0,0,0,
+PPARG,1,1,1,1,4,1,1,1,adipogenesis; cholesterol_homeostasis; uv_response_dn
+PPARGC1A,1,1,1,1,4,0,0,0,hypoxia
+PRG2,1,1,1,1,4,0,0,0,angiogenesis
+PTGER4,1,1,1,1,4,1,1,1,inflammatory_response; tnfa_signaling_via_nfkb
+PTPRC,1,1,1,1,4,0,0,0,allograft_rejection; apical_junction
+PTTG1,1,1,1,1,4,0,0,0,e2f_targets; g2m_checkpoint
+RAG1,1,1,1,1,4,0,0,0,
+RB1,1,1,1,1,4,0,0,0,myogenesis; p53_pathway
+RORA,1,1,1,1,4,0,1,1,hypoxia; il2_stat5_signaling
+RSAD2,1,1,1,1,4,0,0,0,interferon_alpha_response; interferon_gamma_response; kras_signaling_dn
+RUNX3,1,1,1,1,4,0,1,1,
+S100B,1,1,1,1,4,0,0,0,
+SELL,1,1,1,1,4,0,0,0,il2_stat5_signaling; inflammatory_response; interferon_alpha_response
+SELPLG,1,1,1,1,4,0,0,0,
+SERPINB5,1,1,1,1,4,0,0,0,p53_pathway
+SERPINH1,1,1,1,1,4,0,0,0,epithelial_mesenchymal_transition; mtorc1_signaling
+SFRP1,1,1,1,1,4,0,0,0,epithelial_mesenchymal_transition
+SLC2A1,1,1,1,1,4,0,0,0,estrogen_response_early; heme_metabolism; hypoxia; mtorc1_signaling; pi3k_akt_mtor_signaling
+SMO,1,1,1,1,4,0,0,0,
+SNAI1,1,1,1,1,4,0,0,0,
+SNAI2,1,1,1,1,4,0,0,0,epithelial_mesenchymal_transition; uv_response_dn
+SOD2,1,1,1,1,4,1,0,1,apoptosis; interferon_gamma_response; peroxisome; reactive_oxygen_species_pathway; tnfa_signaling_via_nfkb; uv_response_up
+SOX17,1,1,1,1,4,0,0,0,
+SOX2,1,1,1,1,4,0,0,0,
+SOX9,1,1,1,1,4,0,0,0,glycolysis; kras_signaling_up
+SREBF1,1,1,1,1,4,0,0,0,
+ST6GAL1,1,1,1,1,4,0,0,0,kras_signaling_up
+STAT1,1,1,1,1,4,1,1,1,allograft_rejection; il6_jak_stat3_signaling; interferon_gamma_response
+STAT3,1,1,1,1,4,1,0,1,il6_jak_stat3_signaling; interferon_gamma_response
+STAT4,1,1,1,1,4,1,0,1,allograft_rejection; interferon_gamma_response
+STAT6,1,1,1,1,4,0,0,0,
+SYK,1,1,1,1,4,0,0,0,apical_junction
+TACSTD2,1,1,1,1,4,0,0,0,
+TAP1,1,1,1,1,4,0,0,0,allograft_rejection; apoptosis; interferon_alpha_response; interferon_gamma_response; p53_pathway; tnfa_signaling_via_nfkb; uv_response_up
+TAP2,1,1,1,1,4,0,0,0,allograft_rejection
+TCF3,1,1,1,1,4,0,0,0,
+TCF7,1,1,1,1,4,0,0,0,wnt_beta_catenin_signaling
+TFEB,1,1,1,1,4,0,0,0,
+TGFB1,1,1,1,1,4,1,1,1,allograft_rejection; epithelial_mesenchymal_transition; g2m_checkpoint; il6_jak_stat3_signaling; myogenesis; p53_pathway; tgf_beta_signaling
+TGFB2,1,1,1,1,4,1,1,1,allograft_rejection; apoptosis; kras_signaling_dn; xenobiotic_metabolism
+TGFB3,1,1,1,1,4,1,1,1,hypoxia
+TGFBR1,1,1,1,1,4,1,1,1,tgf_beta_signaling
+TGFBR2,1,1,1,1,4,1,1,1,uv_response_dn
+THBS1,1,1,1,1,4,0,0,0,coagulation; epithelial_mesenchymal_transition; tgf_beta_signaling
+THBS4,1,1,1,1,4,0,0,0,
+TIE1,1,1,1,1,4,0,0,0,
+TLR2,1,1,1,1,4,1,1,1,allograft_rejection; il6_jak_stat3_signaling; inflammatory_response; tnfa_signaling_via_nfkb
+TLR4,1,1,1,1,4,1,1,1,
+TLR7,1,1,1,1,4,0,1,1,il2_stat5_signaling
+TNFRSF11A,1,1,1,1,4,1,1,1,
+TNFRSF12A,1,1,1,1,4,1,1,1,apoptosis; cholesterol_homeostasis; epithelial_mesenchymal_transition; il6_jak_stat3_signaling
+TNFRSF13B,1,1,1,1,4,1,1,1,
+TNFRSF13C,1,1,1,1,4,1,1,1,
+TNFRSF18,1,1,1,1,4,1,1,1,il2_stat5_signaling
+TNFRSF1B,1,1,1,1,4,1,1,1,il2_stat5_signaling; il6_jak_stat3_signaling; inflammatory_response; kras_signaling_up
+TNFRSF4,1,1,1,1,4,1,1,1,il2_stat5_signaling
+TNFSF9,1,1,1,1,4,1,1,1,inflammatory_response; p53_pathway; tnfa_signaling_via_nfkb
+TOP2A,1,1,1,1,4,0,1,1,apoptosis; e2f_targets; estrogen_response_late; g2m_checkpoint; mitotic_spindle; peroxisome
+TOX,1,1,1,1,4,0,0,0,
+TWIST1,1,1,1,1,4,0,0,0,
+TWIST2,1,1,1,1,4,0,0,0,
+TXK,1,1,1,1,4,0,0,0,
+TYMS,1,1,1,1,4,0,0,0,dna_repair; myc_targets_v1
+UBE2C,1,1,1,1,4,1,0,1,g2m_checkpoint
+VCAM1,1,1,1,1,4,1,0,1,apical_junction; epithelial_mesenchymal_transition; interferon_gamma_response
+VEGFA,1,1,1,1,4,1,1,1,angiogenesis; epithelial_mesenchymal_transition; glycolysis; hedgehog_signaling; hypoxia; tnfa_signaling_via_nfkb; unfolded_protein_response
+VEGFC,1,1,1,1,4,1,1,1,epithelial_mesenchymal_transition
+VEGFD,1,1,1,1,4,1,1,1,
+VHL,1,1,1,1,4,0,0,0,hypoxia
+VSIR,1,1,1,1,4,0,0,0,
+WIF1,1,1,1,1,4,0,0,0,
+WNT5A,1,1,1,1,4,0,0,0,epithelial_mesenchymal_transition; notch_signaling
+WNT7A,1,1,1,1,4,0,0,0,kras_signaling_up
+WNT7B,1,1,1,1,4,0,0,0,
+XCL1,1,1,1,1,4,1,1,1,interferon_gamma_response
+ZBTB16,1,1,1,1,4,0,0,0,kras_signaling_dn; p53_pathway

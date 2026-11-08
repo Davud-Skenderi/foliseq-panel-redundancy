@@ -1,0 +1,46 @@
+{
+ "Keep: responds in stool": 279,
+ "Keep: sole marker of a cell type": 10,
+ "Keep: default": 511,
+ "Review: redundant (|r| >= 0.8 partner)": 3,
+ "Add: marker for a poorly identified cell type": 122,
+ "Add: field consensus (all 4 vendors)": 169,
+ "Consider: epithelial marker": 219,
+ "poorly_identified_celltypes": {
+  "FOLI_mPS3": [
+   "Activated CD4 T",
+   "B1 B",
+   "CD122+ CD8 T",
+   "CD4 T",
+   "CD8 T",
+   "ICOS-high Tregs",
+   "Ifit3-high B",
+   "Ifit3-high CD4 T",
+   "Ifit3-high CD8 T",
+   "MZ B",
+   "Mature B",
+   "NKT",
+   "Transitional B",
+   "Tregs",
+   "cDC1s"
+  ],
+  "FOLI_hPS2": [
+   "Activated CD4 T",
+   "B1 B",
+   "CD122+ CD8 T",
+   "CD4 T",
+   "CD8 T",
+   "Cycling B/T cells",
+   "ICOS-high Tregs",
+   "Ifit3-high B",
+   "Ifit3-high CD4 T",
+   "Ifit3-high CD8 T",
+   "MZ B",
+   "Mature B",
+   "NKT",
+   "Transitional B",
+   "Tregs",
+   "cDC1s"
+  ]
+ }
+}

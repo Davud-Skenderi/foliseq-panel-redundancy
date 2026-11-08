@@ -8,3 +8,4 @@ data/expr_*.parquet
 data/consensus_corr.npy
 data/consensus_cnt.npy
 .DS_Store
+results/log*.txt

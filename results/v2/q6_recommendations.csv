@@ -1,0 +1,1314 @@
+gene,mouse_gene,on_mPS3,on_hPS2,n_vendors,stool_evidence,immune_marker_of,epithelial_signatures,sole_marker_for,partners_r_ge_0_8,add_reason_poorly_identified,call
+ACVR1B,Acvr1b,True,True,4,unique_Anti_CD40,,,,,,Keep: responds in stool
+ACVR2A,Acvr2a,True,True,4,antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+BMP2,Bmp2,True,True,4,DSS_temporal;antiP19_treatment_response,,,,,,Keep: responds in stool
+C3,C3,True,False,4,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CCL13,Ccl12,True,True,4,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+CCL17,Ccl17,True,True,4,DSS_temporal;unique_Anti_CD40,,,,,,Keep: responds in stool
+CCL20,Ccl20,True,True,4,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+CCL8,Ccl8,True,True,4,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+CCR1,Ccr1,True,True,4,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CCR2,Ccr2,True,True,4,DSS_temporal,GD T,,,,,Keep: responds in stool
+CD4,Cd4,True,True,4,unique_C_rodentium,CD4 T,,hPS2: CD4 T,,,Keep: responds in stool
+CD55,Cd55,True,False,4,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+CD80,Cd80,True,True,4,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CD86,Cd86,True,True,4,unique_C_rodentium,,,,,,Keep: responds in stool
+CSF1,Csf1,True,True,4,antiP19_treatment_response,,,,,,Keep: responds in stool
+CSF1R,Csf1r,True,True,4,DSS_temporal;shared_3_models,Ly6-high mono; Ly6-low mono; Red-pulp macrophages,,hPS2: Ly6-low mono,,,Keep: responds in stool
+CSF2RB,Csf2rb,True,True,4,antiP19_treatment_response,,,,,,Keep: responds in stool
+CSF3R,Csf3r,True,True,4,DSS_temporal;antiP19_treatment_response;shared_3_models,Neutrophils,,,"mPS3: S100A8 (0.84, HS_PBMC); mPS3: S100A9 (0.84, HS_PBMC); mPS3: CXCR2 (0.83, MM_SLN); mPS3: LYZ (0.83, HS_PBMC); hPS2: S100A9 (0.84, HS_PBMC); hPS2: CXCR2 (0.83, MM_SLN); hPS2: CD14 (0.81, HS_PBMC)",,Keep: responds in stool
+CX3CL1,Cx3cl1,True,True,4,DSS_temporal;antiP19_treatment_response;unique_Anti_CD40,,olfm4high stem cell (Gao),,,,Keep: responds in stool
+CXCL1,Cxcl1,True,True,4,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CXCL10,Cxcl10,True,True,4,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CXCL13,Cxcl13,True,True,4,antiP19_treatment_response,,,,,,Keep: responds in stool
+CXCL16,Cxcl16,True,True,4,antiP19_treatment_response,Migratory DCs,,mPS3: Migratory DCs; hPS2: Migratory DCs,,,Keep: responds in stool
+CXCR2,Cxcr2,True,True,4,DSS_temporal;antiP19_treatment_response;shared_3_models,Neutrophils,,,"mPS3: CSF3R (0.83, MM_SLN); mPS3: MMP9 (0.83, MM_SLN); hPS2: CSF3R (0.83, MM_SLN)",,Keep: responds in stool
+CXCR3,Cxcr3,True,True,4,unique_C_rodentium,,,,,,Keep: responds in stool
+CXCR4,Cxcr4,True,True,4,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CXCR5,Cxcr5,True,True,4,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CXCR6,Cxcr6,True,True,4,unique_C_rodentium,GD T,,,,,Keep: responds in stool
+FAS,Fas,True,True,4,antiP19_treatment_response,,,,,,Keep: responds in stool
+FCGR3A,Fcgr4,True,True,4,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+GZMA,Gzma,True,False,4,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,NK,,,"mPS3: CCL5 (0.85, HS_PBMC)",,Keep: responds in stool
+GZMB,Gzmb,True,False,4,DSS_temporal;shared_3_models,,,,,,Keep: responds in stool
+HCK,Hck,True,False,4,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,tuft cells (Busslinger),,,,Keep: responds in stool
+ICAM1,Icam1,True,True,4,unique_Anti_CD40,,,,,,Keep: responds in stool
+IFITM1,Ifitm6,True,False,4,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IFNAR1,Ifnar1,True,True,4,unique_Anti_CD40,,,,,,Keep: responds in stool
+IL13RA1,Il13ra1,True,True,4,DSS_temporal,,,,,,Keep: responds in stool
+IL16,Il16,True,False,4,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IL18,Il18,True,True,4,DSS_temporal,,,,,,Keep: responds in stool
+IL1B,Il1b,True,True,4,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IL1RAP,Il1rap,True,True,4,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IL1RN,Il1rn,True,False,4,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+IL2RG,Il2rg,True,True,4,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IL33,Il33,True,False,4,antiP19_treatment_response,,,,,,Keep: responds in stool
+IL34,Il34,True,False,4,DSS_temporal,,,,,,Keep: responds in stool
+IL6ST,Il6st,True,True,4,antiP19_treatment_response,,,,,,Keep: responds in stool
+ISG15,Isg15,True,False,4,DSS_temporal;antiP19_treatment_response,Ifit3-high CD4 T; Ifit3-high CD8 T,,,,hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T,Keep: responds in stool
+KIT,Kit,True,True,4,antiP19_treatment_response,,,,,,Keep: responds in stool
+LIFR,Lifr,True,True,4,unique_Anti_CD40,,,,,,Keep: responds in stool
+MET,Met,True,True,4,antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+MMP7,Mmp7,True,False,4,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+MMP9,Mmp9,True,False,4,DSS_temporal;antiP19_treatment_response;shared_3_models,Neutrophils,,,"mPS3: CXCR2 (0.83, MM_SLN); mPS3: CSF3R (0.81, MM_SLN); mPS3: S100A8 (0.80, MM_SLN)",,Keep: responds in stool
+MUC1,Muc1,True,True,4,antiP19_treatment_response,,,,,,Keep: responds in stool
+PDGFA,Pdgfa,True,True,4,unique_Anti_CD40,,,,,,Keep: responds in stool
+PDGFRB,Pdgfrb,True,True,4,antiP19_treatment_response,,olfm4high stem cell (Gao),,,,Keep: responds in stool
+PPARG,Pparg,True,True,4,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+PTGER4,Ptger4,True,True,4,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+STAT1,Stat1,True,True,4,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,Ifit3-high CD4 T; Ifit3-high CD8 T,,hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T,,,Keep: responds in stool
+STAT3,Stat3,True,False,4,antiP19_treatment_response,,,,,,Keep: responds in stool
+TGFB1,Tgfb1,True,True,4,unique_Anti_CD40,,,,,,Keep: responds in stool
+TGFBR1,Tgfbr1,True,True,4,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+TLR2,Tlr2,True,True,4,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+TLR4,Tlr4,True,True,4,DSS_temporal;antiP19_treatment_response,,,,,,Keep: responds in stool
+TNFRSF12A,Tnfrsf12a,True,True,4,unique_C_rodentium,,,,,,Keep: responds in stool
+TNFRSF18,Tnfrsf18,True,True,4,DSS_temporal,Tregs,,,,,Keep: responds in stool
+TNFRSF1B,Tnfrsf1b,True,True,4,DSS_temporal;shared_3_models,,,,,,Keep: responds in stool
+TNFRSF4,Tnfrsf4,True,True,4,unique_C_rodentium,Tregs,,,,,Keep: responds in stool
+UBE2C,Ube2c,True,False,4,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+VCAM1,Vcam1,True,False,4,antiP19_treatment_response;unique_Anti_CD40,Red-pulp macrophages,,,,,Keep: responds in stool
+VEGFA,Vegfa,True,True,4,DSS_temporal;shared_3_models,,mature enterocytes (Busslinger),,,,Keep: responds in stool
+XCL1,Xcl1,True,True,4,DSS_temporal;unique_1_DSS,,,,,,Keep: responds in stool
+ABCB1,Abcb1a,True,True,3,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+ADA,Ada,True,False,3,DSS_temporal;antiP19_treatment_response;unique_Anti_CD40,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: responds in stool
+ARG2,Arg2,True,False,3,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+ATG16L1,Atg16l1,True,True,3,DSS_temporal,,,,,,Keep: responds in stool
+BCL2A1,Bcl2a1b,True,False,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+BMI1,Bmi1,True,False,3,unique_Anti_CD40,,,,,,Keep: responds in stool
+BMPR2,Bmpr2,True,True,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+BST2,Bst2,True,False,3,DSS_temporal;antiP19_treatment_response;shared_3_models,pDCs,,,,,Keep: responds in stool
+CCL18,Ccl3,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CCL24,Ccl24,True,True,3,unique_Anti_CD40,,,,,,Keep: responds in stool
+CCL25,Ccl25,True,True,3,antiP19_treatment_response,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: responds in stool
+CCL4,Ccl4,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CCL7,Ccl7,True,True,3,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+CCR3,Ccr3,True,True,3,DSS_temporal;unique_1_DSS,,,,,,Keep: responds in stool
+CCR9,Ccr9,True,True,3,unique_C_rodentium,CD8 T; pDCs,,hPS2: pDCs,,,Keep: responds in stool
+CD24,Cd24a,True,False,3,DSS_temporal;unique_Anti_CD40,Transitional B,bche cells (Busslinger); tuft cells (Busslinger),,,hPS2: Transitional B,Keep: responds in stool
+CD40LG,Cd40lg,True,True,3,unique_C_rodentium,,,,,,Keep: responds in stool
+CLEC4D,Clec4d,True,False,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CLEC4E,Clec4e,True,False,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CSF2RA,Csf2ra,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CSF3,Csf3,True,True,3,DSS_temporal;shared_3_models,,,,,,Keep: responds in stool
+CXCL5,Cxcl5,True,True,3,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,olfm4high stem cell (Gao),,,,Keep: responds in stool
+CXCL9,Cxcl9,True,True,3,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+EBI3,Ebi3,True,False,3,unique_Anti_CD40,,,,,,Keep: responds in stool
+FCGR1A,Fcgr1,True,False,3,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+FCGR2A,Fcgr2b,True,False,3,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+GBP1,Gbp2,True,False,3,DSS_temporal;shared_3_models,,,,,,Keep: responds in stool
+GHR,Ghr,True,True,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+HDC,Hdc,True,False,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+HGF,Hgf,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IDO1,Ido1,True,False,3,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+IFI16,Ifi211,True,False,3,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,Ifit3-high B; Ifit3-high CD4 T; Ifit3-high CD8 T,,,,hPS2: Ifit3-high B; hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T,Keep: responds in stool
+IFI27,Ifi27l2b,True,False,3,antiP19_treatment_response,ICOS-high Tregs; Ifit3-high B; Ifit3-high CD4 T; Tregs,mature enterocytes (Busslinger),,,hPS2: ICOS-high Tregs; hPS2: Ifit3-high B; hPS2: Ifit3-high CD4 T; hPS2: Tregs,Keep: responds in stool
+IFNG,Ifng,True,True,3,DSS_temporal;antiP19_treatment_response,,,,,,Keep: responds in stool
+IFNL1,Ifnl2,True,True,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+IL10RA,Il10ra,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IL12A,Il12a,True,True,3,unique_C_rodentium,,,,,,Keep: responds in stool
+IL15RA,Il15ra,True,True,3,antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+IL17A,Il17a,True,True,3,DSS_temporal,,,,,,Keep: responds in stool
+IL18R1,Il18r1,True,True,3,unique_C_rodentium,GD T,,,,,Keep: responds in stool
+IL18RAP,Il18rap,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IL1A,Il1a,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IL1R2,Il1r2,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IL22,Il22,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IL22RA1,Il22ra1,True,True,3,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+IL23A,Il23a,True,True,3,antiP19_treatment_response,,olfm4high stem cell (Gao),,,,Keep: responds in stool
+IL2RA,Il2ra,True,True,3,unique_C_rodentium,Tregs,,,,,Keep: responds in stool
+IL4,Il4,True,True,3,DSS_temporal;unique_1_DSS,,,,,,Keep: responds in stool
+IL6,Il6,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IRAK1,Irak1,True,False,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+KLRC4-KLRK1,Klrk1,True,False,3,unique_Anti_CD40,NK,,,,,Keep: responds in stool
+KRT18,Krt18,True,False,3,antiP19_treatment_response;unique_Anti_CD40,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger); tuft cells (Busslinger),,,,Keep: responds in stool
+LAMP1,Lamp1,True,False,3,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+LILRB4,Lilr4b,True,False,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+LTB,Ltb,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,olfm4high stem cell (Gao),,,,Keep: responds in stool
+LTBR,Ltbr,True,True,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+LTF,Ltf,True,False,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+MMP14,Mmp14,True,False,3,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+MS4A4A,Ms4a4a,True,False,3,DSS_temporal;antiP19_treatment_response;shared_3_models,CD122+ CD8 T; CD4 T; CD8 T; ICOS-high Tregs; Ifit3-high B; Ifit3-high CD4 T; Ifit3-high CD8 T; NK; NKT; Tregs,,,,hPS2: CD122+ CD8 T; hPS2: CD4 T; hPS2: CD8 T; hPS2: ICOS-high Tregs; hPS2: Ifit3-high B; hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T; hPS2: NKT; hPS2: Tregs,Keep: responds in stool
+MS4A6A,Ms4a6b,True,False,3,DSS_temporal;antiP19_treatment_response;shared_3_models,CD4 T; CD8 T; Ifit3-high CD4 T; Ifit3-high CD8 T; Ly6-high mono; Tregs,,,"mPS3: LYZ (0.87, HS_PBMC); mPS3: S100A9 (0.85, HS_PBMC); mPS3: S100A8 (0.84, HS_PBMC)",hPS2: CD4 T; hPS2: CD8 T; hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T; hPS2: Tregs,Keep: responds in stool
+MYD88,Myd88,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+NFIL3,Nfil3,True,False,3,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+NOS2,Nos2,True,True,3,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+NOX1,Nox1,True,True,3,unique_Anti_CD40,,,,,,Keep: responds in stool
+OSM,Osm,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+PPBP,Ppbp,True,True,3,DSS_temporal;antiP19_treatment_response;unique_1_DSS,,,,,,Keep: responds in stool
+PTGS1,Ptgs1,True,False,3,unique_Anti_CD40,,tuft cells (Busslinger),,,,Keep: responds in stool
+PTGS2,Ptgs2,True,False,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+RELT,Relt,True,True,3,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+RORC,Rorc,True,False,3,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+SELP,Selp,True,False,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+SERPINA3,Serpina3f,True,False,3,DSS_temporal;shared_3_models,,,,,,Keep: responds in stool
+SOCS3,Socs3,True,False,3,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,k cells (Busslinger),,,,Keep: responds in stool
+TFE3,Tfe3,True,False,3,DSS_temporal,,,,,,Keep: responds in stool
+TIMP1,Timp1,True,False,3,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_C_rodentium,,ec cells (Busslinger),,,,Keep: responds in stool
+TIRAP,Tirap,True,True,3,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+TNF,Tnf,True,True,3,DSS_temporal;shared_3_models,,,,,,Keep: responds in stool
+TNFRSF11B,Tnfrsf11b,True,True,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+TNFRSF14,Tnfrsf14,True,True,3,antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+TNFRSF1A,Tnfrsf1a,True,True,3,DSS_temporal,,mature enterocytes (Busslinger),,,,Keep: responds in stool
+TNFRSF21,Tnfrsf21,True,True,3,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+TNFRSF9,Tnfrsf9,True,True,3,DSS_temporal,,,,,,Keep: responds in stool
+TNFSF10,Tnfsf10,True,True,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+TRAF3,Traf3,True,False,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+VEGFB,Vegfb,True,True,3,antiP19_treatment_response,,,,,,Keep: responds in stool
+ACE2,Ace2,True,False,2,antiP19_treatment_response,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: responds in stool
+ACVR1,Acvr1,True,True,2,antiP19_treatment_response,,,,,,Keep: responds in stool
+CCL5,Ccl5,True,True,2,DSS_temporal;shared_3_models,NK; NKT,,hPS2: NK,"mPS3: GZMA (0.85, HS_PBMC)",,Keep: responds in stool
+CLCF1,Clcf1,True,True,2,DSS_temporal,,,,,,Keep: responds in stool
+CLDN1,Cldn1,True,False,2,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+CYP27A1,Cyp27a1,True,False,2,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+DPYD,Dpyd,True,False,2,antiP19_treatment_response,,,,,,Keep: responds in stool
+EREG,Ereg,True,False,2,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+FCER1G,Fcer1g,True,False,2,DSS_temporal;antiP19_treatment_response;shared_3_models,Ly6-high mono; Ly6-low mono; MZ/Marco-high macrophages; NK; Neutrophils; Red-pulp macrophages; cDC2s,,mPS3: cDC2s,"mPS3: TYROBP (0.86, HS_PBMC); mPS3: LYZ (0.83, HS_PBMC)",,Keep: responds in stool
+FCGBP,Fcgbp,True,True,2,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,goblet cells (Busslinger); paneth cells (Busslinger),,,,Keep: responds in stool
+GBP5,Gbp5,True,False,2,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+GNA12,Gna12,True,False,2,antiP19_treatment_response,,olfm4high stem cell (Gao),,,,Keep: responds in stool
+HMGB2,Hmgb2,True,False,2,unique_Anti_CD40,Cycling B/T cells,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: Cycling B/T cells,Keep: responds in stool
+IGKC,Igkc,True,False,2,DSS_temporal;unique_1_DSS,Ifit3-high B; Mature B; Transitional B,,mPS3: Mature B,"mPS3: CD79A (0.86, MM_SLN)",hPS2: Ifit3-high B; hPS2: Mature B; hPS2: Transitional B,Keep: responds in stool
+IKZF2,Ikzf2,True,False,2,unique_Anti_CD40,GD T; ICOS-high Tregs; NKT; Tregs,,,,hPS2: ICOS-high Tregs; hPS2: NKT; hPS2: Tregs,Keep: responds in stool
+IL18BP,Il18bp,True,False,2,DSS_temporal;antiP19_treatment_response,,,,,,Keep: responds in stool
+ITLN1,Itln1,True,True,2,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,goblet cells (Busslinger); paneth cells (Busslinger),,,,Keep: responds in stool
+KRT19,Krt19,True,False,2,unique_C_rodentium,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Keep: responds in stool
+LCN2,Lcn2,True,True,2,DSS_temporal;antiP19_treatment_response;shared_3_models,,paneth cells (Busslinger),,,,Keep: responds in stool
+LY6H,Ly6a,True,False,2,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,B1 B; CD122+ CD8 T; Ifit3-high B; MZ B; NKT,,mPS3: B1 B,,hPS2: B1 B; hPS2: CD122+ CD8 T; hPS2: Ifit3-high B; hPS2: MZ B; hPS2: NKT,Keep: responds in stool
+LYZ,9530003J23Rik,True,False,2,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,Ly6-high mono; Ly6-low mono; MZ/Marco-high macrophages,bche cells (Busslinger); goblet cells (Busslinger); paneth cells (Busslinger); stem cells (Busslinger),,"mPS3: S100A9 (0.95, HS_PBMC); mPS3: S100A8 (0.94, HS_PBMC); mPS3: MS4A6A (0.87, HS_PBMC); mPS3: CSF3R (0.83, HS_PBMC)",,Keep: responds in stool
+MT1A,Mt1,True,False,2,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+MUC2,Muc2,True,True,2,antiP19_treatment_response;unique_Anti_CD40,,goblet cells (Busslinger); paneth cells (Busslinger),,,,Keep: responds in stool
+NHERF1,Slc9a3r1,True,False,2,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+NPC1L1,Npc1l1,True,False,2,antiP19_treatment_response;unique_Anti_CD40,,mature enterocytes (Busslinger),,,,Keep: responds in stool
+NTS,Nts,True,True,2,DSS_temporal;antiP19_treatment_response,,,,,,Keep: responds in stool
+OAT,Oat,True,False,2,antiP19_treatment_response,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Keep: responds in stool
+OLFM4,Olfm4,True,True,2,DSS_temporal;antiP19_treatment_response,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Keep: responds in stool
+PIP,Sval1,True,False,2,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+S100A8,S100a8,True,False,2,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,Neutrophils,,,"mPS3: S100A9 (0.98, HS_PBMC); mPS3: LYZ (0.94, HS_PBMC); mPS3: CSF3R (0.84, HS_PBMC); mPS3: MS4A6A (0.84, HS_PBMC)",,Keep: responds in stool
+S100A9,Gm5849,True,True,2,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,Neutrophils,,,"mPS3: S100A8 (0.98, HS_PBMC); mPS3: LYZ (0.95, HS_PBMC); mPS3: MS4A6A (0.85, HS_PBMC); mPS3: CSF3R (0.84, HS_PBMC); hPS2: CD14 (0.93, HS_PBMC); hPS2: CSF3R (0.84, HS_PBMC); hPS2: CLEC7A (0.82, HS_PBMC); hPS2: CD68 (0.80, HS_PBMC)",,Keep: responds in stool
+SCT,Sct,True,False,2,antiP19_treatment_response,,ec cells (Busslinger); enteroendocrine cells (Gao),,,,Keep: responds in stool
+SLC26A2,Slc26a2,True,True,2,antiP19_treatment_response,,,,,,Keep: responds in stool
+SLC5A1,Slc5a1,True,False,2,antiP19_treatment_response,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: responds in stool
+TJP1,Tjp1,True,False,2,antiP19_treatment_response,,,,,,Keep: responds in stool
+ZBP1,Zbp1,True,False,2,unique_C_rodentium,,,,,,Keep: responds in stool
+ACOD1,Acod1,True,False,1,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+ADAMTS4,Adamts4,True,False,1,unique_C_rodentium,,goblet cell subtype 2 (Gao),,,,Keep: responds in stool
+AQP8,Aqp8,True,True,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,,enterocyte (Gao),,,,Keep: responds in stool
+BDKRB1,Bdkrb1,True,False,1,antiP19_treatment_response,,,,,,Keep: responds in stool
+CA4,Car4,True,False,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+CALHM6,Calhm6,True,False,1,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CD52,Cd52,True,False,1,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CHIA,Chil3,True,False,1,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CLCA3P,Clca3b,True,False,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+CORO1A,Coro1a,True,False,1,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+CPS1,Cps1,True,False,1,unique_Anti_CD40,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: responds in stool
+CYP2C18,Cyp2c55,True,False,1,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: responds in stool
+CYP2D6,Cyp2d9,True,False,1,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+DAZAP2,Dazap2,True,False,1,antiP19_treatment_response,,,,,,Keep: responds in stool
+DEFA1,Defa21,True,False,1,DSS_temporal;antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+DLAT,Dlat,True,False,1,antiP19_treatment_response,,,,,,Keep: responds in stool
+EGR3,Egr3,True,False,1,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+ENPP3,Enpp3,True,False,1,antiP19_treatment_response;unique_C_rodentium,,mature enterocytes (Busslinger),,,,Keep: responds in stool
+F10,F10,True,False,1,unique_Anti_CD40,,,,,,Keep: responds in stool
+FABP1,Fabp1,True,True,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Keep: responds in stool
+FABP2,Fabp2,True,True,1,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: responds in stool
+FUT2,Fut2,True,True,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+GSTA1,Gsta1,True,False,1,DSS_temporal,,early immature enterocytes (Busslinger); enterocyte (Gao),,,,Keep: responds in stool
+HKDC1,Hkdc1,True,False,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_C_rodentium,,mature enterocytes (Busslinger),,,,Keep: responds in stool
+HP,Hp,True,False,1,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+IFNLR1,Ifnlr1,True,True,1,antiP19_treatment_response,,,,,,Keep: responds in stool
+IL17C,Il17c,True,True,1,antiP19_treatment_response,,,,,,Keep: responds in stool
+LRG1,Lrg1,True,False,1,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+LY6D,Ly6d,True,False,1,DSS_temporal;antiP19_treatment_response;shared_3_models,B1 B; Ifit3-high B; MZ B; Transitional B,,mPS3: B1 B,"mPS3: CD79A (0.82, MM_SLN)",hPS2: B1 B; hPS2: Ifit3-high B; hPS2: MZ B; hPS2: Transitional B,Keep: responds in stool
+MMP13,Mmp13,True,False,1,DSS_temporal;unique_1_DSS,,,,,,Keep: responds in stool
+MYDGF,Mydgf,True,False,1,unique_C_rodentium,,,,,,Keep: responds in stool
+NR1D1,Nr1d1,True,False,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+OCLN,Ocln,True,False,1,antiP19_treatment_response,,,,,,Keep: responds in stool
+PALM2AKAP2,Pakap,True,False,1,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+PLEKHO2,Plekho2,True,True,1,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+PRPSAP1,Prpsap1,True,False,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+PSAP,Psap,True,False,1,DSS_temporal;unique_1_DSS,Ly6-high mono; Ly6-low mono; MZ/Marco-high macrophages; Red-pulp macrophages; cDC1s; pDCs,,mPS3: cDC1s,,hPS2: cDC1s,Keep: responds in stool
+PTPN22,Ptpn22,True,True,1,unique_Anti_CD40,,,,,,Keep: responds in stool
+REG1A,Reg1,True,True,1,DSS_temporal;antiP19_treatment_response;unique_Anti_CD40,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: responds in stool
+SAA3P,Saa3,True,False,1,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+SDHD,Sdhd,True,False,1,antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+SIRPB1,Sirpb1a,True,False,1,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+SLC26A3,Slc26a3,True,False,1,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: responds in stool
+SLC6A14,Slc6a14,True,False,1,antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+TBRG4,Tbrg4,True,False,1,antiP19_treatment_response,,,,,,Keep: responds in stool
+TFF1,Tff1,True,False,1,unique_C_rodentium,,,,,,Keep: responds in stool
+TFF3,Tff3,True,True,1,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,ec cells (Busslinger); goblet cells (Busslinger); paneth cells (Busslinger),,,,Keep: responds in stool
+TM4SF5,Tm4sf5,True,False,1,unique_C_rodentium,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: responds in stool
+TMIGD1,Tmigd1,True,False,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+TRAF4,Traf4,True,False,1,antiP19_treatment_response,,,,,,Keep: responds in stool
+TRAPPC10,Trappc10,True,False,1,antiP19_treatment_response,,,,,,Keep: responds in stool
+TSPAN1,Tspan1,True,False,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+TYROBP,Tyrobp,True,False,1,DSS_temporal;antiP19_treatment_response;shared_3_models,Ly6-high mono; Ly6-low mono; MZ/Marco-high macrophages; NK; Neutrophils; Red-pulp macrophages; cDC1s; cDC2s; pDCs,,mPS3: cDC1s; mPS3: cDC2s,"mPS3: FCER1G (0.86, HS_PBMC)",hPS2: cDC1s,Keep: responds in stool
+UBD,Ubd,True,False,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+UPP1,Upp1,True,False,1,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+VIM,Vim,True,True,1,DSS_temporal;unique_1_DSS,MZ/Marco-high macrophages,,hPS2: MZ/Marco-high macrophages,,,Keep: responds in stool
+XPO6,Xpo6,True,False,1,DSS_temporal;shared_3_models,,,,,,Keep: responds in stool
+CA1,Car1,True,False,0,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+CELA1,Cela1,True,False,0,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+CLCA1,Clca1,True,True,0,antiP19_treatment_response,,goblet cells (Busslinger); paneth cells (Busslinger),,,,Keep: responds in stool
+CLCA4,Clca4a,True,False,0,DSS_temporal;antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+CLDN15,Cldn15,True,False,0,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_C_rodentium,,late immature enterocytes (Busslinger),,,,Keep: responds in stool
+DBT,Dbt,True,False,0,unique_Anti_CD40,,,,,,Keep: responds in stool
+ECH1,Ech1,True,False,0,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: responds in stool
+FAM151A,Fam151a,True,False,0,unique_Anti_CD40,,,,,,Keep: responds in stool
+GAPDH,Gapdh,True,True,0,antiP19_treatment_response,Cycling B/T cells,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: responds in stool
+GBP6,Gbp6,True,False,0,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_C_rodentium,,,,,,Keep: responds in stool
+HNF4G,Hnf4g,True,False,0,antiP19_treatment_response;unique_C_rodentium,,late immature enterocytes (Busslinger),,,,Keep: responds in stool
+IFNK,Ifnk,True,True,0,antiP19_treatment_response,,,,,,Keep: responds in stool
+LYPD8,Lypd8,True,False,0,DSS_temporal;antiP19_treatment_response;unique_Anti_CD40,,enterocyte (Gao),,,,Keep: responds in stool
+MPTX1,Mptx1,True,False,0,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+NARF,Narf,True,False,0,unique_Anti_CD40,,,,,,Keep: responds in stool
+PPY,Ppy,True,False,0,antiP19_treatment_response,,,,,,Keep: responds in stool
+PTMA,Ptma,True,False,0,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response;unique_Anti_CD40,Activated CD4 T; Cycling B/T cells,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),mPS3: Activated CD4 T,,hPS2: Activated CD4 T; hPS2: Cycling B/T cells,Keep: responds in stool
+REG3A,Reg3b,True,True,0,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,paneth cells (Busslinger); stem cells (Busslinger),,,,Keep: responds in stool
+REG4,Reg4,True,False,0,antiP19_treatment_response;unique_Anti_CD40,,ec cells (Busslinger); enteroendocrine cells (Gao); goblet cells (Busslinger),,,,Keep: responds in stool
+RETNLB,Retnlb,True,False,0,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+SIRPD,Gm9733,True,False,0,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+SLC15A3,Slc15a3,True,False,0,DSS_temporal;antiP19_treatment_response;shared_3_models,,,,,,Keep: responds in stool
+SLFN12,Slfn4,True,False,0,DSS_temporal;S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,Ifit3-high CD4 T; Ifit3-high CD8 T,,,,hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T,Keep: responds in stool
+ST6GALNAC6,St6galnac6,True,False,0,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+ST8SIA5,St8sia5,True,False,0,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+TRB,Trbc2,True,False,0,unique_C_rodentium,CD122+ CD8 T; CD4 T; CD8 T; GD T; ICOS-high Tregs; Ifit3-high CD4 T; Ifit3-high CD8 T; Tregs,,,,hPS2: CD122+ CD8 T; hPS2: CD4 T; hPS2: CD8 T; hPS2: ICOS-high Tregs; hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T; hPS2: Tregs,Keep: responds in stool
+UGT1A10,Ugt1a8,True,False,0,S7_DEGs_shared_by_Foli_seq_and_proximal_col;antiP19_treatment_response,,,,,,Keep: responds in stool
+WFDC12,Wfdc12,True,False,0,unique_C_rodentium,,,,,,Keep: responds in stool
+ZG16,Zg16,True,True,0,DSS_temporal;antiP19_treatment_response,,,,,,Keep: responds in stool
+ZNF788P,Gm14288,True,False,0,antiP19_treatment_response;unique_Anti_CD40,,,,,,Keep: responds in stool
+CD19,Cd19,False,True,4,,MZ B,,hPS2: MZ B,,mPS3: MZ B,Keep: sole marker of a cell type
+CD28,Cd28,False,True,4,,Activated CD4 T; ICOS-high Tregs,olfm4high stem cell (Gao),hPS2: Activated CD4 T,,mPS3: Activated CD4 T; mPS3: ICOS-high Tregs,Keep: sole marker of a cell type
+ITGAL,Itgal,False,True,4,,GD T; Ly6-low mono,,hPS2: Ly6-low mono,,,Keep: sole marker of a cell type
+ITGAX,Itgax,False,True,4,,cDC2s,,hPS2: cDC2s,,,Keep: sole marker of a cell type
+LCK,Lck,False,True,4,,Activated CD4 T; CD122+ CD8 T; CD4 T; CD8 T; ICOS-high Tregs; Ifit3-high CD4 T; NKT,,hPS2: Activated CD4 T; hPS2: CD4 T; hPS2: Ifit3-high CD4 T,,mPS3: Activated CD4 T; mPS3: CD122+ CD8 T; mPS3: CD4 T; mPS3: CD8 T; mPS3: ICOS-high Tregs; mPS3: Ifit3-high CD4 T; mPS3: NKT,Keep: sole marker of a cell type
+CD79A,Cd79a,True,False,3,,Ifit3-high B; Mature B; Transitional B,,mPS3: Mature B,"mPS3: IGKC (0.86, MM_SLN); mPS3: LY6D (0.82, MM_SLN)",hPS2: Ifit3-high B; hPS2: Mature B; hPS2: Transitional B,Keep: sole marker of a cell type
+IRF8,Irf8,False,True,3,,pDCs,,hPS2: pDCs,,,Keep: sole marker of a cell type
+ITGB1,Itgb1,False,True,3,,ICOS-high Tregs; NK,,hPS2: NK,,mPS3: ICOS-high Tregs,Keep: sole marker of a cell type
+SPIB,Spib,False,True,3,,Transitional B,bche cells (Busslinger); enterocyte (Gao); tuft cells (Busslinger),hPS2: Transitional B,,mPS3: Transitional B,Keep: sole marker of a cell type
+ACTB,Actb,False,True,1,,MZ/Marco-high macrophages; Red-pulp macrophages; cDC1s,,hPS2: MZ/Marco-high macrophages; hPS2: cDC1s,,mPS3: cDC1s,Keep: sole marker of a cell type
+APC,Apc,False,True,4,,,,,,,Keep: default
+BAX,Bax,False,True,4,,,,,,,Keep: default
+BCL2,Bcl2,False,True,4,,,,,,,Keep: default
+BIRC3,Birc3,False,True,4,,,,,,,Keep: default
+C5,Hc,True,False,4,,,,,,,Keep: default
+CCL11,Ccl11,True,True,4,,,,,,,Keep: default
+CCL15,Ccl6,False,True,4,,Ly6-high mono; Neutrophils,,,,,Keep: default
+CCL19,Ccl19,True,True,4,,,,,,,Keep: default
+CCL22,Ccl22,True,True,4,,,,,,,Keep: default
+CCR7,Ccr7,True,True,4,,,,,,,Keep: default
+CD27,Cd27,True,True,4,,,,,,,Keep: default
+CD33,Siglech,True,False,4,,pDCs,,,,,Keep: default
+CD40,Cd40,True,True,4,,,,,,,Keep: default
+CD44,Cd44,True,True,4,,,stem cells (Busslinger),,,,Keep: default
+CDKN1A,Cdkn1a,False,True,4,,,mature enterocytes (Busslinger),,,,Keep: default
+COL6A3,Col6a3,True,False,4,,,,,,,Keep: default
+CX3CR1,Cx3cr1,True,True,4,,Ly6-high mono,,,,,Keep: default
+CXCL12,Cxcl12,True,True,4,,,,,,,Keep: default
+CXCL14,Cxcl14,True,True,4,,,,,,,Keep: default
+EGFR,Egfr,True,True,4,,,,,,,Keep: default
+EPOR,Epor,True,True,4,,,,,,,Keep: default
+FLT1,Flt1,True,True,4,,,,,,,Keep: default
+FLT3LG,Flt3l,False,True,4,,,,,,,Keep: default
+GATA3,Gata3,True,False,4,,,,,,,Keep: default
+ICOSLG,Icosl,False,True,4,,,,,,,Keep: default
+IFNAR2,Ifnar2,True,True,4,,,,,,,Keep: default
+IFNGR1,Ifngr1,True,True,4,,,,,,,Keep: default
+IFNGR2,Ifngr2,True,True,4,,,,,,,Keep: default
+IGF1,Igf1,False,True,4,,,,,,,Keep: default
+IL15,Il15,True,True,4,,,,,,,Keep: default
+IL17RA,Il17ra,True,True,4,,,,,,,Keep: default
+IL1R1,Il1r1,True,True,4,,,,,,,Keep: default
+IL2,Il2,True,True,4,,,,,,,Keep: default
+IL2RB,Il2rb,True,True,4,,NKT,,,,,Keep: default
+IL4R,Il4ra,False,True,4,,,,,,,Keep: default
+IL6R,Il6ra,False,True,4,,,mature enterocytes (Busslinger),,,,Keep: default
+IL7R,Il7r,True,True,4,,CD122+ CD8 T; GD T,,,,,Keep: default
+ITGAM,Itgam,False,True,4,,,,,,,Keep: default
+JAK2,Jak2,True,True,4,,,,,,,Keep: default
+KDR,Kdr,True,True,4,,,goblet cell subtype 2 (Gao),,,,Keep: default
+KITLG,Kitl,False,True,4,,,,,,,Keep: default
+LIF,Lif,True,True,4,,,,,,,Keep: default
+MARCO,Marco,True,False,4,,,,,,,Keep: default
+MKI67,Mki67,False,True,4,,Cycling B/T cells,differentiating stem cells (Busslinger); mki67high cells (Gao); transit amplifying cells (Busslinger),,,,Keep: default
+MPO,Mpo,True,True,4,,,,,,,Keep: default
+MYC,Bmyc,False,True,4,,,,,,,Keep: default
+NCF4,Ncf4,False,True,4,,,,,,,Keep: default
+NFKB1,Nfkb1,True,True,4,,,,,,,Keep: default
+NGFR,Ngfr,True,True,4,,,,,,,Keep: default
+PCK1,Pck1,False,True,4,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: default
+PCNA,Pcna,False,True,4,,,differentiating stem cells (Busslinger),,,,Keep: default
+PDGFB,Pdgfb,True,True,4,,,,,,,Keep: default
+PDGFRA,Pdgfra,True,True,4,,,,,,,Keep: default
+RORA,Rora,False,True,4,,GD T,,,,,Keep: default
+RUNX3,Runx3,False,True,4,,,,,,,Keep: default
+SOD2,Sod2,True,False,4,,,,,,,Keep: default
+STAT4,Stat4,True,False,4,,,,,,,Keep: default
+TGFB2,Tgfb2,True,True,4,,,,,,,Keep: default
+TGFB3,Tgfb3,True,True,4,,,,,,,Keep: default
+TGFBR2,Tgfbr2,True,True,4,,,,,,,Keep: default
+TLR7,Tlr7,False,True,4,,,,,,,Keep: default
+TNFRSF11A,Tnfrsf11a,True,True,4,,,,,,,Keep: default
+TNFRSF13B,Tnfrsf13b,True,True,4,,,,,,,Keep: default
+TNFRSF13C,Tnfrsf13c,True,True,4,,,,,,,Keep: default
+TNFSF9,Tnfsf9,True,True,4,,,,,,,Keep: default
+TOP2A,Top2a,False,True,4,,Cycling B/T cells,differentiating stem cells (Busslinger); mki67high cells (Gao); transit amplifying cells (Busslinger),,,,Keep: default
+VEGFC,Vegfc,True,True,4,,,,,,,Keep: default
+VEGFD,Vegfd,True,True,4,,,,,,,Keep: default
+ACKR3,Ackr3,False,True,3,,,,,,,Keep: default
+ACVRL1,Acvrl1,True,False,3,,,,,,,Keep: default
+ADIPOQ,Adipoq,False,True,3,,,,,,,Keep: default
+AHR,Ahr,False,True,3,,,,,,,Keep: default
+AKT1,Akt1,False,True,3,,,,,,,Keep: default
+AMH,Amh,True,True,3,,,,,,,Keep: default
+ATG5,Atg5,False,True,3,,,,,,,Keep: default
+ATG7,Atg7,False,True,3,,,,,,,Keep: default
+BATF,Batf,False,True,3,,,,,,,Keep: default
+BMP7,Bmp7,True,True,3,,,,,,,Keep: default
+BMPR1A,Bmpr1a,True,True,3,,,,,,,Keep: default
+BMPR1B,Bmpr1b,True,True,3,,,enteroendocrine cells (Gao),,,,Keep: default
+CARD9,Card9,False,True,3,,,,,,,Keep: default
+CASP1,Casp1,True,False,3,,,,,,,Keep: default
+CASP3,Casp3,False,True,3,,,,,,,Keep: default
+CCL1,Ccl1,True,True,3,,,,,,,Keep: default
+CCL14,,False,True,3,,,,,,,Keep: default
+CCL16,,False,True,3,,,,,,,Keep: default
+CCL21,Gm13304,True,True,3,,,,,,,Keep: default
+CCL23,,False,True,3,,,,,,,Keep: default
+CCL26,Ccl26,False,True,3,,,,,,,Keep: default
+CCL27,Ccl27a,False,True,3,,,,,,,Keep: default
+CCL28,Ccl28,True,True,3,,,,,,,Keep: default
+CCR4,Ccr4,True,True,3,,,,,,,Keep: default
+CCR5,Ccr5,True,True,3,,,,,,,Keep: default
+CCR6,Ccr6,True,True,3,,,,,,,Keep: default
+CD160,Cd160,True,False,3,,NKT,,,,hPS2: NKT,Keep: default
+CD2,Cd2,False,True,3,,Tregs,,,,mPS3: Tregs,Keep: default
+CD7,Cd7,True,False,3,,NKT,,,,hPS2: NKT,Keep: default
+CD70,Cd70,True,True,3,,,,,,,Keep: default
+CDKN2A,Cdkn2a,False,True,3,,,enteroendocrine cells (Gao),,,,Keep: default
+CFLAR,Cflar,False,True,3,,,,,,,Keep: default
+CIITA,Ciita,False,True,3,,,,,,,Keep: default
+CLEC10A,Clec10a,True,False,3,,,,,,,Keep: default
+CNTFR,Cntfr,True,True,3,,,,,,,Keep: default
+COL1A2,Col1a2,True,False,3,,,,,,,Keep: default
+CR2,Cr2,True,False,3,,MZ B,,,,hPS2: MZ B,Keep: default
+CRLF2,Crlf2,True,True,3,,,,,,,Keep: default
+CSF2,Csf2,True,True,3,,,,,,,Keep: default
+CTLA4,Ctla4,True,True,3,,ICOS-high Tregs,,,,,Keep: default
+CXCL11,Cxcl11,True,True,3,,,,,,,Keep: default
+CXCL2,,False,True,3,,,,,,,Keep: default
+CXCL6,,False,True,3,,,enteroendocrine cells (Gao),,,,Keep: default
+CXCR1,Cxcr1,True,True,3,,,,,,,Keep: default
+CYLD,Cyld,False,True,3,,,,,,,Keep: default
+EGF,Egf,True,True,3,,,,,,,Keep: default
+EPCAM,Epcam,False,True,3,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: default
+EPO,Epo,True,True,3,,,,,,,Keep: default
+FASLG,Fasl,False,True,3,,,,,,,Keep: default
+FASN,Fasn,False,True,3,,,,,,,Keep: default
+FFAR2,Ffar2,False,True,3,,,enteroendocrine cells (Gao); olfm4high stem cell (Gao),,,,Keep: default
+FLT3,Flt3,True,True,3,,,,,,,Keep: default
+FOXP3,Foxp3,False,True,3,,Tregs,,,,mPS3: Tregs,Keep: default
+GCG,Gcg,False,True,3,,,,,,,Keep: default
+GLI1,Gli1,False,True,3,,,,,,,Keep: default
+GUSB,Gusb,False,True,3,,,,,,,Keep: default
+HDAC6,Hdac6,False,True,3,,,,,,,Keep: default
+ICAM3,,False,True,3,,,,,,,Keep: default
+IFNA1,Ifna1,True,True,3,,,,,,,Keep: default
+IFNB1,Ifnb1,True,True,3,,,,,,,Keep: default
+IHH,Ihh,False,True,3,,,,,,,Keep: default
+IKBKG,Ikbkg,False,True,3,,,,,,,Keep: default
+IL10,Il10,True,True,3,,,goblet cell subtype 2 (Gao),,,,Keep: default
+IL10RB,Il10rb,True,True,3,,,,,,,Keep: default
+IL11,Il11,True,True,3,,,,,,,Keep: default
+IL11RA,Gm13305,False,True,3,,,,,,,Keep: default
+IL12B,Il12b,True,True,3,,,,,,,Keep: default
+IL12RB1,Il12rb1,True,True,3,,,,,,,Keep: default
+IL12RB2,Il12rb2,True,True,3,,,,,,,Keep: default
+IL13,Il13,True,True,3,,,,,,,Keep: default
+IL13RA2,Il13ra2,False,True,3,,,,,,,Keep: default
+IL17B,Il17b,True,True,3,,,,,,,Keep: default
+IL17D,Il17d,True,True,3,,,,,,,Keep: default
+IL17F,Il17f,True,True,3,,,,,,,Keep: default
+IL17RB,Il17rb,True,True,3,,,tuft cells (Busslinger),,,,Keep: default
+IL19,Il19,True,True,3,,,,,,,Keep: default
+IL1RL1,Il1rl1,True,True,3,,,,,,,Keep: default
+IL21,Il21,True,True,3,,,,,,,Keep: default
+IL21R,Il21r,True,True,3,,,,,,,Keep: default
+IL22RA2,Il22ra2,True,True,3,,,,,,,Keep: default
+IL23R,Il23r,True,True,3,,,,,,,Keep: default
+IL24,Il24,True,True,3,,,,,,,Keep: default
+IL25,Il25,True,True,3,,,,,,,Keep: default
+IL26,,False,True,3,,,,,,,Keep: default
+IL27,Il27,True,True,3,,,,,,,Keep: default
+IL3,Il3,True,True,3,,,,,,,Keep: default
+IL3RA,Il3ra,True,True,3,,,,,,,Keep: default
+IL5,Il5,True,True,3,,,,,,,Keep: default
+IL5RA,Il5ra,True,True,3,,,,,,,Keep: default
+IL7,Il7,True,True,3,,,,,,,Keep: default
+IL9,Il9,True,True,3,,,,,,,Keep: default
+INHBA,Inhba,True,True,3,,,,,,,Keep: default
+INHBB,Inhbb,True,True,3,,,,,,,Keep: default
+INS,Ins1,False,True,3,,,,,,,Keep: default
+IRAK3,Irak3,False,True,3,,,,,,,Keep: default
+IRF1,Irf1,False,True,3,,,,,,,Keep: default
+IRF5,Irf5,False,True,3,,,,,,,Keep: default
+IRGM,Igtp,False,True,3,,,,,,,Keep: default
+ITGB2,Itgb2,False,True,3,,,,,,,Keep: default
+JUN,Jun,False,True,3,,,stem cells (Busslinger),,,,Keep: default
+LBP,Lbp,True,False,3,,,,,,,Keep: default
+LEP,Lep,True,True,3,,,,,,,Keep: default
+LEPR,Lepr,True,True,3,,,,,,,Keep: default
+LGR5,Lgr5,True,True,3,,,,,,,Keep: default
+LRP6,Lrp6,False,True,3,,,,,,,Keep: default
+LTA,Lta,True,True,3,,,,,,,Keep: default
+MAP3K8,Map3k8,False,True,3,,,,,,,Keep: default
+MAPK3,Mapk3,False,True,3,,,mature enterocytes (Busslinger),,,,Keep: default
+MME,Mme,False,True,3,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: default
+MMP3,Mmp3,True,False,3,,,,,,,Keep: default
+MPL,Mpl,True,True,3,,,olfm4high stem cell (Gao),,,,Keep: default
+MTOR,Mtor,False,True,3,,,,,,,Keep: default
+NEUROD1,Neurod1,False,True,3,,,ec cells (Busslinger); enteroendocrine cells (Gao),,,,Keep: default
+NFKB2,Nfkb2,True,False,3,,,,,,,Keep: default
+NLRP3,Nlrp3,False,True,3,,,,,,,Keep: default
+NOD1,Nod1,False,True,3,,,,,,,Keep: default
+NOD2,Nod2,True,True,3,,,,,,,Keep: default
+OSMR,Osmr,True,True,3,,,,,,,Keep: default
+PDCD1,Pdcd1,False,True,3,,,,,,,Keep: default
+PDGFC,Pdgfc,True,True,3,,,,,,,Keep: default
+PIK3CA,Pik3ca,False,True,3,,,,,,,Keep: default
+POU5F1,Pou5f1,False,True,3,,,,,,,Keep: default
+PRDM1,Prdm1,False,True,3,,,,,,,Keep: default
+PRKACB,Prkacb,False,True,3,,,,,,,Keep: default
+PRL,Prl,True,True,3,,,,,,,Keep: default
+PRLR,Prlr,True,True,3,,,,,,,Keep: default
+PTCH1,Ptch1,False,True,3,,,,,,,Keep: default
+PTEN,Pten,False,True,3,,,,,,,Keep: default
+PYCARD,Pycard,True,False,3,,,early immature enterocytes (Busslinger),,,,Keep: default
+RAC2,Rac2,False,True,3,,,,,,,Keep: default
+REL,Rel,False,True,3,,,,,,,Keep: default
+RGMB,Rgmb,False,True,3,,,stem cells (Busslinger),,,,Keep: default
+RIPK2,Ripk2,False,True,3,,,,,,,Keep: default
+RIPK3,Ripk3,False,True,3,,,,,,,Keep: default
+SAA1,Saa1,True,False,3,,,,,,,Keep: default
+SELE,Sele,True,False,3,,,,,,,Keep: default
+SGK1,Sgk1,True,False,3,,,mature enterocytes (Busslinger),,,,Keep: default
+SIGIRR,Sigirr,False,True,3,,,tuft cells (Busslinger),,,,Keep: default
+SLC16A1,Slc16a1,False,True,3,,,,,,,Keep: default
+SRC,Src,False,True,3,,,,,,,Keep: default
+SST,Sst,False,True,3,,,,,,,Keep: default
+STAT5A,Stat5a,True,False,3,,,,,,,Keep: default
+STMN1,Stmn1,True,False,3,,Cycling B/T cells,differentiating stem cells (Busslinger),,,hPS2: Cycling B/T cells,Keep: default
+TBK1,Tbk1,True,False,3,,,,,,,Keep: default
+TBX21,Tbx21,True,False,3,,,,,,,Keep: default
+TFRC,Tfrc,False,True,3,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: default
+THY1,Thy1,False,True,3,,CD122+ CD8 T; CD8 T,,,,mPS3: CD122+ CD8 T; mPS3: CD8 T,Keep: default
+TIGIT,Tigit,False,True,3,,,,,,,Keep: default
+TLR1,Tlr1,False,True,3,,,olfm4high stem cell (Gao),,,,Keep: default
+TLR10,,False,True,3,,,,,,,Keep: default
+TLR3,Tlr3,False,True,3,,,,,,,Keep: default
+TLR5,Tlr5,False,True,3,,,,,,,Keep: default
+TLR6,Tlr6,False,True,3,,,,,,,Keep: default
+TLR8,Tlr8,False,True,3,,,,,,,Keep: default
+TLR9,Tlr9,True,True,3,,,,,,,Keep: default
+TNFAIP3,Tnfaip3,False,True,3,,,,,,,Keep: default
+TNFRSF10A,Tnfrsf10b,True,True,3,,,,,,,Keep: default
+TNFRSF10B,Tnfrsf22,False,True,3,,,,,,,Keep: default
+TNFRSF10C,,False,True,3,,,,,,,Keep: default
+TNFRSF10D,,False,True,3,,,,,,,Keep: default
+TNFRSF17,Tnfrsf17,True,True,3,,,,,,,Keep: default
+TNFRSF8,Tnfrsf8,True,True,3,,,,,,,Keep: default
+TNFSF11,Tnfsf11,True,True,3,,,,,,,Keep: default
+TNFSF12,Tnfsf12,True,True,3,,,,,,,Keep: default
+TNFSF13,Tnfsf13,True,True,3,,,,,,,Keep: default
+TNFSF13B,Tnfsf13b,True,True,3,,,,,,,Keep: default
+TNFSF14,Tnfsf14,True,True,3,,,,,,,Keep: default
+TNFSF15,Tnfsf15,True,True,3,,,olfm4high stem cell (Gao),,,,Keep: default
+TNFSF18,Tnfsf18,True,True,3,,,,,,,Keep: default
+TNFSF4,Tnfsf4,True,True,3,,,,,,,Keep: default
+TNFSF8,Tnfsf8,True,True,3,,,,,,,Keep: default
+TOLLIP,Tollip,False,True,3,,,,,,,Keep: default
+TP53,Trp53,False,True,3,,,,,,,Keep: default
+TRAF2,Traf2,True,False,3,,,,,,,Keep: default
+TRAF6,Traf6,True,False,3,,,,,,,Keep: default
+TREM1,Trem1,False,True,3,,,,,,,Keep: default
+TSLP,Tslp,True,True,3,,,,,,,Keep: default
+TYK2,Tyk2,True,True,3,,,,,,,Keep: default
+VWF,Vwf,True,True,3,,,goblet cell subtype 2 (Gao),,,,Keep: default
+XBP1,Xbp1,False,True,3,,,,,,,Keep: default
+XCR1,Xcr1,True,True,3,,,,,,,Keep: default
+ZAP70,Zap70,False,True,3,,,,,,,Keep: default
+ABCA1,Abca1,False,True,2,,,,,,,Keep: default
+ACSL1,Acsl1,True,False,2,,,mx cells (Busslinger); olfm4high stem cell (Gao),,,,Keep: default
+ACVR2B,Acvr2b,True,True,2,,,,,,,Keep: default
+ALOX12,Alox12,True,False,2,,,,,,,Keep: default
+AMHR2,Amhr2,True,True,2,,,,,,,Keep: default
+ANPEP,Anpep,False,True,2,,,early immature enterocytes (Busslinger); enterocyte (Gao); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: default
+APAF1,Apaf1,False,True,2,,,,,,,Keep: default
+APOD,Apod,True,False,2,,,enteroendocrine cells (Gao),,,,Keep: default
+B2M,B2m,False,True,2,,GD T,,,,,Keep: default
+BCAR1,Bcar1,False,True,2,,,,,,,Keep: default
+BIRC2,Birc2,False,True,2,,,,,,,Keep: default
+C4A,C4b,True,False,2,,,,,,,Keep: default
+CCK,Cck,False,True,2,,,i cells (Busslinger),,,,Keep: default
+CCL2,,False,True,2,,,,,,,Keep: default
+CCL3,,False,True,2,,,,,,,Keep: default
+CCR10,Ccr10,True,True,2,,,,,,,Keep: default
+CDX2,Cdx2,True,False,2,,,,,,,Keep: default
+CEACAM6,,False,True,2,,,mature enterocytes (Busslinger),,,,Keep: default
+CRP,Crp,False,True,2,,,,,,,Keep: default
+CUL2,Cul2,False,True,2,,,,,,,Keep: default
+CXCL17,Cxcl17,True,False,2,,,,,,,Keep: default
+CXCL3,,False,True,2,,,,,,,Keep: default
+CXCL8,,False,True,2,,,,,,,Keep: default
+CYTOR,,False,True,2,,,,,,,Keep: default
+DEFB1,Defb1,True,True,2,,,,,,,Keep: default
+DMBT1,Dmbt1,False,True,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: default
+DNMT3B,Dnmt3b,False,True,2,,,,,,,Keep: default
+EDA,Eda,True,True,2,,,,,,,Keep: default
+ERBIN,Erbin,False,True,2,,,,,,,Keep: default
+FADS2,Fads2,False,True,2,,,,,,,Keep: default
+FFAR3,Ffar3,False,True,2,,,,,,,Keep: default
+FGFBP2,,False,True,2,,,,,,,Keep: default
+GABRA2,Gabra2,True,False,2,,,,,,,Keep: default
+GNAI3,Gnai3,True,False,2,,,,,,,Keep: default
+GPNMB,Gpnmb,True,False,2,,,,,,,Keep: default
+GREM1,Grem1,True,False,2,,,olfm4high stem cell (Gao),,,,Keep: default
+HADHA,Hadha,True,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Keep: default
+HLA-DRA,H2-Ea,False,True,2,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: default
+HMGB1,Hmgb1,False,True,2,,Cycling B/T cells,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: default
+HMGCS2,Hmgcs2,True,False,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); stem cells (Busslinger),,,,Keep: default
+HMOX1,Hmox1,False,True,2,,Red-pulp macrophages,,,,,Keep: default
+HPRT1,Hprt,False,True,2,,,,,,,Keep: default
+IFI44L,Ifi44l,False,True,2,,,,,,,Keep: default
+IFNW1,,False,True,2,,,,,,,Keep: default
+IGHA1,Igha,True,False,2,,,,,,,Keep: default
+IL20,Il20,True,True,2,,,,,,,Keep: default
+IL20RA,Il20ra,True,True,2,,,,,,,Keep: default
+IL20RB,Il20rb,True,True,2,,,,,,,Keep: default
+IL9R,Il9r,True,True,2,,,,,,,Keep: default
+JCHAIN,Jchain,True,False,2,,,,,,,Keep: default
+LAMB1,Lamb1,False,True,2,,,stem cells (Busslinger),,,,Keep: default
+LHX2,Lhx2,True,False,2,,,,,,,Keep: default
+LRRK2,Lrrk2,False,True,2,,,,,,,Keep: default
+MADCAM1,Madcam1,True,False,2,,,,,,,Keep: default
+MEFV,Mefv,False,True,2,,,,,,,Keep: default
+MIF,Mif,False,True,2,,,,,,,Keep: default
+MMP1,Mmp1a,True,False,2,,,,,,,Keep: default
+MMP12,Mmp12,False,True,2,,,,,,,Keep: default
+NCAN,Ncan,True,False,2,,,,,,,Keep: default
+NCF2,Ncf2,False,True,2,,,,,,,Keep: default
+NLRP1,Nlrp1a,False,True,2,,,,,,,Keep: default
+NR1H2,Nr1h2,False,True,2,,,,,,,Keep: default
+PF4,Pf4,True,True,2,,,,,,,Keep: default
+PF4V1,,False,True,2,,,enteroendocrine cells (Gao),,,,Keep: default
+PGK1,Pgk1,False,True,2,,,,,,,Keep: default
+POU2F3,Pou2f3,False,True,2,,,tuft cells (Busslinger),,,,Keep: default
+PSMD4,Psmd4,False,True,2,,,,,,,Keep: default
+PTPN2,Ptpn2,False,True,2,,,,,,,Keep: default
+RNF31,Rnf31,False,True,2,,,,,,,Keep: default
+SEL1L,Sel1l,False,True,2,,,,,,,Keep: default
+SELENBP1,Selenbp1,False,True,2,,,,,,,Keep: default
+SERPINE1,Serpine1,True,True,2,,,,,,,Keep: default
+SGK2,Sgk2,True,False,2,,,,,,,Keep: default
+SLC25A20,Slc25a20,False,True,2,,,,,,,Keep: default
+SLC4A4,Slc4a4,False,True,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Keep: default
+SPDEF,Spdef,False,True,2,,,,,,,Keep: default
+SSTR3,Sstr3,True,False,2,,,,,,,Keep: default
+TAC1,Tac1,False,True,2,,,,,,,Keep: default
+TBP,Tbp,False,True,2,,,,,,,Keep: default
+TCF7L2,Tcf7l2,False,True,2,,,,,,,Keep: default
+TGFBR3,Tgfbr3,False,True,2,,,,,,,Keep: default
+TNFRSF19,Tnfrsf19,True,True,2,,,,,,,Keep: default
+TNFRSF25,Tnfrsf25,True,True,2,,,,,,,Keep: default
+TPO,Tpo,True,False,2,,,,,,,Keep: default
+TRAF5,Traf5,True,False,2,,,,,,,Keep: default
+ULK1,Ulk1,False,True,2,,,,,,,Keep: default
+XIAP,,False,True,2,,,,,,,Keep: default
+YWHAZ,Ywhaz,False,True,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Keep: default
+ABCA8,Abca8a,False,True,1,,,,,,,Keep: default
+ADAMDEC1,Adamdec1,False,True,1,,,,,,,Keep: default
+AGR2,Agr2,False,True,1,,,differentiating stem cells (Busslinger); goblet cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: default
+AIM2,Aim2,False,True,1,,,,,,,Keep: default
+ALPL,Alpl,True,False,1,,,,,,,Keep: default
+ASCL2,Ascl2,False,True,1,,,stem cells (Busslinger),,,,Keep: default
+ATG16L2,Atg16l2,False,True,1,,,,,,,Keep: default
+ATG4A,Atg4a,False,True,1,,,,,,,Keep: default
+ATG4D,Atg4d,False,True,1,,,,,,,Keep: default
+AVIL,Avil,False,True,1,,,tuft cells (Busslinger),,,,Keep: default
+BRAT1,Brat1,True,False,1,,,,,,,Keep: default
+BTNL2,Btnl2,False,True,1,,,,,,,Keep: default
+CA2,Car2,False,True,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Keep: default
+CA7,Car7,False,True,1,,,bche cells (Busslinger); enterocyte (Gao),,,,Keep: default
+CASQ2,Casq2,True,False,1,,,olfm4high stem cell (Gao),,,,Keep: default
+CCDC122,Ccdc122,False,True,1,,,,,,,Keep: default
+CCR8,Ccr8,True,True,1,,,,,,,Keep: default
+CD101,Cd101,False,True,1,,,,,,,Keep: default
+CDKAL1,Cdkal1,False,True,1,,,,,,,Keep: default
+CEMIP,Cemip,True,False,1,,,,,,,Keep: default
+CES1,Ces1d,True,False,1,,,ec cells (Busslinger); enteroendocrine cells (Gao); stem cells (Busslinger),,,,Keep: default
+CGA,Cga,True,False,1,,,,,,,Keep: default
+CHGA,Chga,False,True,1,,,ec cells (Busslinger); k cells (Busslinger),,,,Keep: default
+CHGB,Chgb,True,True,1,,,ec cells (Busslinger); enteroendocrine cells (Gao),,,,Keep: default
+CHRDL2,Chrdl2,True,False,1,,,,,,,Keep: default
+CLDN8,Cldn8,False,True,1,,,,,,,Keep: default
+CLEC2D,,False,True,1,,,,,,,Keep: default
+CNTF,Cntf,True,True,1,,,,,,,Keep: default
+CPN1,Cpn1,True,False,1,,,,,,,Keep: default
+CTF1,Ctf1,True,True,1,,,,,,,Keep: default
+CYP2C19,Cyp2c69,True,False,1,,,,,,,Keep: default
+CYP3A4,Cyp3a11,True,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: default
+DAP,Dap,False,True,1,,,,,,,Keep: default
+DEFA6,,False,True,1,,,paneth cells (Busslinger),,,,Keep: default
+DEFB4A,Defb4,True,True,1,,,,,,,Keep: default
+DIO2,Dio2,True,False,1,,,,,,,Keep: default
+DLG5,Dlg5,False,True,1,,,,,,,Keep: default
+DUOX2,Duox2,False,True,1,,,,,,,Keep: default
+EDAR,Edar,True,True,1,,,,,,,Keep: default
+F9,F9,False,True,1,,,,,,,Keep: default
+FABP4,Fabp4,True,False,1,,,,,,,Keep: default
+FABP5,Fabp5,False,True,1,,,,,,,Keep: default
+FLT4,Flt4,True,True,1,,,,,,,Keep: default
+FRZB,Frzb,False,True,1,,,,,,,Keep: default
+FUT3,,False,True,1,,,,,,,Keep: default
+FXYD4,Fxyd4,True,False,1,,,,,,,Keep: default
+GABRG1,Gabrg1,True,False,1,,,,,,,Keep: default
+GDF5,Gdf5,True,True,1,,,,,,,Keep: default
+GHRL,Ghrl,False,True,1,,,mx cells (Busslinger),,,,Keep: default
+GIP,Gip,True,True,1,,,k cells (Busslinger),,,,Keep: default
+GP2,Gp2,False,True,1,,,,,,,Keep: default
+GPR107,Gpr107,True,False,1,,,,,,,Keep: default
+GPR83,Gpr83,True,False,1,,,,,,,Keep: default
+GSDMB,,False,True,1,,,mature enterocytes (Busslinger),,,,Keep: default
+H2BC10,H2bc6,True,False,1,,,,,,,Keep: default
+HAPLN1,Hapln1,False,True,1,,,,,,,Keep: default
+HNRNPA1,Hnrnpa1,False,True,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: default
+HSD3B1,Hsd3b2,True,False,1,,,,,,,Keep: default
+IFI44,Ifi44,False,True,1,,,,,,,Keep: default
+IFNE,Ifne,True,True,1,,,,,,,Keep: default
+IL17RC,Il17rc,False,True,1,,,,,,,Keep: default
+IL17RE,Il17re,False,True,1,,,,,,,Keep: default
+IL31,Il31,True,False,1,,,,,,,Keep: default
+IL31RA,Il31ra,False,True,1,,,,,,,Keep: default
+IL36A,Il36a,False,True,1,,,,,,,Keep: default
+IL37,,False,True,1,,,,,,,Keep: default
+INHBC,Inhbc,True,True,1,,,,,,,Keep: default
+IRAG2,Irag2,False,True,1,,,tuft cells (Busslinger),,,,Keep: default
+KCNN4,Kcnn4,False,True,1,,,,,,,Keep: default
+KLK15,Klk15,False,True,1,,,goblet cell subtype 1 (Gao),,,,Keep: default
+KLK3,,False,True,1,,,,,,,Keep: default
+LACC1,Lacc1,False,True,1,,,,,,,Keep: default
+LGI2,Lgi2,True,False,1,,,,,,,Keep: default
+MST1,Mst1,False,True,1,,,,,,,Keep: default
+MUC19,Muc19,False,True,1,,,goblet cell subtype 2 (Gao),,,,Keep: default
+MUC5AC,Muc5ac,True,False,1,,,olfm4high stem cell (Gao),,,,Keep: default
+MUC5B,Muc5b,True,False,1,,,,,,,Keep: default
+NALCN,Nalcn,True,False,1,,,,,,,Keep: default
+NDUFA9,Ndufa9,True,False,1,,,,,,,Keep: default
+NELL1,Nell1,False,True,1,,,,,,,Keep: default
+NKX2-3,Nkx2-3,False,True,1,,,,,,,Keep: default
+NLRP12,Nlrp12,False,True,1,,,,,,,Keep: default
+NLRP6,Nlrp6,False,True,1,,,,,,,Keep: default
+NLRP7,,False,True,1,,,,,,,Keep: default
+ORMDL3,Ormdl3,False,True,1,,,,,,,Keep: default
+PAPPA2,Pappa2,True,False,1,,,enteroendocrine cells (Gao),,,,Keep: default
+PCP4,Pcp4,True,False,1,,,,,,,Keep: default
+PDE2A,Gm45837,True,False,1,,,enteroendocrine cells (Gao),,,,Keep: default
+PDZD4,Pdzd4,True,False,1,,,olfm4high stem cell (Gao),,,,Keep: default
+PGLYRP1,Pglyrp1,False,True,1,,,,,,,Keep: default
+PI3,,False,True,1,,,,,,,Keep: default
+PIGR,Pigr,False,True,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Keep: default
+PPIA,Ppia,False,True,1,,Cycling B/T cells,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: default
+PSTPIP1,Pstpip1,False,True,1,,,,,,,Keep: default
+PTX3,Ptx3,True,False,1,,,,,,,Keep: default
+PYY,Pyy,True,False,1,,,,,,,Keep: default
+RGS3,Rgs3,False,True,1,,,,,,,Keep: default
+S1PR5,S1pr5,False,True,1,,,,,,,Keep: default
+SATB2,Satb2,False,True,1,,,,,,,Keep: default
+SCNN1B,Scnn1b,True,False,1,,,,,,,Keep: default
+SEZ6,Sez6,True,False,1,,,enteroendocrine cells (Gao),,,,Keep: default
+SLC10A6,Slc10a6,True,False,1,,,,,,,Keep: default
+SLC15A1,Slc15a1,False,True,1,,,enterocyte (Gao); enteroendocrine cells (Gao); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Keep: default
+SLC15A4,Slc15a4,False,True,1,,,,,,,Keep: default
+SLC22A4,Slc22a4,False,True,1,,,,,,,Keep: default
+SLC22A5,Slc22a21,False,True,1,,,,,,,Keep: default
+SLC27A2,Slc27a2,True,False,1,,,,,,,Keep: default
+SLC2A14,Slc2a3,False,True,1,,,,,,,Keep: default
+SLC30A10,Slc30a10,True,False,1,,,,,,,Keep: default
+SLC9A3,Slc9a3,True,False,1,,,,,,,Keep: default
+SLPI,Slpi,True,False,1,,,,,,,Keep: default
+SMOC2,Smoc2,False,True,1,,,stem cells (Busslinger),,,,Keep: default
+ST8SIA1,St8sia1,False,True,1,,,goblet cell subtype 2 (Gao),,,,Keep: default
+SULT1A1,Sult1a1,True,False,1,,,late immature enterocytes (Busslinger),,,,Keep: default
+SYT6,Syt6,True,False,1,,,,,,,Keep: default
+THPO,Thpo,False,True,1,,,,,,,Keep: default
+TNFRSF6B,,False,True,1,,,,,,,Keep: default
+TPH1,Tph1,False,True,1,,,enteroendocrine cells (Gao),,,,Keep: default
+TRPM5,Trpm5,True,True,1,,,tuft cells (Busslinger),,,,Keep: default
+USP25,Usp25,True,False,1,,,,,,,Keep: default
+ANK3,Ank3,False,True,0,,,mature enterocytes (Busslinger),,,,Keep: default
+APOF,Apof,True,False,0,,,,,,,Keep: default
+BAHD1,Bahd1,False,True,0,,,,,,,Keep: default
+BEST2,Best2,False,True,0,,,,,,,Keep: default
+BEST4,,False,True,0,,,bche cells (Busslinger),,,,Keep: default
+BTBD17,Btbd17,True,False,0,,,,,,,Keep: default
+C1GALT1C1,C1galt1c1,False,True,0,,,,,,,Keep: default
+CBR3-AS1,,False,True,0,,,,,,,Keep: default
+CCDC150,Ccdc150,True,False,0,,,,,,,Keep: default
+CHN1,Chn1,False,True,0,,,,,,,Keep: default
+CPN2,Cpn2,True,False,0,,,,,,,Keep: default
+CPXM1,Cpxm1,True,False,0,,,,,,,Keep: default
+DEFA5,,False,True,0,,,paneth cells (Busslinger),,,,Keep: default
+DRAIC,,False,True,0,,,,,,,Keep: default
+ECM1,Ecm1,False,True,0,,,,,,,Keep: default
+EDA2R,Eda2r,True,True,0,,,,,,,Keep: default
+EDN2,Edn2,True,False,0,,,,,,,Keep: default
+EXOC3L4,Exoc3l4,True,False,0,,,,,,,Keep: default
+GUCA2A,Guca2a,False,True,0,,,bche cells (Busslinger); enterocyte (Gao); paneth cells (Busslinger),,,,Keep: default
+HAS1,Has1,True,False,0,,,,,,,Keep: default
+HORMAD2,Hormad2,False,True,0,,,,,,,Keep: default
+INHBE,Inhbe,True,True,0,,,,,,,Keep: default
+KLF6,Klf6,False,True,0,,,mature enterocytes (Busslinger),,,,Keep: default
+LEAP2,Leap2,True,False,0,,,,,,,Keep: default
+MLN,,False,True,0,,,i cells (Busslinger); mx cells (Busslinger),,,,Keep: default
+MMP10,Mmp10,True,False,0,,,,,,,Keep: default
+MOCOS,Mocos,False,True,0,,,,,,,Keep: default
+MYBL1,Mybl1,True,False,0,,,,,,,Keep: default
+NLRP10,Nlrp10,False,True,0,,,,,,,Keep: default
+NLRX1,Nlrx1,False,True,0,,,,,,,Keep: default
+NPW,Npw,False,True,0,,,,,,,Keep: default
+NR1D2,Nr1d2,False,True,0,,,,,,,Keep: default
+OTOP2,Otop2,False,True,0,,,,,,,Keep: default
+PEX11A,Pex11a,True,False,0,,,,,,,Keep: default
+PLB1,Plb1,True,False,0,,,,,,,Keep: default
+PUS10,Pus10,False,True,0,,,,,,,Keep: default
+RASL11A,Rasl11a,True,False,0,,,,,,,Keep: default
+RBP2,Rbp2,False,True,0,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Keep: default
+RGS20,Rgs20,True,False,0,,,,,,,Keep: default
+RNF186,Rnf186,False,True,0,,,late immature enterocytes (Busslinger),,,,Keep: default
+RPS18,Rps18,False,True,0,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Keep: default
+RTCA,Rtca,True,False,0,,,,,,,Keep: default
+SEMA6B,Sema6b,True,False,0,,,,,,,Keep: default
+SH2D6,Sh2d6,True,False,0,,,tuft cells (Busslinger),,,,Keep: default
+SLC5A4,Slc5a4a,True,False,0,,,,,,,Keep: default
+SLC7A15P,Slc7a15,True,False,0,,,,,,,Keep: default
+STYX,Gm14698,True,False,0,,,,,,,Keep: default
+TAGAP,Tagap,False,True,0,,,,,,,Keep: default
+TCAF2,Tcaf3,True,False,0,,,,,,,Keep: default
+TUBAL3,Tubal3,True,False,0,,,,,,,Keep: default
+WFDC2,Wfdc2,False,True,0,,,,,,,Keep: default
+WFDC3,Wfdc3,False,True,0,,,olfm4high stem cell (Gao),,,,Keep: default
+ZNF365,Zfp365,False,True,0,,,,,,,Keep: default
+CD14,Cd14,False,True,4,,,,,"hPS2: S100A9 (0.93, HS_PBMC); hPS2: CSF3R (0.81, HS_PBMC); hPS2: CLEC7A (0.80, HS_PBMC)",,Review: redundant (|r| >= 0.8 partner)
+CD68,Cd68,False,True,4,,,,,"hPS2: S100A9 (0.80, HS_PBMC)",,Review: redundant (|r| >= 0.8 partner)
+CLEC7A,Clec7a,False,True,4,,,,,"hPS2: S100A9 (0.82, HS_PBMC); hPS2: CD14 (0.80, HS_PBMC)",,Review: redundant (|r| >= 0.8 partner)
+BLK,Blk,False,False,4,,B1 B; MZ B,,,,hPS2: B1 B; hPS2: MZ B; mPS3: B1 B; mPS3: MZ B,Add: marker for a poorly identified cell type
+CD37,Cd37,False,False,4,,Transitional B,,,,hPS2: Transitional B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+CD38,Cd38,False,False,4,,MZ B,,,,hPS2: MZ B; mPS3: MZ B,Add: marker for a poorly identified cell type
+CD3D,Cd3d,False,False,4,,Activated CD4 T; CD122+ CD8 T; CD4 T; CD8 T; ICOS-high Tregs; Ifit3-high CD4 T; Ifit3-high CD8 T; NKT; Tregs,,,,hPS2: Activated CD4 T; hPS2: CD122+ CD8 T; hPS2: CD4 T; hPS2: CD8 T; hPS2: ICOS-high Tregs; hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T; hPS2: NKT; hPS2: Tregs; mPS3: Activated CD4 T; mPS3: CD122+ CD8 T; mPS3: CD4 T; mPS3: CD8 T; mPS3: ICOS-high Tregs; mPS3: Ifit3-high CD4 T; mPS3: Ifit3-high CD8 T; mPS3: NKT; mPS3: Tregs,Add: marker for a poorly identified cell type
+CD3E,Cd3e,False,False,4,,Activated CD4 T; CD4 T; CD8 T; ICOS-high Tregs; Ifit3-high CD8 T,,,,hPS2: Activated CD4 T; hPS2: CD4 T; hPS2: CD8 T; hPS2: ICOS-high Tregs; hPS2: Ifit3-high CD8 T; mPS3: Activated CD4 T; mPS3: CD4 T; mPS3: CD8 T; mPS3: ICOS-high Tregs; mPS3: Ifit3-high CD8 T,Add: marker for a poorly identified cell type
+CD3G,Cd3g,False,False,4,,Activated CD4 T; CD4 T; CD8 T; GD T; ICOS-high Tregs; Ifit3-high CD4 T; Ifit3-high CD8 T; NKT; Tregs,,,,hPS2: Activated CD4 T; hPS2: CD4 T; hPS2: CD8 T; hPS2: ICOS-high Tregs; hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T; hPS2: NKT; hPS2: Tregs; mPS3: Activated CD4 T; mPS3: CD4 T; mPS3: CD8 T; mPS3: ICOS-high Tregs; mPS3: Ifit3-high CD4 T; mPS3: Ifit3-high CD8 T; mPS3: NKT; mPS3: Tregs,Add: marker for a poorly identified cell type
+CD8A,Cd8a,False,False,4,,CD122+ CD8 T; CD8 T; Ifit3-high CD8 T,,,,hPS2: CD122+ CD8 T; hPS2: CD8 T; hPS2: Ifit3-high CD8 T; mPS3: CD122+ CD8 T; mPS3: CD8 T; mPS3: Ifit3-high CD8 T,Add: marker for a poorly identified cell type
+CD8B,Cd8b1,False,False,4,,CD122+ CD8 T; CD8 T; Ifit3-high CD8 T,,,,hPS2: CD122+ CD8 T; hPS2: CD8 T; hPS2: Ifit3-high CD8 T; mPS3: CD122+ CD8 T; mPS3: CD8 T; mPS3: Ifit3-high CD8 T,Add: marker for a poorly identified cell type
+CYBB,Cybb,False,False,4,,B1 B; Ly6-high mono; Ly6-low mono; MZ B,,,,hPS2: B1 B; hPS2: MZ B; mPS3: B1 B; mPS3: MZ B,Add: marker for a poorly identified cell type
+GIMAP4,Gimap4,False,False,4,,NKT,,,,hPS2: NKT; mPS3: NKT,Add: marker for a poorly identified cell type
+HLA-DMB,H2-DMb1,False,False,4,,Mature B,,,,hPS2: Mature B; mPS3: Mature B,Add: marker for a poorly identified cell type
+IFIT1,Ifit1,False,False,4,,Ifit3-high CD4 T; Ifit3-high CD8 T,,,,hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T; mPS3: Ifit3-high CD4 T; mPS3: Ifit3-high CD8 T,Add: marker for a poorly identified cell type
+MAF,Maf,False,False,4,,GD T; ICOS-high Tregs,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,hPS2: ICOS-high Tregs; mPS3: ICOS-high Tregs,Add: marker for a poorly identified cell type
+MS4A1,Ms4a1,False,False,4,,B1 B; MZ B; Mature B; Transitional B,,,,hPS2: B1 B; hPS2: MZ B; hPS2: Mature B; hPS2: Transitional B; mPS3: B1 B; mPS3: MZ B; mPS3: Mature B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+SELPLG,Selplg,False,False,4,,CD8 T; NK; NKT,,,,hPS2: CD8 T; hPS2: NKT; mPS3: CD8 T; mPS3: NKT,Add: marker for a poorly identified cell type
+TCF7,Tcf7,False,False,4,,CD4 T; Ifit3-high CD4 T,,,,hPS2: CD4 T; hPS2: Ifit3-high CD4 T; mPS3: CD4 T; mPS3: Ifit3-high CD4 T,Add: marker for a poorly identified cell type
+TXK,Txk,False,False,4,,NK; NKT,,,,hPS2: NKT; mPS3: NKT,Add: marker for a poorly identified cell type
+AIF1,Aif1,False,False,3,,MZ/Marco-high macrophages; cDC1s,,,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+BANK1,Bank1,False,False,3,,Ifit3-high B; MZ B; Mature B,,,,hPS2: Ifit3-high B; hPS2: MZ B; hPS2: Mature B; mPS3: Ifit3-high B; mPS3: MZ B; mPS3: Mature B,Add: marker for a poorly identified cell type
+BLNK,Blnk,False,False,3,,MZ B,,,,hPS2: MZ B; mPS3: MZ B,Add: marker for a poorly identified cell type
+CCND2,Ccnd2,False,False,3,,Activated CD4 T; GD T; Ifit3-high CD4 T; Ifit3-high CD8 T; Tregs,differentiating stem cells (Busslinger); stem cells (Busslinger),,,hPS2: Activated CD4 T; hPS2: Ifit3-high CD4 T; hPS2: Ifit3-high CD8 T; hPS2: Tregs; mPS3: Activated CD4 T; mPS3: Ifit3-high CD4 T; mPS3: Ifit3-high CD8 T; mPS3: Tregs,Add: marker for a poorly identified cell type
+CD5,Cd5,False,False,3,,Activated CD4 T; Tregs,,,,hPS2: Activated CD4 T; hPS2: Tregs; mPS3: Activated CD4 T; mPS3: Tregs,Add: marker for a poorly identified cell type
+CD79B,Cd79b,False,False,3,,B1 B; MZ B; Mature B; Transitional B,,,,hPS2: B1 B; hPS2: MZ B; hPS2: Mature B; hPS2: Transitional B; mPS3: B1 B; mPS3: MZ B; mPS3: Mature B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+CTSW,Ctsw,False,False,3,,CD122+ CD8 T; NK; NKT,,,,hPS2: CD122+ CD8 T; hPS2: NKT; mPS3: CD122+ CD8 T; mPS3: NKT,Add: marker for a poorly identified cell type
+FCER2,Fcer2a,False,False,3,,Mature B,,,,hPS2: Mature B; mPS3: Mature B,Add: marker for a poorly identified cell type
+GBP4,Gbp3,False,False,3,,Ifit3-high CD8 T,,,,hPS2: Ifit3-high CD8 T; mPS3: Ifit3-high CD8 T,Add: marker for a poorly identified cell type
+GM2A,Gm2a,False,False,3,,cDC1s; cDC2s,,,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+HLA-A,Gm10499,False,False,3,,ICOS-high Tregs,,,,hPS2: ICOS-high Tregs; mPS3: ICOS-high Tregs,Add: marker for a poorly identified cell type
+HLA-DOB,H2-Ob,False,False,3,,Mature B,,,,hPS2: Mature B; mPS3: Mature B,Add: marker for a poorly identified cell type
+ID2,Id2,False,False,3,,GD T; NK; cDC1s,tuft cells (Busslinger),,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+IGHD,Ighd,False,False,3,,Ifit3-high B; Mature B,,,,hPS2: Ifit3-high B; hPS2: Mature B; mPS3: Ifit3-high B; mPS3: Mature B,Add: marker for a poorly identified cell type
+KLRD1,Klrd1,False,False,3,,CD122+ CD8 T; NK; NKT,goblet cell subtype 2 (Gao),,,hPS2: CD122+ CD8 T; hPS2: NKT; mPS3: CD122+ CD8 T; mPS3: NKT,Add: marker for a poorly identified cell type
+LAT,Lat,False,False,3,,CD4 T; CD8 T; Ifit3-high CD4 T,,,,hPS2: CD4 T; hPS2: CD8 T; hPS2: Ifit3-high CD4 T; mPS3: CD4 T; mPS3: CD8 T; mPS3: Ifit3-high CD4 T,Add: marker for a poorly identified cell type
+LDHA,Ldha,False,False,3,,Activated CD4 T,late immature enterocytes (Busslinger),,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+LEF1,Lef1,False,False,3,,CD4 T; CD8 T; Ifit3-high CD4 T,,,,hPS2: CD4 T; hPS2: CD8 T; hPS2: Ifit3-high CD4 T; mPS3: CD4 T; mPS3: CD8 T; mPS3: Ifit3-high CD4 T,Add: marker for a poorly identified cell type
+LMNB1,Lmnb1,False,False,3,,Cycling B/T cells,olfm4high stem cell (Gao),,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+LY86,Ly86,False,False,3,,B1 B,,,,hPS2: B1 B; mPS3: B1 B,Add: marker for a poorly identified cell type
+MCM5,Mcm5,False,False,3,,Cycling B/T cells,,,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+MCM7,Mcm7,False,False,3,,Cycling B/T cells,differentiating stem cells (Busslinger); stem cells (Busslinger),,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+MEF2C,Mef2c,False,False,3,,Ifit3-high B; Mature B,,,,hPS2: Ifit3-high B; hPS2: Mature B; mPS3: Ifit3-high B; mPS3: Mature B,Add: marker for a poorly identified cell type
+MZB1,Mzb1,False,False,3,,B1 B; MZ B,,,,hPS2: B1 B; hPS2: MZ B; mPS3: B1 B; mPS3: MZ B,Add: marker for a poorly identified cell type
+NKG7,Nkg7,False,False,3,,CD122+ CD8 T; CD8 T; Ifit3-high CD8 T; NK; NKT,,,,hPS2: CD122+ CD8 T; hPS2: CD8 T; hPS2: Ifit3-high CD8 T; hPS2: NKT; mPS3: CD122+ CD8 T; mPS3: CD8 T; mPS3: Ifit3-high CD8 T; mPS3: NKT,Add: marker for a poorly identified cell type
+SATB1,Satb1,False,False,3,,CD4 T,,,,hPS2: CD4 T; mPS3: CD4 T,Add: marker for a poorly identified cell type
+TCF4,Tcf4,False,False,3,,B1 B; MZ B; pDCs,,,,hPS2: B1 B; hPS2: MZ B; mPS3: B1 B; mPS3: MZ B,Add: marker for a poorly identified cell type
+TUBB,Tubb5,False,False,3,,Cycling B/T cells,differentiating stem cells (Busslinger),,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+APOE,Apoe,False,False,2,,B1 B; MZ/Marco-high macrophages; Red-pulp macrophages,,,,hPS2: B1 B; mPS3: B1 B,Add: marker for a poorly identified cell type
+ATOX1,Atox1,False,False,2,,cDC1s; cDC2s,,,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+BCL11B,Bcl11b,False,False,2,,CD4 T; Ifit3-high CD4 T; Tregs,,,,hPS2: CD4 T; hPS2: Ifit3-high CD4 T; hPS2: Tregs; mPS3: CD4 T; mPS3: Ifit3-high CD4 T; mPS3: Tregs,Add: marker for a poorly identified cell type
+CD74,Cd74,False,False,2,,Ifit3-high B; Mature B; Transitional B; cDC1s,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,hPS2: Ifit3-high B; hPS2: Mature B; hPS2: Transitional B; hPS2: cDC1s; mPS3: Ifit3-high B; mPS3: Mature B; mPS3: Transitional B; mPS3: cDC1s,Add: marker for a poorly identified cell type
+CHD3,Chd3,False,False,2,,CD4 T; Tregs,,,,hPS2: CD4 T; hPS2: Tregs; mPS3: CD4 T; mPS3: Tregs,Add: marker for a poorly identified cell type
+EIF4A1,Eif4a1,False,False,2,,Activated CD4 T,,,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+EIF5A,Eif5a,False,False,2,,Activated CD4 T,,,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+FYB1,Fyb,False,False,2,,CD4 T; Ifit3-high CD4 T,goblet cell subtype 2 (Gao); tuft cells (Busslinger),,,hPS2: CD4 T; hPS2: Ifit3-high CD4 T; mPS3: CD4 T; mPS3: Ifit3-high CD4 T,Add: marker for a poorly identified cell type
+H2AZ1,H2az1,False,False,2,,Cycling B/T cells; NK,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+H3-3A,H3f3a,False,False,2,,Transitional B,,,,hPS2: Transitional B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+HCST,Hcst,False,False,2,,CD122+ CD8 T; GD T; NKT,,,,hPS2: CD122+ CD8 T; hPS2: NKT; mPS3: CD122+ CD8 T; mPS3: NKT,Add: marker for a poorly identified cell type
+HLA-DQA1,H2-Aa,False,False,2,,Ifit3-high B; Mature B; cDC1s; cDC2s,,,,hPS2: Ifit3-high B; hPS2: Mature B; hPS2: cDC1s; mPS3: Ifit3-high B; mPS3: Mature B; mPS3: cDC1s,Add: marker for a poorly identified cell type
+HLA-DQB1,H2-Ab1,False,False,2,,Ifit3-high B; Mature B; cDC1s; cDC2s,olfm4high stem cell (Gao),,,hPS2: Ifit3-high B; hPS2: Mature B; hPS2: cDC1s; mPS3: Ifit3-high B; mPS3: Mature B; mPS3: cDC1s,Add: marker for a poorly identified cell type
+HLA-DRB1,H2-Eb1,False,False,2,,Ifit3-high B; Mature B; cDC1s; cDC2s,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,hPS2: Ifit3-high B; hPS2: Mature B; hPS2: cDC1s; mPS3: Ifit3-high B; mPS3: Mature B; mPS3: cDC1s,Add: marker for a poorly identified cell type
+HSPA8,Hspa8,False,False,2,,Activated CD4 T,differentiating stem cells (Busslinger); stem cells (Busslinger),,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+HSPD1,Hspd1,False,False,2,,Activated CD4 T,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+IGHM,Ighm,False,False,2,,B1 B; MZ B; Mature B; Transitional B,,,,hPS2: B1 B; hPS2: MZ B; hPS2: Mature B; hPS2: Transitional B; mPS3: B1 B; mPS3: MZ B; mPS3: Mature B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+LY6E,Ly6e,False,False,2,,Ifit3-high B; Transitional B,,,,hPS2: Ifit3-high B; hPS2: Transitional B; mPS3: Ifit3-high B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+NME1,Nme1,False,False,2,,Activated CD4 T,,,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+PDIA4,Pdia4,False,False,2,,MZ B,,,,hPS2: MZ B; mPS3: MZ B,Add: marker for a poorly identified cell type
+PLBD1,Plbd1,False,False,2,,cDC1s; cDC2s,,,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+SERINC3,Serinc3,False,False,2,,Transitional B,,,,hPS2: Transitional B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+SMC4,Smc4,False,False,2,,Tregs,differentiating stem cells (Busslinger),,,hPS2: Tregs; mPS3: Tregs,Add: marker for a poorly identified cell type
+TRIM5,Trim12a,False,False,2,,Ifit3-high B,,,,hPS2: Ifit3-high B; mPS3: Ifit3-high B,Add: marker for a poorly identified cell type
+VPREB3,Vpreb3,False,False,2,,Transitional B,,,,hPS2: Transitional B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+ZBTB20,Zbtb20,False,False,2,,B1 B,,,,hPS2: B1 B; mPS3: B1 B,Add: marker for a poorly identified cell type
+ZYX,Zyx,False,False,2,,NKT,,,,hPS2: NKT; mPS3: NKT,Add: marker for a poorly identified cell type
+ACTG1,Actg1,False,False,1,,cDC1s,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+ATP1B3,Atp1b3,False,False,1,,CD4 T,late immature enterocytes (Busslinger),,,hPS2: CD4 T; mPS3: CD4 T,Add: marker for a poorly identified cell type
+ATP5IF1,Atpif1,False,False,1,,cDC1s,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+CAPG,Capg,False,False,1,,B1 B,,,,hPS2: B1 B; mPS3: B1 B,Add: marker for a poorly identified cell type
+CST3,Cst3,False,False,1,,Ly6-high mono; Ly6-low mono; cDC1s; cDC2s,bche cells (Busslinger),,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+DDX21,Ddx21,False,False,1,,Activated CD4 T,differentiating stem cells (Busslinger); stem cells (Busslinger),,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+DUT,Dut,False,False,1,,Cycling B/T cells,differentiating stem cells (Busslinger); stem cells (Busslinger),,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+EBF1,Ebf1,False,False,1,,Ifit3-high B; MZ B; Mature B; Transitional B,,,,hPS2: Ifit3-high B; hPS2: MZ B; hPS2: Mature B; hPS2: Transitional B; mPS3: Ifit3-high B; mPS3: MZ B; mPS3: Mature B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+EPSTI1,Epsti1,False,False,1,,CD122+ CD8 T; Ifit3-high CD8 T,,,,hPS2: CD122+ CD8 T; hPS2: Ifit3-high CD8 T; mPS3: CD122+ CD8 T; mPS3: Ifit3-high CD8 T,Add: marker for a poorly identified cell type
+FCMR,Fcmr,False,False,1,,B1 B; Ifit3-high B; Mature B,,,,hPS2: B1 B; hPS2: Ifit3-high B; hPS2: Mature B; mPS3: B1 B; mPS3: Ifit3-high B; mPS3: Mature B,Add: marker for a poorly identified cell type
+GIMAP1-GIMAP5,Gimap3,False,False,1,,Tregs,,,,hPS2: Tregs; mPS3: Tregs,Add: marker for a poorly identified cell type
+HMGN2,Hmgn2,False,False,1,,Cycling B/T cells,,,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+HSP90AB1,Hsp90ab1,False,False,1,,Activated CD4 T,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+IFI30,Ifi30,False,False,1,,Transitional B,,,,hPS2: Transitional B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+IGLC1,Iglc3,False,False,1,,B1 B; Ifit3-high B; Mature B,,,,hPS2: B1 B; hPS2: Ifit3-high B; hPS2: Mature B; mPS3: B1 B; mPS3: Ifit3-high B; mPS3: Mature B,Add: marker for a poorly identified cell type
+IGLC2,Iglc1,False,False,1,,B1 B; MZ B; Mature B; Transitional B,,,,hPS2: B1 B; hPS2: MZ B; hPS2: Mature B; hPS2: Transitional B; mPS3: B1 B; mPS3: MZ B; mPS3: Mature B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+IZUMO1R,Izumo1r,False,False,1,,ICOS-high Tregs; Tregs,,,,hPS2: ICOS-high Tregs; hPS2: Tregs; mPS3: ICOS-high Tregs; mPS3: Tregs,Add: marker for a poorly identified cell type
+LIG1,Lig1,False,False,1,,Cycling B/T cells,,,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+NAPSA,Napsa,False,False,1,,B1 B,,,,hPS2: B1 B; mPS3: B1 B,Add: marker for a poorly identified cell type
+NCL,Ncl,False,False,1,,Activated CD4 T,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+NPM1,Npm1,False,False,1,,Activated CD4 T,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+PCLAF,Pclaf,False,False,1,,Cycling B/T cells,differentiating stem cells (Busslinger),,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+PLAC8,Plac8,False,False,1,,B1 B; MZ B; pDCs,bche cells (Busslinger),,,hPS2: B1 B; hPS2: MZ B; mPS3: B1 B; mPS3: MZ B,Add: marker for a poorly identified cell type
+RAN,Ran,False,False,1,,Cycling B/T cells,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+RPLP0,Rplp0,False,False,1,,CD122+ CD8 T,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: CD122+ CD8 T; mPS3: CD122+ CD8 T,Add: marker for a poorly identified cell type
+S100A10,S100a10,False,False,1,,ICOS-high Tregs; NKT,,,,hPS2: ICOS-high Tregs; hPS2: NKT; mPS3: ICOS-high Tregs; mPS3: NKT,Add: marker for a poorly identified cell type
+SARAF,Saraf,False,False,1,,CD8 T; Ifit3-high CD8 T,,,,hPS2: CD8 T; hPS2: Ifit3-high CD8 T; mPS3: CD8 T; mPS3: Ifit3-high CD8 T,Add: marker for a poorly identified cell type
+SET,Set,False,False,1,,Activated CD4 T,differentiating stem cells (Busslinger); stem cells (Busslinger),,,hPS2: Activated CD4 T; mPS3: Activated CD4 T,Add: marker for a poorly identified cell type
+SIDT1,Sidt1,False,False,1,,CD122+ CD8 T,,,,hPS2: CD122+ CD8 T; mPS3: CD122+ CD8 T,Add: marker for a poorly identified cell type
+SIGLEC10,Siglecg,False,False,1,,MZ B; Transitional B,,,,hPS2: MZ B; hPS2: Transitional B; mPS3: MZ B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+TBC1D4,Tbc1d4,False,False,1,,Migratory DCs; cDC1s,,,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+TMSB4X,Tmsb4x,False,False,1,,MZ/Marco-high macrophages; cDC1s,,,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+TUBA1B,Tuba1b,False,False,1,,Cycling B/T cells,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+AHNAK,Ahnak,False,False,0,,ICOS-high Tregs; NK; NKT,mature enterocytes (Busslinger),,,hPS2: ICOS-high Tregs; hPS2: NKT; mPS3: ICOS-high Tregs; mPS3: NKT,Add: marker for a poorly identified cell type
+ARL4C,Arl4c,False,False,0,,CD122+ CD8 T; CD8 T; Ifit3-high CD8 T,,,,hPS2: CD122+ CD8 T; hPS2: CD8 T; hPS2: Ifit3-high CD8 T; mPS3: CD122+ CD8 T; mPS3: CD8 T; mPS3: Ifit3-high CD8 T,Add: marker for a poorly identified cell type
+DNAJC15,Dnajc15,False,False,0,,CD122+ CD8 T; CD8 T,,,,hPS2: CD122+ CD8 T; hPS2: CD8 T; mPS3: CD122+ CD8 T; mPS3: CD8 T,Add: marker for a poorly identified cell type
+EEF1B2,Eef1b2,False,False,0,,CD122+ CD8 T,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: CD122+ CD8 T; mPS3: CD122+ CD8 T,Add: marker for a poorly identified cell type
+FTL,Ftl1,False,False,0,,MZ/Marco-high macrophages; Red-pulp macrophages; cDC1s,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+FXYD5,Fxyd5,False,False,0,,CD4 T; CD8 T; ICOS-high Tregs,,,,hPS2: CD4 T; hPS2: CD8 T; hPS2: ICOS-high Tregs; mPS3: CD4 T; mPS3: CD8 T; mPS3: ICOS-high Tregs,Add: marker for a poorly identified cell type
+IGFBP4,Igfbp4,False,False,0,,CD4 T,mature enterocytes (Busslinger),,,hPS2: CD4 T; mPS3: CD4 T,Add: marker for a poorly identified cell type
+PTMS,Ptms,False,False,0,,cDC1s,,,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+RALGPS2,Ralgps2,False,False,0,,Mature B; Transitional B,,,,hPS2: Mature B; hPS2: Transitional B; mPS3: Mature B; mPS3: Transitional B,Add: marker for a poorly identified cell type
+RGS10,Rgs10,False,False,0,,Tregs,,,,hPS2: Tregs; mPS3: Tregs,Add: marker for a poorly identified cell type
+RINL,Rinl,False,False,0,,GD T; ICOS-high Tregs,,,,hPS2: ICOS-high Tregs; mPS3: ICOS-high Tregs,Add: marker for a poorly identified cell type
+S100A11,S100a11,False,False,0,,Neutrophils; cDC1s,,,,hPS2: cDC1s; mPS3: cDC1s,Add: marker for a poorly identified cell type
+SKAP1,Skap1,False,False,0,,CD4 T; ICOS-high Tregs; Ifit3-high CD4 T,,,,hPS2: CD4 T; hPS2: ICOS-high Tregs; hPS2: Ifit3-high CD4 T; mPS3: CD4 T; mPS3: ICOS-high Tregs; mPS3: Ifit3-high CD4 T,Add: marker for a poorly identified cell type
+SUB1,Sub1,False,False,0,,B1 B,,,,hPS2: B1 B; mPS3: B1 B,Add: marker for a poorly identified cell type
+TM6SF1,Tm6sf1,False,False,0,,MZ B,,,,hPS2: MZ B; mPS3: MZ B,Add: marker for a poorly identified cell type
+TRA,Trac,False,False,0,,Activated CD4 T; CD122+ CD8 T; CD4 T; CD8 T; ICOS-high Tregs; Ifit3-high CD4 T,,,,hPS2: Activated CD4 T; hPS2: CD122+ CD8 T; hPS2: CD4 T; hPS2: CD8 T; hPS2: ICOS-high Tregs; hPS2: Ifit3-high CD4 T; mPS3: Activated CD4 T; mPS3: CD122+ CD8 T; mPS3: CD4 T; mPS3: CD8 T; mPS3: ICOS-high Tregs; mPS3: Ifit3-high CD4 T,Add: marker for a poorly identified cell type
+TXN,Txn1,False,False,0,,Cycling B/T cells,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,hPS2: Cycling B/T cells,Add: marker for a poorly identified cell type
+ALCAM,Alcam,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ANGPT1,Angpt1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+APP,App,False,False,4,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Add: field consensus (all 4 vendors)
+AR,Ar,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ARG1,Arg1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ASCL1,Ascl1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ATF3,Atf3,False,False,4,,,stem cells (Busslinger),,,,Add: field consensus (all 4 vendors)
+ATM,Atm,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+AXL,Axl,False,False,4,,Red-pulp macrophages,,,,,Add: field consensus (all 4 vendors)
+BID,Bid,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+BIRC5,Birc5,False,False,4,,,mki67high cells (Gao),,,,Add: field consensus (all 4 vendors)
+BMP5,Bmp5,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+BST1,Bst1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+BTK,Btk,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+C5AR1,C5ar1,False,False,4,,,olfm4high stem cell (Gao),,,,Add: field consensus (all 4 vendors)
+CASP8,Casp8,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CCND1,Ccnd1,False,False,4,,cDC2s,stem cells (Busslinger),,,,Add: field consensus (all 4 vendors)
+CD209,Cd209a,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD22,Cd22,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD244,Cd244a,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD274,Cd274,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD300A,Cd300a,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD34,Cd34,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD36,Cd36,False,False,4,,,mature enterocytes (Busslinger); olfm4high stem cell (Gao),,,,Add: field consensus (all 4 vendors)
+CD47,Cd47,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD48,Cd48,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD53,Cd53,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD59,Cd59a,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD6,Cd6,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD69,Cd69,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD83,Cd83,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CD84,Cd84,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CDH1,Cdh1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CDH11,Cdh11,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CDH5,Cdh5,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CEBPA,Cebpa,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CENPF,Cenpf,False,False,4,,,differentiating stem cells (Busslinger); mki67high cells (Gao); transit amplifying cells (Busslinger),,,,Add: field consensus (all 4 vendors)
+CHEK2,Chek2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CLEC14A,Clec14a,False,False,4,,,goblet cell subtype 2 (Gao),,,,Add: field consensus (all 4 vendors)
+CLEC4A,Clec4a1,False,False,4,,Ly6-high mono; Ly6-low mono,,,,,Add: field consensus (all 4 vendors)
+CMKLR1,Cmklr1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+COL17A1,Col17a1,False,False,4,,,mature enterocytes (Busslinger),,,,Add: field consensus (all 4 vendors)
+COL1A1,Col1a1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+COL4A5,Col4a5,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+COL5A2,Col5a2,False,False,4,,,enteroendocrine cells (Gao),,,,Add: field consensus (all 4 vendors)
+COMP,Comp,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CTNNB1,Ctnnb1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+CTSG,Ctsg,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+DDIT3,Ddit3,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+DLL1,Dll1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+DLL4,Dll4,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+DNMT3A,Dnmt3a,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+DPP4,Dpp4,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+DST,Dst,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+DUSP1,Dusp1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+DUSP6,Dusp6,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+EFNA1,Efna1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+EFNA5,Efna5,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ELANE,Elane,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ENG,Eng,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ENTPD1,Entpd1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+EPHA2,Epha2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ESR1,Esr1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ETS1,Ets1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ETV1,Etv1,False,False,4,,,enteroendocrine cells (Gao),,,,Add: field consensus (all 4 vendors)
+ETV4,Etv4,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+EZH2,Ezh2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+F13A1,F13a1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+FCN1,Fcnb,False,False,4,,Red-pulp macrophages,,,,,Add: field consensus (all 4 vendors)
+FGF1,Fgf1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+FGF13,Fgf13,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+FGF9,Fgf9,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+FGFR1,Fgfr1,False,False,4,,,enteroendocrine cells (Gao); mx cells (Busslinger),,,,Add: field consensus (all 4 vendors)
+FGFR2,Fgfr2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+FGFR3,Fgfr3,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+FN1,Fn1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+FYN,Fyn,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+FZD1,Fzd1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+FZD3,Fzd3,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+FZD4,Fzd4,False,False,4,,,goblet cell subtype 2 (Gao),,,,Add: field consensus (all 4 vendors)
+FZD6,Fzd6,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+GATA2,Gata2,False,False,4,,,olfm4high stem cell (Gao),,,,Add: field consensus (all 4 vendors)
+GLUD1,Glud1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+HDAC5,Hdac5,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+HEY1,Hey1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+HIF1A,Hif1a,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+HPGD,Hpgd,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+HSPA1A,Hspa1a,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ICAM2,Icam2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ICOS,Icos,False,False,4,,GD T,,,,,Add: field consensus (all 4 vendors)
+IGF1R,Igf1r,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+IGF2R,Igf2r,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+IGFBP3,Igfbp3,False,False,4,,,ec cells (Busslinger); enteroendocrine cells (Gao),,,,Add: field consensus (all 4 vendors)
+IRF4,Irf4,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ISG20,Isg20,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ITGA1,Itga1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ITGA5,Itga5,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ITGA8,Itga8,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ITGAE,Itgae,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ITGAV,Itgav,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ITGB6,Itgb6,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ITGB8,Itgb8,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ITK,Itk,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+JAG1,Jag1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+KLRB1,Klrb1,False,False,4,,NK,,,,,Add: field consensus (all 4 vendors)
+LAG3,Lag3,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+LAIR1,Lair1,False,False,4,,pDCs,,,,,Add: field consensus (all 4 vendors)
+LAMP3,Lamp3,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+LGALS9,Lgals9,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+LRP2,Lrp2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+LYN,Lyn,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+MAPK14,Mapk14,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+MERTK,Mertk,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+MRC1,Mrc1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+MSH2,Msh2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+MST1R,Mst1r,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+NCAM1,Ncam1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+NLRC5,Nlrc5,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+NOTCH1,Notch1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+NOTCH2,Notch2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+NOTCH3,Notch3,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+NR3C1,Nr3c1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+NRP1,Nrp1,False,False,4,,,enteroendocrine cells (Gao),,,,Add: field consensus (all 4 vendors)
+NTRK2,Ntrk2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+OAS3,Oas3,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+PECAM1,Pecam1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+POU2AF1,Pou2af1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+PPARGC1A,Ppargc1a,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+PRG2,Prg2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+PTPRC,Ptprc,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+PTTG1,Pttg1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+RAG1,Rag1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+RB1,Rb1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+RSAD2,Rsad2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+S100B,S100b,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+SELL,Sell,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+SERPINB5,Serpinb5,False,False,4,,,olfm4high stem cell (Gao),,,,Add: field consensus (all 4 vendors)
+SERPINH1,Serpinh1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+SFRP1,Sfrp1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+SLC2A1,Slc2a1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+SMO,Smo,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+SNAI1,Snai1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+SNAI2,Snai2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+SOX17,Sox17,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+SOX2,Sox2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+SOX9,Sox9,False,False,4,,,stem cells (Busslinger); tuft cells (Busslinger),,,,Add: field consensus (all 4 vendors)
+SREBF1,Srebf1,False,False,4,,,mature enterocytes (Busslinger),,,,Add: field consensus (all 4 vendors)
+ST6GAL1,St6gal1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+STAT6,Stat6,False,False,4,,,mature enterocytes (Busslinger),,,,Add: field consensus (all 4 vendors)
+SYK,Syk,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+TACSTD2,Tacstd2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+TAP1,Tap1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+TAP2,Tap2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+TCF3,Tcf3,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+TFEB,Tfeb,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+THBS1,Thbs1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+THBS4,Thbs4,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+TIE1,Tie1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+TOX,Tox,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+TWIST1,Twist1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+TWIST2,Twist2,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+TYMS,Tyms,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+VHL,Vhl,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+VSIR,Vsir,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+WIF1,Wif1,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+WNT5A,Wnt5a,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+WNT7A,Wnt7a,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+WNT7B,Wnt7b,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ZBTB16,Zbtb16,False,False,4,,,,,,,Add: field consensus (all 4 vendors)
+ACE,Ace,False,False,3,,Ly6-low mono,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+APOB,Apob,False,False,3,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+BCAM,Bcam,False,False,3,,,olfm4high stem cell (Gao); tuft cells (Busslinger),,,,Consider: epithelial marker
+C7,C7,False,False,3,,,enteroendocrine cells (Gao); olfm4high stem cell (Gao),,,,Consider: epithelial marker
+CD9,Cd9,False,False,3,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+DDC,Ddc,False,False,3,,,early immature enterocytes (Busslinger); ec cells (Busslinger),,,,Consider: epithelial marker
+EGR1,Egr1,False,False,3,,,differentiating stem cells (Busslinger); goblet cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+ENO1,Eno1,False,False,3,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+EPHB2,Ephb2,False,False,3,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+FBP1,Fbp1,False,False,3,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+GPX2,Gpx2,False,False,3,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+HMGA1,Hmga1,False,False,3,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+ID1,Id1,False,False,3,,,bche cells (Busslinger); ec cells (Busslinger),,,,Consider: epithelial marker
+IDH2,Idh2,False,False,3,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+LAD1,Lad1,False,False,3,,,differentiating stem cells (Busslinger); enterocyte (Gao),,,,Consider: epithelial marker
+LGALS3,Lgals3,False,False,3,,MZ/Marco-high macrophages,bche cells (Busslinger); early immature enterocytes (Busslinger),,,,Consider: epithelial marker
+MARCKSL1,Marcksl1,False,False,3,,,stem cells (Busslinger); tuft cells (Busslinger),,,,Consider: epithelial marker
+PRKDC,Prkdc,False,False,3,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+PTGES3,Ptges3,False,False,3,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+SCG2,Scg2,False,False,3,,,ec cells (Busslinger); enteroendocrine cells (Gao); i cells (Busslinger); k cells (Busslinger),,,,Consider: epithelial marker
+SCG5,Scg5,False,False,3,,,enteroendocrine cells (Gao); i cells (Busslinger); k cells (Busslinger),,,,Consider: epithelial marker
+SMPD3,Smpd3,False,False,3,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+SOX4,Sox4,False,False,3,,,differentiating stem cells (Busslinger); stem cells (Busslinger); tuft cells (Busslinger),,,,Consider: epithelial marker
+SPINK1,Spink1,False,False,3,,,differentiating stem cells (Busslinger); ec cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+TKT,Tkt,False,False,3,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+TMEM45B,Tmem45b,False,False,3,,,enterocyte (Gao); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+ACOX1,Acox1,False,False,2,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+ACTN1,Actn1,False,False,2,,,stem cells (Busslinger); tuft cells (Busslinger),,,,Consider: epithelial marker
+ADH1C,,False,False,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+ADH4,Adh4,False,False,2,,,ec cells (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+ANP32B,Anp32b,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+ANXA4,Anxa4,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+APEX1,Apex1,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+AQP1,Aqp1,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+ATP1A1,Atp1a1,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+ATP5F1C,Atp5c1,False,False,2,,,early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+CACNA1A,Cacna1a,False,False,2,,,enteroendocrine cells (Gao); k cells (Busslinger),,,,Consider: epithelial marker
+CANX,Canx,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+CBR1,Cbr1,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+CCT6A,Cct6a,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+CLDN3,Cldn3,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+CLU,Clu,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+COX4I1,Cox4i1,False,False,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+COX5B,Cox5b,False,False,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+COX6A1,Cox6a1,False,False,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+CREB3L3,Creb3l3,False,False,2,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+CYCS,Cycs,False,False,2,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+DDAH1,Ddah1,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+EEF1G,Eef1g,False,False,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+EIF3A,Eif3a,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+EMP2,Emp2,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+GATM,Gatm,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+GSTP1,Gstp1,False,False,2,,,bche cells (Busslinger); differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+HNRNPD,Hnrnpd,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+HNRNPM,Hnrnpm,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+HSD17B2,Hsd17b2,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+HSP90B1,Hsp90b1,False,False,2,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+IMPDH2,Impdh2,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+KCNH8,Kcnh8,False,False,2,,,enteroendocrine cells (Gao); olfm4high stem cell (Gao),,,,Consider: epithelial marker
+KCTD12,Kctd12,False,False,2,,,ec cells (Busslinger); i cells (Busslinger); k cells (Busslinger); mx cells (Busslinger); tuft cells (Busslinger),,,,Consider: epithelial marker
+KLF5,Klf5,False,False,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+KRT20,Krt20,False,False,2,,,bche cells (Busslinger); early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+LRPPRC,Lrpprc,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+MAOA,Maoa,False,False,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+MAP1B,Map1b,False,False,2,,,ec cells (Busslinger); enteroendocrine cells (Gao),,,,Consider: epithelial marker
+MAP2,Map2,False,False,2,,,enteroendocrine cells (Gao); olfm4high stem cell (Gao),,,,Consider: epithelial marker
+MARCKS,Marcks,False,False,2,,Migratory DCs; Red-pulp macrophages,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+MLEC,Mlec,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+MLXIPL,Mlxipl,False,False,2,,,enterocyte (Gao); enteroendocrine cells (Gao); olfm4high stem cell (Gao),,,,Consider: epithelial marker
+MSLN,Msln,False,False,2,,,enterocyte (Gao); olfm4high stem cell (Gao),,,,Consider: epithelial marker
+NDUFAB1,Ndufab1,False,False,2,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+NFIB,Nfib,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+NKX2-2,Nkx2-2,False,False,2,,,enteroendocrine cells (Gao); i cells (Busslinger),,,,Consider: epithelial marker
+NONO,Nono,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+P4HB,P4hb,False,False,2,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+PCK2,Pck2,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+PDLIM1,Pdlim1,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+PEBP1,Pbp2,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+PHB2,Phb2,False,False,2,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+PLIN2,Plin2,False,False,2,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+PNP,Pnp,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+PPP1R1B,Ppp1r1b,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+PRAP1,Prap1,False,False,2,,,enterocyte (Gao); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+PTGR1,Ptgr1,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+RACK1,Rack1,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+RBM47,Rbm47,False,False,2,,,bche cells (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+RCC2,Rcc2,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+S100A14,S100a14,False,False,2,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+SAT1,Sat1,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+SERPINA1,Serpina1a,False,False,2,,,mature enterocytes (Busslinger); tuft cells (Busslinger),,,,Consider: epithelial marker
+SFPQ,Sfpq,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+SLC12A2,Slc12a2,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+SLC25A37,Slc25a37,False,False,2,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+SLC2A2,Slc2a2,False,False,2,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+SLC2A5,Slc2a5,False,False,2,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+TRIM28,Trim28,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+TSPAN8,Tspan8,False,False,2,,,bche cells (Busslinger); differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+TTR,Ttr,False,False,2,,,ec cells (Busslinger); enteroendocrine cells (Gao),,,,Consider: epithelial marker
+UQCRQ,Uqcrq,False,False,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+VDAC1,Vdac1,False,False,2,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger),,,,Consider: epithelial marker
+XRCC5,Xrcc5,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+YWHAQ,Ywhaq,False,False,2,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+ABCG2,Abcg2,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+ACAA1,Acaa1a,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+ACADVL,Acadvl,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+ACSL5,Acsl5,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+ADD3,Add3,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+ADIRF,,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+AHCY,Ahcy,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+AKR1C3,,False,False,1,,,bche cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+ALDH1A1,Aldh1a1,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+ALDOB,Aldob,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+ATP1B1,Atp1b1,False,False,1,,pDCs,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+ATP5F1A,Atp5a1,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+ATP5F1B,Atp5b,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+ATP5PB,Atp5pb,False,False,1,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+ATP5PO,Atp5o,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+BANF1,Banf1,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+BDH2,Bdh2,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+BNC2,Bnc2,False,False,1,,,goblet cell subtype 2 (Gao); olfm4high stem cell (Gao),,,,Consider: epithelial marker
+BTF3,Btf3,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+CADPS,Cadps,False,False,1,,,ec cells (Busslinger); enteroendocrine cells (Gao),,,,Consider: epithelial marker
+CALM1,Calm1,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+CALM2,Calm2,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger),,,,Consider: epithelial marker
+CAMK2N1,Camk2n1,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+CBX3,Cbx3,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+CDHR5,Cdhr5,False,False,1,,,enterocyte (Gao); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+CFTR,Cftr,False,False,1,,,bche cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+CHCHD10,Chchd10,False,False,1,,,early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+CIDEB,Cideb,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+COX5A,Cox5a,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+COX6C,Cox6c,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+COX7C,Cox7c,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+COX8A,Cox8a,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+CPE,Cpe,False,False,1,,,enteroendocrine cells (Gao); i cells (Busslinger); mx cells (Busslinger),,,,Consider: epithelial marker
+CRYBA2,Cryba2,False,False,1,,,ec cells (Busslinger); enteroendocrine cells (Gao),,,,Consider: epithelial marker
+CYB5A,Cyb5a,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+CYC1,Cyc1,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+CYP1A1,Cyp1a1,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+CYP2C9,Cyp2c70,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+CYP3A5,,False,False,1,,,enterocyte (Gao); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+DBI,Dbi,False,False,1,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+DGAT1,Dgat1,False,False,1,,,enterocyte (Gao); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+DNAH5,Dnah5,False,False,1,,,goblet cell subtype 2 (Gao); olfm4high stem cell (Gao),,,,Consider: epithelial marker
+EIF2S3,Eif2s3x,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+EIF5B,Eif5b,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+EPS8L3,Eps8l3,False,False,1,,,enterocyte (Gao); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+ESD,Esd,False,False,1,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+FAU,Fau,False,False,1,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+FBL,Fbl,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+FEV,Fev,False,False,1,,,ec cells (Busslinger); enteroendocrine cells (Gao),,,,Consider: epithelial marker
+GC,Gc,False,False,1,,,ec cells (Busslinger); i cells (Busslinger),,,,Consider: epithelial marker
+GOLM1,Golm1,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+GSN,Gsn,False,False,1,,,bche cells (Busslinger); tuft cells (Busslinger),,,,Consider: epithelial marker
+GUCA2B,Guca2b,False,False,1,,,bche cells (Busslinger); enterocyte (Gao),,,,Consider: epithelial marker
+H4C3,,False,False,1,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+HEBP1,Hebp1,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+HMGN1,Hmgn1,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+HNRNPK,Hnrnpk,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+HSP90AA1,Hsp90aa1,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+HSPE1,Hspe1,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+KRT8,Krt8,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger); tuft cells (Busslinger),,,,Consider: epithelial marker
+MALL,Mall,False,False,1,,,enterocyte (Gao); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+MEP1B,Mep1b,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+MGAM,Mgam,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+MGST1,Mgst1,False,False,1,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+MGST3,Mgst3,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+MISP,Misp,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+MT1E,,False,False,1,,,bche cells (Busslinger); differentiating stem cells (Busslinger),,,,Consider: epithelial marker
+MT1F,,False,False,1,,,bche cells (Busslinger); differentiating stem cells (Busslinger),,,,Consider: epithelial marker
+MT1G,,False,False,1,,,bche cells (Busslinger); differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger); tuft cells (Busslinger),,,,Consider: epithelial marker
+MT1X,,False,False,1,,,bche cells (Busslinger); differentiating stem cells (Busslinger),,,,Consider: epithelial marker
+MT2A,,False,False,1,,,bche cells (Busslinger); differentiating stem cells (Busslinger); transit amplifying cells (Busslinger); tuft cells (Busslinger),,,,Consider: epithelial marker
+MTTP,Mttp,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+NDUFB9,Ndufb9,False,False,1,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+NRARP,Nrarp,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+ONECUT2,Onecut2,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+PBLD,Pbld1,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+PCLO,Pclo,False,False,1,,,enteroendocrine cells (Gao); mx cells (Busslinger),,,,Consider: epithelial marker
+PCSK1,Pcsk1,False,False,1,,,ec cells (Busslinger); enteroendocrine cells (Gao),,,,Consider: epithelial marker
+PCSK1N,Pcsk1n,False,False,1,,,ec cells (Busslinger); enteroendocrine cells (Gao); i cells (Busslinger); mx cells (Busslinger),,,,Consider: epithelial marker
+PEPD,Pepd,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+PFN1,Pfn1,False,False,1,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+PLS1,Pls1,False,False,1,,,enterocyte (Gao); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+PRDX1,Prdx1,False,False,1,,,early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+PSME2,Psme2,False,False,1,,,early immature enterocytes (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+REEP6,Reep6,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+RPL22,Rpl22,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+RPL23,Rpl23,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+RPL32,Rpl32,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+RPL34,Rpl34,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+RPL37,Rpl37,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+RPL7A,Rpl7a,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+RPS27A,Rps27a,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+RPS29,Rps29,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+RPS6,Rps6,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+S100A6,S100a6,False,False,1,,GD T; Ly6-high mono; Neutrophils; cDC2s,bche cells (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+SAT2,Sat2,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+SCGN,Scgn,False,False,1,,,ec cells (Busslinger); enteroendocrine cells (Gao); k cells (Busslinger); mx cells (Busslinger),,,,Consider: epithelial marker
+SLC4A7,Slc4a7,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+SLC6A19,Slc6a19,False,False,1,,,enterocyte (Gao); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+SMIM24,Smim24,False,False,1,,,early immature enterocytes (Busslinger); enterocyte (Gao); late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+SNHG8,Snhg8,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+SNRPB,Snrpb,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+STX1A,Stx1a,False,False,1,,,enteroendocrine cells (Gao); k cells (Busslinger),,,,Consider: epithelial marker
+SUCLG1,Suclg1,False,False,1,,,differentiating stem cells (Busslinger); early immature enterocytes (Busslinger),,,,Consider: epithelial marker
+TKFC,Tkfc,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+TM4SF20,Tm4sf20,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+TM4SF4,Tm4sf4,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+TM6SF2,Tm6sf2,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+TMPRSS15,Tmprss15,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+TMSB10,Gm9844,False,False,1,,,bche cells (Busslinger); differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+TRPV6,Trpv6,False,False,1,,,mature enterocytes (Busslinger); olfm4high stem cell (Gao),,,,Consider: epithelial marker
+TUFM,Tufm,False,False,1,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+UGT2B17,,False,False,1,,,early immature enterocytes (Busslinger); late immature enterocytes (Busslinger),,,,Consider: epithelial marker
+UGT2B7,,False,False,1,,,late immature enterocytes (Busslinger); mature enterocytes (Busslinger),,,,Consider: epithelial marker
+UQCRFS1,Uqcrfs1,False,False,1,,,differentiating stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker
+VDR,Vdr,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger),,,,Consider: epithelial marker
+YBX1,Ybx1,False,False,1,,,differentiating stem cells (Busslinger); stem cells (Busslinger); transit amplifying cells (Busslinger),,,,Consider: epithelial marker

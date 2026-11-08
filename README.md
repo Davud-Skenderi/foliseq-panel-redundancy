@@ -1,90 +1,70 @@
-# Spatial panel redundancy and Foli-seq
+# Spatial panel comparison for Foli-seq panel design
 
-This repo compares the gene panels of commercial
-spatial transcriptomics platforms (10x Xenium, NanoString CosMx and GeoMx, Vizgen MERSCOPE, plus Illumina
-AmpliSeq and IDT xGen for reference) with the current Foli-seq panels (mouse mPS3, human hPS2; Huang et al.,
-*Nature Biotechnology* 2025). It looks for **consistency, redundancy and gaps** at the pathway level, then uses
-public expression data and Foli-seq stool results to rank genes to keep, review and add.
+This repo compares the gene panels of commercial spatial transcriptomics platforms (10x Xenium, NanoString CosMx and
+GeoMx, Vizgen MERSCOPE) with the current Foli-seq panels (mouse mPS3, human hPS2; Huang et al., *Nature
+Biotechnology* 2025) to inform which genes future Foli-seq panels should target.
 
-Start with `results/Panel_redundancy_results.xlsx`, sheet **foli_candidate_genes**. It has one row per gene,
-with all evidence columns and a Keep / Review / Add call.
+Each step answers one plain question with an established method, and every output is a gene list, a count or an
+accuracy. The evaluation of panels follows the published framework of **Spapros** (Kuemmerle et al. 2024, *Nature
+Methods*, "Probe set selection for targeted spatial transcriptomics") and uses its code.
 
-## Main findings
+| Question | Method | Reference | Main output |
+| --- | --- | --- | --- |
+| Q1 Consistency: which genes do vendors agree on? | Count vendors per gene; UpSet plot of set overlaps | Lex et al. 2014 (UpSet) | `results/v2/q1_consensus_genes.csv` |
+| Q2 Gaps: which cell types and pathways does each panel cover? | Count signature/marker genes on each panel; Hallmark over-representation (hypergeometric, BH FDR) | Busslinger et al. 2021; Gao et al. 2018; Liberzon et al. 2015; Wolf et al. 2018 | `results/v2/q2*_*.csv` |
+| Q3 Redundancy: which panel genes carry the same information? | Pairwise Pearson correlation; pairs with \|r\| ≥ 0.8 | Spapros `gene_corr` | `results/v2/q3_correlated_pairs.csv` |
+| Q4 Function: can the panel identify cell types? | XGBoost classifier on panel genes, 5-fold cross-validation, per-cell-type accuracy | Spapros `forest_clfs`; Chen & Guestrin 2016 | `results/v2/q4_accuracy_by_celltype.csv` |
+| Q4b Do the consensus genes help? | Same classifier on mPS3 + the vendor-consensus genes it lacks, against mPS3 + the same number of random genes | Spapros `forest_clfs` | `results/v2/q4b_addition_test.csv` |
+| Q5 Stool relevance | Foli-seq stool DEG tables | Huang et al. 2025, Tables S3–S7 | `data/foli_stool_degs.csv` |
+| Q6 Recommendations | Fixed rules over Q1–Q5 evidence (no weighted score) | — | `results/v2/q6_recommendations.csv` |
 
-- Vendors choose mostly different genes (Jaccard mostly 0.01–0.35) to probe largely the same pathways
-  (pathway-profile similarity 0.5–0.9). A pathway can be tracked with about 7–8 well-chosen genes
-  (held-out r ≈ 0.87). About 300 covariance-chosen genes reconstruct gut/IBD pathway scores as well as
-  1,000–10,000-gene panels.
-- Foli-seq mPS3/hPS2 cover cytokine signalling about as deeply as the largest spatial panels (83–91% of
-  KEGG cytokine–receptor genes) and carry little internal redundancy (15–16% of genes predictable from the rest).
-- 279 of 535 mPS3 genes changed in Foli-seq stool data in at least one colitis model (paper Tables S3–S7).
-  Whether vendors include a gene does not predict this (55% response for genes on no spatial panel, 60% for 8–12).
-- The shared gap is gut epithelium: enterocyte, goblet, enteroendocrine and stem programs are thinly covered by
-  every panel, Foli-seq included. Candidate additions are grouped by cell type in the workbook.
+Figures are in `figures/v2/`. A full methods guide (each step's rationale, citation, result and limits) is in the Claude Doc "Foli-seq panel design: methods guide (v2)". The first version of this analysis (cosine similarity of enrichment profiles, PCA–ridge
+reconstruction, weighted priority score) is kept in `archive/v1/` for the record and is superseded.
 
-Figures are in `figures/`.
+## Reference data and its limits
+
+- **Q3/Q4 currently use immune references**: mouse spleen + lymph node CITE-seq with 26 annotated cell types
+  (Gayoso et al. 2021, *Nature Methods*) and human PBMC 10k (10x Genomics; redundancy only, unannotated).
+- **Gut references still needed.** The same scripts accept any annotated `.h5ad`. Planned: the mouse small-intestinal
+  epithelium atlas of Haber et al. 2017 (*Nature*; GEO GSE92332, `GSE92332_atlas_UMIcounts.txt.gz`) and Foli-seq
+  count data. Until then, epithelial conclusions rest on Q2 (gene lists) only.
+- Stool evidence (Q5) is mouse-only.
+
+## Running
+
+```bash
+pip install pandas numpy scipy statsmodels scanpy anndata pyarrow openpyxl matplotlib rdata upsetplot xgboost
+pip install --no-deps spapros && pip install rich venndata
+bash scripts/fetch_public_data.sh
+python scripts/00_foli_inputs.py && python scripts/01_harmonize_panels.py && python scripts/02_genesets.py
+python scripts/10_consistency.py && python scripts/12_spapros_eval.py && python scripts/11_coverage.py
+python scripts/15_addition_test.py && python scripts/13_recommendations.py && python scripts/14_figures_v2.py
+```
+
+`12_spapros_eval.py` takes about an hour on a laptop (cached per panel, so it can be resumed).
 
 ## Layout
 
 ```
-inputs/vendor_panels/      vendor gene lists as downloaded (MERSCOPE human IO files are empty)
-inputs/foli_supplement/    Huang et al. 2025 Supplementary Tables S1–S9
-data/                      harmonised panels (gene_by_panel.csv, panels_long.csv), Foli-seq panels, stool DEGs
-results/                   all result tables + Panel_redundancy_results.xlsx
-figures/                   fig1–fig9
-scripts/                   pipeline (run in numeric order)
+inputs/vendor_panels/      vendor gene lists as received (MERSCOPE human IO files are empty)
+inputs/foli_supplement/    Huang et al. 2025 Supplementary Tables S1–S9 (Foli-seq panels, stool DEGs)
+data/                      harmonised gene x panel table, Foli-seq panels, stool DEGs
+scripts/                   00–02 inputs; 10–15 analysis (Q1–Q6) and figures
+results/v2/, figures/v2/   current results
+archive/v1/                superseded first version
 ```
 
-## Running it
+## Key references
 
-Requires Python 3.11+ with pandas, numpy, scipy, scikit-learn, statsmodels, scanpy, anndata, pyarrow,
-openpyxl, matplotlib and rdata.
-
-```bash
-pip install pandas numpy scipy scikit-learn statsmodels scanpy anndata pyarrow openpyxl matplotlib rdata
-bash scripts/fetch_public_data.sh          # ~400 MB of public data into external/
-for s in 00_foli_inputs 01_harmonize_panels 02_genesets 03_pathway_coverage 04_expression_metacells \
-         05_covariance_redundancy 05b_pathway_core_heldout 06_optimize_panel; do python scripts/$s.py; done
-FOLI_PANEL=FOLI_mPS3 python scripts/06b_foli_focus.py
-FOLI_PANEL=FOLI_hPS2 SKIP_DENOVO=1 python scripts/06b_foli_focus.py
-for s in 06c_foli_proxies 09_candidates 07_figures 08_workbook; do python scripts/$s.py; done
-```
-
-Steps 5 and 6 take roughly 30–60 minutes on a laptop. Step 5 reuses earlier vendor-panel results in `results/`
-if present, so delete `results/panel_redundancy_by_dataset.csv` for a full recompute.
-
-| Step | Script | What it does |
-| --- | --- | --- |
-| 0 | `00_foli_inputs.py` | Foli-seq panels and stool-responsive genes from the paper's supplement |
-| 1 | `01_harmonize_panels.py` | parses every gene list; maps mouse/dog to human (HGNC + MGI/AGR orthologs) |
-| 2 | `02_genesets.py` | MSigDB 7.5.1 gene sets plus a gut/IBD lens (221 sets) |
-| 3 | `03_pathway_coverage.py` | pathway coverage and enrichment per panel; gene and pathway overlap between panels |
-| 4 | `04_expression_metacells.py` | public scRNA-seq into metacells; HPA + GTEx tissue profiles |
-| 5 | `05_covariance_redundancy.py` | within-panel redundancy, pathway fidelity, consensus gene–gene correlation |
-| 5b | `05b_pathway_core_heldout.py` | split-half validated core genes per pathway |
-| 6 | `06_optimize_panel.py` | covariance-optimised panel (generic objective) and vendor benchmark |
-| 6b | `06b_foli_focus.py` | gut/IBD objective: unique contribution and ranked additions for a Foli-seq panel |
-| 6c | `06c_foli_proxies.py` | Foli-seq genes on spatial panels, directly or via co-expressed proxies |
-| 9 | `09_candidates.py` | per-gene evidence table and Keep / Review / Add calls |
-| 7, 8 | `07_figures.py`, `08_workbook.py` | figures and results workbook |
-
-Paths resolve relative to the repository; override with `PANEL_EXT`, `PANEL_RAW`, `PANEL_SUP` or `PANEL_PROJ`.
-
-## Data sources
-
-- Huang Y, et al. Fecal exfoliome sequencing captures immune dynamics of the healthy and inflamed gut.
-  *Nature Biotechnology* (2025). doi:10.1038/s41587-025-02894-4 (Supplementary Tables S1–S9)
-- Vendor panel gene lists from 10x Genomics, NanoString, Vizgen, Illumina and IDT (some are form-gated
-  downloads; keep this repository private unless redistribution is cleared)
-- MSigDB 7.5.1 via [msigdbr](https://github.com/cran/msigdbr); orthologs via [babelgene](https://github.com/cran/babelgene);
-  symbol updates via [HGNChelper](https://github.com/cran/HGNChelper)
-- HPA and GTEx tissue expression via [TissueEnrich](https://github.com/bioc/TissueEnrich)
-- Public single-cell data from [YosefLab/scVI-data](https://github.com/YosefLab/scVI-data): 10x PBMC 10k,
-  mouse spleen and lymph node, and a Human Heart Cell Atlas subsample
-
-## Caveats
-
-- Co-expression comes from blood, spleen/lymph node, heart and tissue-atlas data, not gut. Epithelial
-  redundancy may differ; Foli-seq count data or a colon single-cell atlas would be the better source.
-- Stool evidence is mouse-only, so human-only hPS2 genes have none.
-- MSigDB intestinal cell-type signatures are approximate; some include immune genes.
+- Huang Y, et al. Fecal exfoliome sequencing captures immune dynamics of the healthy and inflamed gut. *Nat Biotechnol* (2025).
+- Kuemmerle LB, et al. Probe set selection for targeted spatial transcriptomics. *Nat Methods* (2024).
+- Lex A, et al. UpSet: visualization of intersecting sets. *IEEE TVCG* (2014).
+- Liberzon A, et al. The Molecular Signatures Database hallmark gene set collection. *Cell Syst* (2015).
+- Busslinger GA, et al. Human gastrointestinal epithelia of the esophagus, stomach, and duodenum resolved at single-cell resolution. *Cell Rep* (2021).
+- Gao S, et al. Tracing the temporal-spatial transcriptome landscapes of the human fetal digestive tract using single-cell RNA-sequencing. *Nat Cell Biol* (2018).
+- Gayoso A, et al. Joint probabilistic modeling of single-cell multi-omic data with totalVI. *Nat Methods* (2021).
+- Wolf FA, Angerer P, Theis FJ. SCANPY: large-scale single-cell gene expression data analysis. *Genome Biol* (2018).
+- Soneson C, Robinson MD. Bias, robustness and scalability in single-cell differential expression analysis. *Nat Methods* (2018).
+- Chen T, Guestrin C. XGBoost: a scalable tree boosting system. *KDD* (2016).
+- Benjamini Y, Hochberg Y. Controlling the false discovery rate. *J R Stat Soc B* (1995).
+- Haber AL, et al. A single-cell survey of the small intestinal epithelium. *Nature* (2017).

@@ -1,0 +1,28 @@
+sets,n_genes
+10x Xenium,3598
+NanoString CosMx,2121
+10x Xenium & NanoString CosMx,2027
+10x Xenium & NanoString CosMx & NanoString GeoMx,834
+NanoString CosMx & NanoString GeoMx,354
+10x Xenium & NanoString CosMx & NanoString GeoMx & Foli-seq,229
+10x Xenium & NanoString CosMx & Vizgen MERSCOPE & NanoString GeoMx,186
+10x Xenium & NanoString CosMx & Vizgen MERSCOPE,175
+10x Xenium & NanoString CosMx & Vizgen MERSCOPE & NanoString GeoMx & Foli-seq,147
+10x Xenium & Foli-seq,119
+NanoString CosMx & Vizgen MERSCOPE,91
+Foli-seq,83
+10x Xenium & NanoString CosMx & Foli-seq,80
+10x Xenium & Vizgen MERSCOPE,58
+NanoString CosMx & Foli-seq,53
+Vizgen MERSCOPE,53
+NanoString GeoMx,42
+NanoString CosMx & Vizgen MERSCOPE & NanoString GeoMx,37
+10x Xenium & NanoString CosMx & Vizgen MERSCOPE & Foli-seq,30
+NanoString CosMx & NanoString GeoMx & Foli-seq,30
+10x Xenium & NanoString GeoMx,15
+NanoString CosMx & Vizgen MERSCOPE & NanoString GeoMx & Foli-seq,12
+NanoString CosMx & Vizgen MERSCOPE & Foli-seq,6
+Vizgen MERSCOPE & Foli-seq,5
+10x Xenium & Vizgen MERSCOPE & Foli-seq,5
+10x Xenium & NanoString GeoMx & Foli-seq,3
+NanoString GeoMx & Foli-seq,1

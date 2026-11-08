@@ -1,0 +1,16 @@
+{
+ "genes_on_any_vendor_general_panel": 10311,
+ "genes_by_number_of_vendors": {
+  "1": 5992,
+  "2": 2669,
+  "3": 1317,
+  "4": 333
+ },
+ "consensus_all_four_vendors": 333,
+ "consensus_on_FoliSeq": 147,
+ "consensus_on_mPS3": 117,
+ "consensus_on_hPS2": 124,
+ "FoliSeq_genes": 803,
+ "FoliSeq_genes_on_no_vendor_panel": 83,
+ "FoliSeq_genes_on_all_four": 147
+}
