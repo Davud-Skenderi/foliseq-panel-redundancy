@@ -22,9 +22,10 @@ Outputs per reference REF:
   results/v2/q3_correlated_pairs_{REF}.csv        pairs with |r| >= 0.8
 """
 import os, sys, time, warnings
-import numpy as np, pandas as pd, anndata as ad, scanpy as sc
+import numpy as np, pandas as pd, anndata as ad, scanpy as sc, scipy.sparse as sp
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from paths import PROJ, EXT
+from common import to_human
 from spapros.evaluation import metrics as spm
 warnings.filterwarnings("ignore")
 
@@ -36,6 +37,18 @@ PANELS = ["FOLI_mPS3", "FOLI_hPS2", "COSMX_HIO", "MER_M_BRAINTRAIN", "MER_M_PAN"
           "XEN_M5K", "XEN_H5K", "COSMX_H6K"]
 RANDOM_SIZES = [330, 535]      # 330 = Foli-seq mPS3 measured size; 535 = baseline used in v2
 N_RANDOM = 3
+
+
+def to_symbols(a, species):
+    """Collapse a reference onto human symbols. Identical to 12_spapros_eval.to_symbols, so that a
+    mouse reference added here is mapped exactly as MM_SLN was and the two stay comparable."""
+    hs = [to_human(g, species) for g in a.var_names.astype(str)]
+    keep = np.array([isinstance(h, str) and len(h) > 0 for h in hs])
+    a = a[:, keep].copy()
+    h = np.array(hs, dtype=object)[keep]
+    codes, uniq = pd.factorize(h)
+    Mx = sp.csr_matrix((np.ones(len(codes)), (np.arange(len(codes)), codes)), shape=(len(codes), len(uniq)))
+    return ad.AnnData(sp.csr_matrix(a.X) @ Mx, obs=a.obs.copy(), var=pd.DataFrame(index=uniq))
 
 
 def lognorm(a):
@@ -73,9 +86,14 @@ def corr_summary(adata, genes, tag, panel):
     ), pairs
 
 
-def run(ref_tag, h5ad_name):
+def run(ref_tag, spec):
+    h5ad_name, species = spec
     a = ad.read_h5ad(EXT + f"expr/{h5ad_name}")
     title = a.uns.get("reference_title", ref_tag)
+    if species == "Mouse":
+        n0 = a.n_vars
+        a = to_symbols(a, "Mouse")
+        print(f"  {ref_tag}: {n0} mouse genes -> {a.n_vars} human symbols", flush=True)
     sc.pp.filter_genes(a, min_cells=10)
     a = lognorm(a)
     clf_ad = sample_per_type(a, "celltype")
@@ -127,7 +145,12 @@ def run(ref_tag, h5ad_name):
     print(f"=== {ref_tag} done", flush=True)
 
 
-REFS = {"GUT_HEALTHY": "gut_healthy.h5ad", "GUT_IBD": "gut_ibd.h5ad", "GUT_CRC": "gut_crc.h5ad"}
+REFS = {"GUT_HEALTHY": ("gut_healthy.h5ad", "Human"),
+        "GUT_IBD":     ("gut_ibd.h5ad", "Human"),
+        "GUT_CRC":     ("gut_crc.h5ad", "Human"),
+        "HABER_GUT":   ("haber_gut.h5ad", "Mouse"),
+        # epithelium-only human reference, compartment-matched to HABER_GUT (see 21_)
+        "GUT_HEALTHY_EPI": ("gut_healthy_epi.h5ad", "Human")}
 
 if __name__ == "__main__":
     # usage: 17_multiref_eval.py REF [REF ...] [--panels A,B,C]

@@ -146,6 +146,61 @@ gut reference the design becomes 2x2 — mouse/human x immune/gut — and the ti
 estimated with species held fixed. The repo README already named Haber as planned work; this analysis
 turns that from a nice-to-have into the next necessary step.
 
+## 9b. Resolving the confound: the Haber reference and the 2x2
+
+`scripts/19_build_haber_ref.py` adds Haber et al. 2017 (GEO GSE92332), mouse small-intestinal
+epithelium, 7,216 cells across 15 finely annotated epithelial types. Gene symbols are mapped to human
+with `common.to_human` — the same mapping `12_spapros_eval.py` applied to MM_SLN — so the two mouse
+references are directly comparable rather than differing by mapping method.
+
+Haber is epithelium-only, while the human gut references are whole tissue (epithelial + immune +
+stromal). So `HABER_GUT -> human gut` is not species alone; it is also epithelium -> mixed tissue.
+`scripts/21_build_epi_matched_ref.py` therefore derives `GUT_HEALTHY_EPI`, the Gut Cell Atlas
+restricted to its 12 epithelial cell types, giving a human reference matched to Haber on compartment.
+
+### Lift, not raw accuracy
+
+Raw accuracy is not comparable across references: each poses a different problem (26 immune types, 15
+epithelial, 12 epithelial, 72/54/45 whole-tissue), and chance alone moves with the number of classes.
+Every panel is therefore scored as **lift over the size-matched random baseline measured on the same
+reference** (RANDOM_535, common to every run):
+
+    lift(panel, ref) = mean_accuracy(panel, ref) - mean_accuracy(RANDOM_535, ref)
+
+The baselines confirm the problems differ: RANDOM_535 scores 57.9% on mouse immune, 52.2% on mouse
+gut epithelium, 63.2% on human gut epithelium, and 48.2% on the 72-type human gut.
+
+### What the decomposition shows
+
+| Effect | Contrast | Range across 9 panels |
+| --- | --- | --- |
+| Tissue (species fixed) | mouse immune -> mouse gut epithelium | **-2 to -21 pp**, negative for every panel |
+| Species (compartment fixed) | mouse -> human gut epithelium | -4.7 to +12.3 pp, mostly small |
+| Compartment (species fixed) | human gut epithelium -> whole tissue | -0.6 to +30 pp |
+
+Three things follow.
+
+**The apparent "species effect" was mostly compartment.** Before matching, mouse gut -> human whole
+gut looked like +6.7 to +25.3 pp. Once compartment is held fixed, the species term collapses for most
+panels while the compartment term carries the difference.
+
+**Every panel loses lift moving from immune to gut epithelium.** This is the finding that matters for
+Foli-seq: commercial panels are immune-weighted, and that weighting costs them on epithelium — the
+compartment the exfoliome is made of. The CosMx IO 100-plex add-on is the clearest case, falling to
+**-14.8 pp on mouse and -19.5 pp on human gut epithelium**, meaning it performs *worse than a random
+gene set of the same size* there. An immuno-oncology panel is not merely unhelpful on epithelium, it
+is actively worse than chance-equivalent selection.
+
+**The two Foli-seq panels each favour their own species**, and matching compartment makes the effect
+larger, not smaller:
+
+| | mouse gut epithelium | human gut epithelium |
+| --- | --- | --- |
+| mPS3 (mouse panel) minus hPS2 (human panel) | **+4.1 pp** | **-7.0 pp** |
+
+An 11.0 pp swing. This is real ortholog-mapping and species-biology signal, and it means a panel
+validated on one species should not be assumed to transfer to the other.
+
 ## 10. Curation beats size-matched random, cleanly
 
 With random baselines drawn from the **transcriptome** (not from the union of commercial panels),
@@ -175,7 +230,13 @@ panel genes. Drawing from the transcriptome is what makes the comparison meaning
 - **The |r| >= 0.8 threshold is a convention**, taken from Spapros. `q3_correlated_pairs_*.csv` stores
   only pairs above it, so the distribution of r below 0.8 cannot be recovered from those files without
   recomputing the correlation matrices.
-- **Species is confounded with tissue** in the current reference set; see section 9.
+- **Species was confounded with tissue** in the four-reference set; resolved in section 9b by adding
+  Haber (mouse gut) and a compartment-matched human epithelial reference.
+- **Haber carries a batch column but batch is not modelled.** Cell types and mice are not fully
+  crossed in that dataset, so some of the mouse-gut signal may be donor rather than cell type.
+- **`GUT_HEALTHY_EPI` is a subset of `GUT_HEALTHY`**, so the two are not independent; the compartment
+  effect is a within-dataset contrast, which is a strength for that comparison and a limit on reading
+  it as a general property of gut tissue.
 - **Cache keys.** `12_spapros_eval.py` caches confusion matrices as `q4_confusion_{panel}.csv` with no
   reference in the filename. Running a second reference through that script would silently reuse the
   first reference's results. `17_multiref_eval.py` keys its cache `q4_confusion_{REF}__{panel}.csv`.
