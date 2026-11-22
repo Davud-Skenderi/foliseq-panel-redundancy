@@ -53,16 +53,20 @@ def accuracy_table(ref):
     rebuilds the table from the per-panel cached confusion matrices so partial results are usable.
     """
     agg = O + (f"q4_accuracy_by_celltype_{ref}.csv" if ref != "MM_SLN" else "q4_accuracy_by_celltype.csv")
-    if os.path.exists(agg):
-        return pd.read_csv(agg, index_col=0) * 100, "complete"
+    aggA = pd.read_csv(agg, index_col=0) * 100 if os.path.exists(agg) else None
     cols = {}
     for f in sorted(glob.glob(O + f"q4_confusion_{ref}__*.csv")):
         panel = os.path.basename(f).split("__", 1)[1][:-4]
         cm = pd.read_csv(f, index_col=0)
         cols[panel] = pd.Series(np.diag(cm.values), index=cm.index)
-    if not cols:
+    cacheA = pd.DataFrame(cols) * 100 if cols else None
+    # A subset run (--panels) rewrites the aggregate with only that subset, so prefer whichever
+    # source carries more panels; the per-panel caches are never overwritten.
+    if aggA is not None and (cacheA is None or aggA.shape[1] >= cacheA.shape[1]):
+        return aggA, "complete"
+    if cacheA is None:
         return None, "missing"
-    return pd.DataFrame(cols) * 100, "partial"
+    return cacheA, "partial"
 
 
 # ------------------------------------------------------------------ F4 corrected

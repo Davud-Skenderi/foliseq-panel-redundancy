@@ -122,6 +122,45 @@ Random gene sets of matched size are the control: they say what a panel of that 
 curation at all. v2 used 535 genes x 3 draws. v3 adds 330 x 3 (the measured size of Foli-seq mPS3), so
 each Foli-seq panel has a size-matched null rather than one borrowed from a different size.
 
+
+## 9. A confound in the current reference set, and how to remove it
+
+`MM_SLN` is **mouse** tissue. All three gut references are **human**. So the contrast currently
+labelled "immune vs gut" is also "mouse vs human", and the two cannot be separated with these four
+references alone.
+
+The data shows why this matters. Across the 9 shared panels the mean shift from immune to gut is
+small (-4.5 to +4.2 points), but the two Foli-seq panels move in **opposite directions**:
+
+| Panel | MM_SLN (mouse immune) | mean of 3 human gut refs | shift |
+| --- | --- | --- | --- |
+| Foli-seq mPS3 (mouse panel) | 76.9% | 72.8% | **-4.1** |
+| Foli-seq hPS2 (human panel) | 69.5% | 73.7% | **+4.2** |
+
+Each panel does better on the reference matching its own species. That is exactly the signature of a
+species effect rather than a tissue effect, and it is the single most likely alternative explanation
+for any tissue-specific claim made from these four references.
+
+**Adding Haber et al. 2017 (GSE92332, mouse small intestinal epithelium) resolves it.** With a mouse
+gut reference the design becomes 2x2 — mouse/human x immune/gut — and the tissue effect can be
+estimated with species held fixed. The repo README already named Haber as planned work; this analysis
+turns that from a nice-to-have into the next necessary step.
+
+## 10. Curation beats size-matched random, cleanly
+
+With random baselines drawn from the **transcriptome** (not from the union of commercial panels),
+a 330-gene random set is far behind the curated panels of comparable size:
+
+| Reference | random 330 (mean of 3) | Foli-seq mPS3 | gap |
+| --- | --- | --- | --- |
+| Gut Cell Atlas, healthy | 43.2% | 69.7% | +26.5 |
+| Inflamed gut | 45.2% | 70.9% | +25.7 |
+| Colorectal cancer | 46.7% | 77.9% | +31.1 |
+
+This is worth stating carefully. A null drawn from the union of commercial panel genes would be a far
+weaker test, because the large panels make up most of that union — a random draw from it is mostly
+panel genes. Drawing from the transcriptome is what makes the comparison meaningful.
+
 ## 7. Known limitations
 
 - **Subsampling.** 250 cells per type (Spapros then uses up to 200). Adequate for per-type accuracy,
@@ -136,6 +175,7 @@ each Foli-seq panel has a size-matched null rather than one borrowed from a diff
 - **The |r| >= 0.8 threshold is a convention**, taken from Spapros. `q3_correlated_pairs_*.csv` stores
   only pairs above it, so the distribution of r below 0.8 cannot be recovered from those files without
   recomputing the correlation matrices.
+- **Species is confounded with tissue** in the current reference set; see section 9.
 - **Cache keys.** `12_spapros_eval.py` caches confusion matrices as `q4_confusion_{panel}.csv` with no
   reference in the filename. Running a second reference through that script would silently reuse the
   first reference's results. `17_multiref_eval.py` keys its cache `q4_confusion_{REF}__{panel}.csv`.

@@ -21,55 +21,6 @@ Methods*, "Probe set selection for targeted spatial transcriptomics") and uses i
 Figures are in `figures/v2/`. A full methods guide (each step's rationale, citation, result and limits) is in the Claude Doc "Foli-seq panel design: methods guide (v2)". The first version of this analysis (cosine similarity of enrichment profiles, PCA–ridge
 reconstruction, weighted priority score) is kept in `archive/v1/` for the record and is superseded.
 
-
-## v3: gut references, distributions, and a robustness test
-
-`docs/METHODS_v3.md` explains the reasoning behind every step below in plain language.
-
-| Step | Script | What it adds |
-| --- | --- | --- |
-| Gut references | `scripts/16_build_gut_refs.py` | Closes the README's "gut references still needed" gap. Builds three annotated human intestinal references from the CELLxGENE Census (release 2025-11-08): `GUT_HEALTHY` (Gut Cell Atlas, 72 cell types), `GUT_IBD` (54), `GUT_CRC` (45). Full transcriptome retained so random baselines are drawn from the transcriptome, not from the union of commercial panels. |
-| Re-evaluation | `scripts/17_multiref_eval.py` | Runs the same Spapros Q3/Q4 metrics against each gut reference. Adds 330-gene random baselines (the measured size of Foli-seq mPS3) alongside the existing 535. |
-| v3 figures | `scripts/18_figures_v3.py` | `v3_fig4c` corrected redundancy, `v3_fig5h` accuracy as a distribution, `v3_fig7` reference robustness. |
-
-### Two corrections to v2
-
-**fig4 plotted a size-confounded quantity.** It showed the raw count of gene pairs with |r| >= 0.8.
-Possible pairs grow as n(n-1)/2, so the count ranks panels largely by size; the figure's own code
-comment said it showed "% genes without a |r| >= 0.8 partner", which `q3_redundancy_summary.csv`
-already stores as `pct_genes_nonredundant`. Plotting the size-normalised form **inverts the ordering**:
-CosMx Human 6K has the most redundant pairs by count and nearly the fewest per gene (0.47%), while the
-CosMx IO 100-plex add-on has 18.2% of its genes carrying a redundant partner on human PBMC — the
-highest of any panel.
-
-**fig5 plotted a mean over cell types.** A mean cannot distinguish a uniformly mediocre panel from one
-that is excellent on most cell types and fails on a few. The histogram shows, for example, that
-Foli-seq hPS2's 70% mean on mouse spleen/lymph node is **bimodal** — one group of cell types near 55%,
-another near 85%.
-
-### Robustness (the point of varying the reference)
-
-Panels (1) and metrics (2) are held fixed while the reference (3) is varied. A reference with more and
-finer cell types is a harder problem, so the whole accuracy distribution shifts left — that shift is
-expected and says nothing about any panel. What matters is whether panel **ordering** survives it.
-Between mouse spleen/lymph node (26 immune types) and the Gut Cell Atlas (72 intestinal types),
-Spearman rank correlation of per-panel mean accuracy is **0.93** over the 9 shared panels, with a mean
-shift of -2.4 percentage points. Foli-seq mPS3 is the notable mover, falling relative to the others on
-gut tissue.
-
-### Status
-
-`GUT_HEALTHY` is complete for 9 of 14 panels; `GEOMX_H_CTA`, `GEOMX_DOG_CCA`, `XEN_M5K`, `XEN_H5K`,
-`COSMX_H6K` and the random baselines are still to run, and `GUT_IBD`/`GUT_CRC` have not been started.
-Per-panel confusion matrices are cached as `results/v2/q4_confusion_{REF}__{panel}.csv`, so
-`python scripts/17_multiref_eval.py GUT_HEALTHY GUT_IBD GUT_CRC` resumes where it stopped. The figure
-script reads those caches directly, so figures regenerate from partial runs and are labelled as such.
-Run `scripts/16_build_gut_refs.py` first; it writes to `external/expr/` (gitignored).
-
-**Known issue in `12_spapros_eval.py`:** its confusion-matrix cache key is `q4_confusion_{panel}.csv`
-with no reference in the name, so running a second reference through that script would silently reload
-the first reference's results. `17_multiref_eval.py` keys its cache by reference.
-
 ## Reference data and its limits
 
 - **Q3/Q4 currently use immune references**: mouse spleen + lymph node CITE-seq with 26 annotated cell types

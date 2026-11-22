@@ -128,6 +128,20 @@ def run(ref_tag, h5ad_name):
 
 
 REFS = {"GUT_HEALTHY": "gut_healthy.h5ad", "GUT_IBD": "gut_ibd.h5ad", "GUT_CRC": "gut_crc.h5ad"}
+
 if __name__ == "__main__":
-    for tag in (sys.argv[1:] or list(REFS)):
+    # usage: 17_multiref_eval.py REF [REF ...] [--panels A,B,C]
+    # --panels restricts the run to a subset, so a shared panel set can be completed across every
+    # reference before the expensive 5K/6K panels are attempted on any one of them. Results are
+    # cached per (reference, panel), so later runs extend rather than repeat.
+    args = sys.argv[1:]
+    subset = None
+    if "--panels" in args:
+        i = args.index("--panels")
+        subset = [x for x in args[i + 1].split(",") if x]
+        args = args[:i]
+    if subset:
+        PANELS = [p for p in PANELS if p in subset]
+        print(f"panel subset: {len(PANELS)} panels", flush=True)
+    for tag in (args or list(REFS)):
         run(tag, REFS[tag])
