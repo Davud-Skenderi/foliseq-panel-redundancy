@@ -201,6 +201,63 @@ larger, not smaller:
 An 11.0 pp swing. This is real ortholog-mapping and species-biology signal, and it means a panel
 validated on one species should not be assumed to transfer to the other.
 
+## 9c. Lift does not fully normalise for the number of cell types — and what that costs
+
+Lift subtracts a size-matched random baseline measured on the same reference, which should cancel out
+how hard that reference's problem is. It does not fully succeed. Across the six references:
+
+    corr(number of cell types, mean lift) = +0.78
+
+More cell types means systematically higher lift, because a harder problem leaves more headroom for
+curation to fill. A headroom-normalised alternative, `(panel - random) / (100 - random)`, still
+correlates +0.63. Neither metric removes the dependence.
+
+**This threatened the tissue result specifically.** The tissue effect is measured MM_SLN (26 cell
+types) -> HABER_GUT (15). The count drops, and the artifact predicts lift should drop with it, which
+is exactly the direction observed. "Panels are immune-weighted" and "Haber has fewer cell types"
+could not be told apart.
+
+(The species step was never threatened: HABER_GUT 15 types -> GUT_HEALTHY_EPI 12 types *decreases*
+the count while lift *rises*, against the artifact's direction.)
+
+### The control
+
+`scripts/22_celltype_count_control.py` re-runs MM_SLN restricted to a random 15 of its 26 cell types,
+over 3 independent draws, so the immune reference poses a 15-class problem exactly like Haber.
+Everything else is identical: same panels, same classifier settings, same RANDOM_535 baselines, same
+preparation code as `12_spapros_eval.py`.
+
+| Panel | tissue effect, unmatched | tissue effect, **matched** | sd across draws |
+| --- | --- | --- | --- |
+| CosMx IO (100) | -21.0 | **-21.2** | 2.98 |
+| MERSCOPE Brain (128) | -12.6 | **-12.3** | 0.58 |
+| MERSCOPE Pan-Mouse (815) | -12.8 | **-10.1** | 1.80 |
+| CosMx Human UCC (1K) | -10.6 | **-6.9** | 1.86 |
+| CosMx Mouse UCC (1K) | -10.5 | **-6.6** | 2.10 |
+| MERSCOPE PanNeuro (815) | -5.5 | **-3.0** | 0.18 |
+| Foli-seq mPS3 | -5.3 | **-2.5** | 1.54 |
+| CosMx Mouse Neuro (1K) | -3.1 | **-1.7** | 1.38 |
+| Foli-seq hPS2 | -2.0 | **-0.3** | 2.30 |
+
+**The direction survives for every panel**, so the tissue effect is not purely an artifact. But
+roughly a third of the apparent magnitude was the class-count artifact for mid-sized panels, and the
+conclusion needs restating:
+
+- **Commercial panels built for other tissues lose substantial lift on gut epithelium** — CosMx IO
+  -21.2, MERSCOPE Brain -12.3, MERSCOPE Pan-Mouse -10.1. These are large and well outside the
+  draw-to-draw spread.
+- **The Foli-seq panels do not.** mPS3 is -2.5 (sd 1.54) and hPS2 is -0.3 (sd 2.30) — hPS2's interval
+  comfortably includes zero. The panels designed for gut do not pay the epithelium penalty.
+
+That is a better result for Foli-seq than the uncorrected version suggested, and a more defensible
+one. The claim to make is not "all panels are immune-weighted" but "panels curated for other tissues
+lose power on gut epithelium, and the Foli-seq panels do not."
+
+One further observation from the control: RANDOM_535 scores about 66.6% on the 15-type immune problem
+against 52.2% on Haber's 15-type problem. **Same class count, very different difficulty.** Cell-type
+count is therefore not the only driver of reference difficulty, which is why an empirical baseline is
+needed rather than a correction formula.
+
 ## 10. Curation beats size-matched random, cleanly
 
 With random baselines drawn from the **transcriptome** (not from the union of commercial panels),
@@ -230,6 +287,8 @@ panel genes. Drawing from the transcriptome is what makes the comparison meaning
 - **The |r| >= 0.8 threshold is a convention**, taken from Spapros. `q3_correlated_pairs_*.csv` stores
   only pairs above it, so the distribution of r below 0.8 cannot be recovered from those files without
   recomputing the correlation matrices.
+- **Lift does not fully normalise for cell-type count** (r = +0.78); section 9c runs the control and
+  restates the tissue result accordingly.
 - **Species was confounded with tissue** in the four-reference set; resolved in section 9b by adding
   Haber (mouse gut) and a compartment-matched human epithelial reference.
 - **Haber carries a batch column but batch is not modelled.** Cell types and mice are not fully
