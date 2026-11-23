@@ -258,6 +258,113 @@ against 52.2% on Haber's 15-type problem. **Same class count, very different dif
 count is therefore not the only driver of reference difficulty, which is why an empirical baseline is
 needed rather than a correction formula.
 
+## 9d. A ceiling, and what a targeted panel gives up
+
+The CosMx Whole Transcriptome (WTx) lists were supplied directly, having been sales-gated.
+`scripts/23_add_cosmx_wtx.py` adds them: 18,934 human source genes -> 18,692 human symbols, and
+21,190 mouse -> 17,491. They matter as a **ceiling**, not as competitors: whole-transcriptome imaging
+measures essentially everything the platform can, so its accuracy bounds what any targeted panel on
+that platform could reach.
+
+With a floor (size-matched random) and a ceiling (whole transcriptome), panel scores become
+interpretable on an absolute scale (`scripts/26_ceiling_analysis.py`):
+
+    ceiling fraction = (panel - random) / (whole transcriptome - random)
+
+| Reference | floor (random 535) | ceiling (WTx) | usable range |
+| --- | --- | --- | --- |
+| Mouse gut epithelium (Haber) | 52.2% | 72.5% | 20.3 pp |
+| Human gut epithelium (GCA) | 63.2% | 87.5% | 24.3 pp |
+
+**Foli-seq hPS2 reaches 90.3% of the ceiling on human gut epithelium with 543 genes** — 85.2%
+accuracy against the whole transcriptome's 87.5%, a 2.3 point gap for roughly a 26-fold reduction in
+genes measured. On mouse gut epithelium, mPS3 reaches 67.4% of the ceiling and the 5K/6K panels reach
+83-84%.
+
+The species-match pattern persists on this scale: hPS2 captures 90.3% of the ceiling on human
+epithelium but only 47.5% on mouse; mPS3 captures 67.4% on mouse and 61.7% on human.
+
+Note the negative values are meaningful rather than clipped: CosMx IO at -80.2% and MERSCOPE Brain at
+-50.3% on human epithelium are below the random floor, consistent with section 9b.
+
+Each WTx workbook also carries a **Known Missing Targets** sheet, a vendor-stated gap list saved to
+`data/known_missing_COSMX_{H,M}_WTX.csv`. Human lists 88 exclusions (61 with no RefSeq transcript, 13
+mitochondrially encoded, 10 intentionally dropped for high expression such as ACTB and EEF1A1); mouse
+lists 1,205. So even the whole transcriptome has holes, and some are deliberate.
+
+### A bug this exposed
+
+The Q3 redundancy step builds an n x n correlation matrix. At whole-transcriptome size that is tens
+of millions of float64 entries plus copies, which exhausted memory and killed the process **after**
+the classification result had been cached — silently, with no error in the log. `17_multiref_eval.py`
+now skips the correlation step above `CORR_MAX_GENES = 8000`. Redundancy has no design
+interpretation for a whole-transcriptome panel anyway, since it is not a curated selection.
+
+## 9e. Where the ortholog mapping actually distorts
+
+`scripts/24_ortholog_collapse_audit.py` quantifies the many-to-one collapses. On Haber, 194 human
+symbols receive two or more mouse genes, absorbing 383 extra genes — 3.1% of mapped genes. Modest in
+aggregate, but **highly concentrated**, and concentrated on exactly the biology this project cares
+about:
+
+| Human symbol | mouse genes absorbed | |
+| --- | --- | --- |
+| ZNF117 | 38 | zinc fingers |
+| **DEFA1** | **19** | **alpha-defensins (Paneth cell antimicrobial peptides)** |
+| HLA-A | 15 | MHC class I |
+| H3C1 / H4C1 / H2BC10 | 12 / 10 / 10 | histones |
+
+Mouse has a greatly expanded alpha-defensin (cryptdin) family; human has far fewer. After mapping,
+only two defensin symbols are present at all in Haber's gene space, one of which absorbs 19 mouse
+genes. REG3A absorbs 4.
+
+**The practical rule:** cross-species claims about mucins, pattern-recognition receptors, tight
+junctions and IgA transport are safe — those categories show zero collapses. Cross-species claims
+about **antimicrobial peptides are not**, and neither are claims touching MHC class I, which matters
+because the immune reference sits on one side of the tissue comparison.
+
+## 9f. What the panels actually carry at the host-microbiome interface
+
+`scripts/25_interface_coverage.py` scores every panel against a 154-gene interface set — antimicrobial
+peptides, mucins, pattern-recognition receptors, tight junction and barrier genes, IgA transport, the
+trefoil/goblet programme, and Paneth markers — using the CosMx Human WTx panel as the denominator, so
+"missing" means missing relative to what the platform could have included.
+
+| Panel | size | interface genes | % of set | **% of its own budget** |
+| --- | --- | --- | --- | --- |
+| Xenium Mouse 5K | 4,949 | 57 | 37.0 | 1.15 |
+| CosMx Human 6K | 6,338 | 57 | 37.0 | 0.90 |
+| Xenium Human 5K | 5,000 | 52 | 33.8 | 1.04 |
+| **Foli-seq hPS2** | **543** | **42** | **27.3** | **7.73** |
+| GeoMx CTA | 1,890 | 34 | 22.1 | 1.80 |
+| **Foli-seq mPS3** | **535** | **29** | **18.8** | **5.42** |
+| MERSCOPE PanNeuro | 812 | 3 | 1.9 | 0.37 |
+| MERSCOPE Brain | 128 | 0 | 0.0 | 0.00 |
+
+The Foli-seq panels spend **5-8% of their gene budget** on interface biology against 0.4-2.9% for
+every commercial panel. hPS2 carries 42 interface genes in 543 slots; Xenium Human 5K carries 52 in
+5,000. That is roughly a sevenfold difference in density, and it is the clearest quantitative
+evidence that the Foli-seq panels are doing something the commercial ones are not.
+
+### The gap list
+
+**55 of the 154 interface genes are carried by no targeted panel at all:**
+
+- **30 of 45 antimicrobial peptides** — almost the entire beta-defensin family (DEFB103A through
+  DEFB110 and beyond).
+- **13 of 21 mucins** — including **MUC3A, MUC12, MUC13, MUC17**, the membrane-tethered mucins of the
+  intestinal brush border. This is core barrier biology and no commercial or Foli-seq panel has it.
+- 8 of 34 tight junction genes, 4 of 36 pattern-recognition receptors.
+
+`results/v2/q11_interface_orphans.csv` lists them. This is the concrete target list the project has
+been working toward.
+
+### A gap in the Foli-seq panels themselves
+
+hPS2 carries **1 of 34 tight junction / barrier genes**, and mPS3 carries 4. Xenium Mouse 5K carries
+20. For an assay reading cells shed from an epithelial barrier, barrier-integrity genes are an odd
+thing to be thin on, and this is the most actionable single finding for the next panel revision.
+
 ## 10. Curation beats size-matched random, cleanly
 
 With random baselines drawn from the **transcriptome** (not from the union of commercial panels),

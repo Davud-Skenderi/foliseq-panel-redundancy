@@ -34,8 +34,12 @@ os.makedirs(O, exist_ok=True)
 M = pd.read_csv(D + "gene_by_panel.csv", index_col=0)
 PANELS = ["FOLI_mPS3", "FOLI_hPS2", "COSMX_HIO", "MER_M_BRAINTRAIN", "MER_M_PAN", "MER_M_PANNEURO",
           "COSMX_MNEURO", "COSMX_MUCC", "COSMX_HUCC", "GEOMX_H_CTA", "GEOMX_DOG_CCA",
-          "XEN_M5K", "XEN_H5K", "COSMX_H6K"]
+          "XEN_M5K", "XEN_H5K", "COSMX_H6K",
+          # whole-transcriptome panels: not competitors but a CEILING -- what the platform achieves
+          # measuring essentially everything, so targeted panels can be read as a fraction of it
+          "COSMX_H_WTX", "COSMX_M_WTX"]
 RANDOM_SIZES = [330, 535]      # 330 = Foli-seq mPS3 measured size; 535 = baseline used in v2
+CORR_MAX_GENES = 8000          # above this the n x n correlation matrix exhausts memory; see run()
 N_RANDOM = 3
 
 
@@ -130,7 +134,12 @@ def run(ref_tag, spec):
                          min_celltype_accuracy=float(diag.min()),
                          pct_celltypes_acc_gt_0_8=float(np.mean(diag > 0.8)) * 100))
         per_ct += [dict(panel_id=p, celltype=c, accuracy=float(v)) for c, v in diag.items()]
-        if not p.startswith("RANDOM"):
+        # The redundancy step builds an n x n correlation matrix. At whole-transcriptome size that is
+        # tens of millions of float64 entries plus copies, which exhausts memory and kills the process
+        # AFTER the classification result has been cached -- silently, with no error in the log.
+        # Redundancy is not a meaningful question for a whole-transcriptome panel anyway: it is not a
+        # curated selection, so "what fraction of its genes are redundant" has no design interpretation.
+        if not p.startswith("RANDOM") and len(genes) <= CORR_MAX_GENES:
             s, pairs = corr_summary(corr_ad, genes, ref_tag, p)
             red.append(s)
             allpairs += [dict(dataset=ref_tag, panel_id=p, gene_a=x, gene_b=y, r=r) for x, y, r in pairs]

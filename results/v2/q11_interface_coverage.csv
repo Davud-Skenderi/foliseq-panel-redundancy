@@ -1,0 +1,14 @@
+panel_id,panel_size,interface_genes,interface_pct_of_set,pct_of_panel_budget,antimicrobial peptides,mucins,pattern-recognition,tight junction / barrier,IgA transport,trefoil / goblet,Paneth / secretory
+XEN_M5K,4949,57,37.0,1.15,2,4,22,20,3,2,4
+COSMX_H6K,6338,57,37.0,0.9,8,3,23,8,5,6,5
+XEN_H5K,5000,52,33.8,1.04,5,6,26,8,2,2,3
+FOLI_hPS2,543,42,27.3,7.73,7,3,22,1,3,6,0
+GEOMX_H_CTA,1890,34,22.1,1.8,6,2,19,0,3,0,5
+COSMX_MUCC,985,29,18.8,2.94,4,1,13,1,4,2,4
+FOLI_mPS3,535,29,18.8,5.42,7,4,5,4,3,5,1
+COSMX_HUCC,1108,28,18.2,2.53,4,0,13,1,4,2,4
+MER_M_PAN,805,13,8.4,1.61,0,1,4,4,0,0,4
+COSMX_MNEURO,1001,5,3.2,0.5,1,0,1,2,0,0,1
+MER_M_PANNEURO,812,3,1.9,0.37,0,0,0,2,0,0,1
+COSMX_HIO,104,2,1.3,1.92,0,0,0,0,1,0,1
+MER_M_BRAINTRAIN,128,0,0.0,0.0,0,0,0,0,0,0,0
