@@ -1,0 +1,89 @@
+panel_id,gene_symbol,rationale
+COSMX_H_WTX,ACTB,Intentional - Known high expression
+COSMX_H_WTX,ACTG1,Intentional - Known high expression
+COSMX_H_WTX,EEF1A1,Intentional - Known high expression
+COSMX_H_WTX,EEF2,Intentional - Known high expression
+COSMX_H_WTX,FTL,Intentional - Known high expression
+COSMX_H_WTX,GAPDH,Intentional - Known high expression
+COSMX_H_WTX,PSAP,Intentional - Known high expression
+COSMX_H_WTX,RPL3,Intentional - Known high expression
+COSMX_H_WTX,TPT1,Intentional - Known high expression
+COSMX_H_WTX,UBC,Intentional - Known high expression
+COSMX_H_WTX,MT-ND2,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-ND3,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-ATP8,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-ATP6,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-ND4,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-ND5,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-CO2,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-CYB,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-CO1,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-ND1,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-CO3,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-ND4L,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,MT-ND6,"Intentional - Mitochondrially Encoded, Known high Expression"
+COSMX_H_WTX,RBMY1C,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,ERLN,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,KIR2DS5,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,TRA,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,SDIM1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,MLDHR,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,CIMIP5,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,PCDHA@,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,MAPDA,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,BACC1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,APOBEC3A_B,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,PEX39,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,TRG,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR51C1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,TAS2R36,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR1P1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,UGT1A,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR5AC1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR4F4,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,CSNK2A2IP,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR5G3,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,KIR2DL5B,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR8G3,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR5H8,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,DDX11L13,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,FAM90A5,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,TRD,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,CIMIP7,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,FSAF1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,ARLN,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR51J1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,SAMTOR,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,POPDC1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR56B2,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,KIR2DL2,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,TAS2R33,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR9H1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,CIMIP6,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,PCDHB@,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,USP17L23,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR2B8,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR2I1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,TRB,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR13C7,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,DEFB109D,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,PCDHG@,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR4A8,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,DUX3,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,IGL,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,FAM90A20,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,GOLGA6L19,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,SLCO1B7,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,DNAAF19,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR5BS1,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,OR1E3,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,HLA-DRB4,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,TAS2R2,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,IGK,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,IGH,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,DEFB109C,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,ATXN8,No available transcript sequence in RefSeq at time of design
+COSMX_H_WTX,ANKRD36B,Alterations in the transcriptome during product development
+COSMX_H_WTX,MYH16,Alterations in the transcriptome during product development
+COSMX_H_WTX,ZNF33A,Alterations in the transcriptome during product development
+COSMX_H_WTX,© 2025 Bruker Spatial Biology. All rights reserved,FOR RESEARCH USE ONLY. NOT FOR USE IN DIAGNOSTIC PROCEDURES.
