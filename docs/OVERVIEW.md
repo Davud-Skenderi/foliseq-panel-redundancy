@@ -121,7 +121,7 @@ meaningful maximum.
 
 | Tag | Source | Species | Tissue | Cell types | Seeds |
 | --- | --- | --- | --- | --- | --- |
-| `MM_SLN` | Gayoso et al. CITE-seq | Mouse | Immune (spleen/lymph node) | 26 | 1 |
+| `MM_SLN` | Gayoso et al. CITE-seq | Mouse | Immune (spleen/lymph node) | 26 | 5 |
 | `HUMAN_IMMUNE` | Human Immune Health Atlas | Human | Immune (blood) | 37 | 1 |
 | `HABER_GUT` | Haber et al. 2017, GSE92332 | Mouse | Gut epithelium | 15 | 5 |
 | `GUT_HEALTHY_EPI` | Gut Cell Atlas, epithelial subset | Human | Gut epithelium | 12 | 5 |
@@ -176,9 +176,16 @@ ranking.
 A 330-gene random set scores 43–47% on gut references where Foli-seq mPS3 scores 70–78%. Gaps of
 +26 to +31 points.
 
-### The tissue effect is real, replicates, and is small for the Foli-seq panels
-Moving from immune tissue to gut epithelium, panels lose lift. The two independent estimates
-correlate **r = +0.96**, so this is not an artifact of one reference.
+### The tissue effect is real, replicates, and is absent for the Foli-seq panels
+Moving from immune tissue to gut epithelium, panels lose lift. The two independent estimates — one
+computed entirely within mouse, one entirely within human — correlate **r = +0.97**, with the sign
+agreeing for 7 of 9 panels. This is not an artifact of one reference.
+
+Re-running MM_SLN at 5 seeds shrank several magnitudes, so the single-run numbers had been somewhat
+inflated: CosMx IO from -20.4 to -18.2, CosMx Human UCC from -10.1 to -7.2, CosMx Mouse Neuro from
+-3.1 to -0.2. **Both Foli-seq panels land at or above zero** (mPS3 -2.5 in mouse and -0.2 in human;
+hPS2 +0.2 and +6.5), meaning they pay no epithelium penalty at all and hPS2 is actually better on
+gut epithelium than on immune tissue.
 
 But magnitude matters, and a control was needed. Because lift correlates with class count, and the
 tissue comparison reduces class count, the effect's direction was also the artifact's direction.
@@ -289,8 +296,9 @@ is the standard-deviation matrix — the reason no number in this repo had an er
 
 ## 10. What is still open
 
-**Unquantified.** `MM_SLN`, `HUMAN_IMMUNE` and the three whole-tissue gut references are still at
-`n_seeds=1`, so only the two gut-epithelium references carry error bars. The whole-transcriptome
+**Unquantified.** `HUMAN_IMMUNE` and the three whole-tissue gut references are still at `n_seeds=1`;
+`MM_SLN`, `HABER_GUT` and `GUT_HEALTHY_EPI` are at 5. So the mouse row of the grid is internally
+consistent and the human row is not yet. The whole-transcriptome
 ceiling is a single run, and the ceiling fraction divides by it.
 
 **Incomplete runs.** `GEOMX_H_CTA`, `GEOMX_DOG_CCA`, `XEN_M5K`, `XEN_H5K` and `COSMX_H6K` have not run

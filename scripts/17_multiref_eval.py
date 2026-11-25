@@ -93,9 +93,19 @@ def corr_summary(adata, genes, tag, panel):
     ), pairs
 
 
+def load_mm_sln():
+    """Same preparation as 12_spapros_eval.py: concat the two donors, drop doublets and low quality."""
+    a1 = ad.read_h5ad(EXT + "expr/sln_111.h5ad"); a2 = ad.read_h5ad(EXT + "expr/sln_208.h5ad")
+    a = ad.concat([a1, a2], join="inner"); a.obs_names_make_unique()
+    a = a[~a.obs.cell_types.str.contains("doublet|Low quality|Erythrocytes", case=False)].copy()
+    a.obs["celltype"] = a.obs.cell_types.astype(str)
+    a.uns["reference_title"] = "Mouse spleen / lymph node CITE-seq"
+    return a
+
+
 def run(ref_tag, spec):
     h5ad_name, species = spec
-    a = ad.read_h5ad(EXT + f"expr/{h5ad_name}")
+    a = load_mm_sln() if h5ad_name == "__MM_SLN__" else ad.read_h5ad(EXT + f"expr/{h5ad_name}")
     title = a.uns.get("reference_title", ref_tag)
     if species == "Mouse":
         n0 = a.n_vars
@@ -175,7 +185,11 @@ REFS = {"GUT_HEALTHY": ("gut_healthy.h5ad", "Human"),
         # epithelium-only human reference, compartment-matched to HABER_GUT (see 21_)
         "GUT_HEALTHY_EPI": ("gut_healthy_epi.h5ad", "Human"),
         # fills the empty human-immune corner of the species x tissue grid (see 28_)
-        "HUMAN_IMMUNE": ("human_immune.h5ad", "Human")}
+        "HUMAN_IMMUNE": ("human_immune.h5ad", "Human"),
+        # MM_SLN is two files that must be concatenated and filtered, so it is loaded specially
+        # below rather than from a single h5ad. Registered here so it can be re-run at 5 seeds and
+        # the whole grid share one seed setting instead of mixing 1-seed and 5-seed numbers.
+        "MM_SLN": ("__MM_SLN__", "Mouse")}
 
 if __name__ == "__main__":
     # usage: 17_multiref_eval.py REF [REF ...] [--panels A,B,C]

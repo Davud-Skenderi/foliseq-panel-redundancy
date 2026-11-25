@@ -43,8 +43,18 @@ f3 = importlib.util.module_from_spec(spec); spec.loader.exec_module(f3)
 
 PANELS = ["FOLI_mPS3", "FOLI_hPS2", "COSMX_HIO", "MER_M_BRAINTRAIN", "MER_M_PAN", "MER_M_PANNEURO",
           "COSMX_MNEURO", "COSMX_MUCC", "COSMX_HUCC"]
-GRID = {"MM_SLN": ("Mouse", "Immune", 1), "HUMAN_IMMUNE": ("Human", "Immune", 1),
-        "HABER_GUT": ("Mouse", "Gut epithelium", 5), "GUT_HEALTHY_EPI": ("Human", "Gut epithelium", 5)}
+GRID = {"MM_SLN": ("Mouse", "Immune"), "HUMAN_IMMUNE": ("Human", "Immune"),
+        "HABER_GUT": ("Mouse", "Gut epithelium"), "GUT_HEALTHY_EPI": ("Human", "Gut epithelium")}
+
+
+def seeds_available(ref):
+    """Use the 5-seed run where it is complete (panels AND the RANDOM_535 baseline the lift needs),
+    otherwise fall back to 1 seed. Mixing within a single reference would be incoherent; mixing
+    ACROSS references is reported rather than hidden, since each lift is computed within a reference."""
+    have = {os.path.basename(f).split("__", 1)[1][:-4]
+            for f in glob.glob(O + f"q4_confusion_s5_{ref}__*.csv")}
+    need = set(PANELS) | {f"RANDOM_535_{k}" for k in range(3)}
+    return 5 if need <= have else 1
 
 
 def table(ref, seeds):
@@ -71,7 +81,8 @@ def sd_table(ref):
 
 
 rows = []
-for ref, (sp_, ti, seeds) in GRID.items():
+for ref, (sp_, ti) in GRID.items():
+    seeds = seeds_available(ref)
     A = table(ref, seeds)
     if A is None:
         print(f"{ref}: missing"); continue
