@@ -40,6 +40,9 @@ PANELS = ["FOLI_mPS3", "FOLI_hPS2", "COSMX_HIO", "MER_M_BRAINTRAIN", "MER_M_PAN"
           "COSMX_H_WTX", "COSMX_M_WTX"]
 RANDOM_SIZES = [330, 535]      # 330 = Foli-seq mPS3 measured size; 535 = baseline used in v2
 CORR_MAX_GENES = 8000          # above this the n x n correlation matrix exhausts memory; see run()
+N_SEEDS = int(os.environ.get("N_SEEDS", "1"))   # Spapros default is 5; v2 used 1 for compute.
+                                                # With 1 seed no accuracy carries a spread, so a 2-point
+                                                # difference cannot be told from run-to-run noise.
 N_RANDOM = 3
 
 
@@ -118,13 +121,23 @@ def run(ref_tag, spec):
         if len(genes) < 10:
             print(f"  {p}: only {len(genes)} genes measured, skipped", flush=True); continue
         t0 = time.time()
-        cached = O + f"q4_confusion_{ref_tag}__{p}.csv"       # dataset-keyed cache
+        # cache key carries the seed count as well as the dataset: a 5-seed result is a different
+        # quantity from a 1-seed result and must not silently overwrite or reload it
+        suffix = "" if N_SEEDS == 1 else f"_s{N_SEEDS}"
+        cached = O + f"q4_confusion{suffix}_{ref_tag}__{p}.csv"
         if os.path.exists(cached):
             cm = pd.read_csv(cached, index_col=0)
         else:
-            cm = spm.xgboost_forest_classification(clf_ad, genes, celltypes="all", ct_key="celltype",
-                                                   n_cells_min=40, n_seeds=1, n_jobs=2, verbosity=0)[0]
+            out = spm.xgboost_forest_classification(clf_ad, genes, celltypes="all", ct_key="celltype",
+                                                    n_cells_min=40, n_seeds=N_SEEDS, n_jobs=2,
+                                                    verbosity=0)
+            # out[0] is the confusion matrix averaged over CV folds and seeds; out[1] is its standard
+            # deviation over the same. 12_spapros_eval.py discarded out[1], which is why no number in
+            # this repo had an error bar. Keep it.
+            cm = out[0]
             cm.to_csv(cached)
+            if len(out) > 1 and out[1] is not None:
+                out[1].to_csv(cached.replace("q4_confusion", "q4_confusion_sd"))
         diag = pd.Series(np.diag(cm.values), index=cm.index)
         rows.append(dict(reference=ref_tag, panel_id=p, n_genes_measured=len(genes),
                          n_celltypes=len(diag),
@@ -145,9 +158,10 @@ def run(ref_tag, spec):
             allpairs += [dict(dataset=ref_tag, panel_id=p, gene_a=x, gene_b=y, r=r) for x, y, r in pairs]
         print(f"  {p}: {len(genes)} genes, mean acc {diag.mean():.3f}, {time.time()-t0:.0f}s", flush=True)
 
-    pd.DataFrame(rows).to_csv(O + f"q4_celltype_identification_{ref_tag}.csv", index=False)
+    sfx = "" if N_SEEDS == 1 else f"_s{N_SEEDS}"
+    pd.DataFrame(rows).to_csv(O + f"q4_celltype_identification{sfx}_{ref_tag}.csv", index=False)
     (pd.DataFrame(per_ct).pivot(index="celltype", columns="panel_id", values="accuracy")
-       .to_csv(O + f"q4_accuracy_by_celltype_{ref_tag}.csv"))
+       .to_csv(O + f"q4_accuracy_by_celltype{sfx}_{ref_tag}.csv"))
     if red:
         pd.DataFrame(red).to_csv(O + f"q3_redundancy_summary_{ref_tag}.csv", index=False)
         pd.DataFrame(allpairs).to_csv(O + f"q3_correlated_pairs_{ref_tag}.csv", index=False)
@@ -159,7 +173,9 @@ REFS = {"GUT_HEALTHY": ("gut_healthy.h5ad", "Human"),
         "GUT_CRC":     ("gut_crc.h5ad", "Human"),
         "HABER_GUT":   ("haber_gut.h5ad", "Mouse"),
         # epithelium-only human reference, compartment-matched to HABER_GUT (see 21_)
-        "GUT_HEALTHY_EPI": ("gut_healthy_epi.h5ad", "Human")}
+        "GUT_HEALTHY_EPI": ("gut_healthy_epi.h5ad", "Human"),
+        # fills the empty human-immune corner of the species x tissue grid (see 28_)
+        "HUMAN_IMMUNE": ("human_immune.h5ad", "Human")}
 
 if __name__ == "__main__":
     # usage: 17_multiref_eval.py REF [REF ...] [--panels A,B,C]
