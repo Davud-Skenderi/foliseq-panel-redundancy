@@ -1,60 +1,277 @@
-# Panel comparison — update for Yiming
+# Panel comparison — full brief
 
-Four things, in the order you asked for them. Figures are in `figures/v3/`.
-
----
-
-## 1. The accuracy figure, as a distribution
-
-**Figure:** `v3_fig5h_accuracy_distribution_MM_SLN.png`
-
-The old fig5 plotted each panel's *mean* accuracy across cell types. A mean can't distinguish a panel
-that is uniformly mediocre from one that is excellent on most cell types and fails on a few — and
-those mean very different things for design.
-
-Plotted as a distribution, **Foli-seq hPS2 is bimodal on mouse spleen/lymph node**: one group of cell
-types near 55%, another near 85%. Its "70%" was an average of two behaviours. The second case is
-actionable — you can name the failing cell types and add markers.
+Written to be read before presenting. Sections 1–3 are the concepts; section 4 walks every figure
+with what it shows and how to say it out loud; section 5 has the questions to ask.
 
 ---
 
-## 2. Gut single-cell references, and whether the comparison holds up
+## 0. The thirty-second version
 
-**Figure:** `v3_fig7_reference_robustness.png`
-
-The panel comparison was running on immune tissue only — mouse spleen/lymph node and human PBMC — so
-nothing epithelial had ever been tested against real gut data.
-
-Added, all from the CELLxGENE Census (release 2025-11-08), primary data only:
-
-| Reference | Tissue | Cell types |
-| --- | --- | --- |
-| Gut Cell Atlas (Elmentaite 2021) | healthy human intestine | 72 |
-| Metaplasia / inflammatory gut disease | inflamed | 54 |
-| Colorectal cancer immune hubs | malignant | 45 |
-| Haber 2017 (GSE92332) | mouse small intestine | 15 |
-
-**The panel ordering survives the change of reference**: all pairwise Spearman correlations of
-per-panel mean accuracy fall between **0.92 and 0.97**. Absolute scores shift — a reference with more
-cell types is a harder problem — but which panel beats which does not.
-
-Panels are scored as **lift over a size-matched random gene set measured on the same reference**,
-which is how panel size is normalised. The baselines confirm the references differ in difficulty:
-random 535 genes score 57.9% on mouse immune, 52.2% on mouse gut epithelium, 48.2% on the 72-type
-human gut.
-
-Curation clearly works: a 330-gene random set scores 43–47% on gut where Foli-seq mPS3 scores 70–78%.
+> We'd only ever tested the panels against immune tissue, so nothing epithelial had been checked
+> against real gut data. I added four gut references, converted the accuracy figure from a bar of
+> means to a distribution, and normalised the panel comparison for panel size. The ranking of panels
+> holds up across every reference. And counting genes directly, our panels spend 5–8% of their gene
+> budget on host-microbiome interface biology where commercial panels spend 0.4–2.9% — with 55
+> interface genes, including the brush-border mucins, on no targeted panel at all.
 
 ---
 
-## 3. What the panels carry at the host-microbiome interface
+## 1. What a "reference" is, and what each one is for
 
-**Data:** `results/v2/q11_interface_coverage.csv`, `q11_interface_orphans.csv`
+A **reference** is an annotated single-cell dataset: someone dissociated a tissue, sequenced each
+cell, and labelled every cell with its type. Those labels are the answer key.
 
-This is the part that speaks directly to what Foli-seq should target. It uses no classifier and no
-normalisation — it is counting genes against a 154-gene interface set (antimicrobial peptides,
-mucins, pattern-recognition receptors, tight junctions, IgA transport, trefoil/goblet, Paneth
-markers), denominated by what the CosMx Whole Transcriptome panel can see.
+We use a reference to **test a panel**. The procedure: throw away every gene except the panel's,
+hand what's left to a classifier, and see whether it can recover each cell's known label. If it can,
+the panel carries the information that distinguishes those cells. If it can't, the panel is blind to
+that variation — and nothing downstream will recover what was never measured.
+
+Two consequences worth holding onto:
+
+- **This is not proposing Foli-seq do cell typing.** The classifier is a measuring instrument for
+  information content. We already know the labels; we're asking whether they're *recoverable*.
+- **A score is never a property of the panel alone.** "77% accuracy" means "77% at separating the 26
+  cell types annotated in this one dataset." Change the dataset and the number changes.
+
+That second point is why there are several references rather than one. Each has a distinct job:
+
+| Reference | What it is | Cell types | Why it's in the study |
+| --- | --- | --- | --- |
+| `MM_SLN` | mouse spleen / lymph node, CITE-seq | 26 | The original reference. Now serves as the **immune contrast** — the comparison that lets us say panels are immune-weighted. Not a design target; no gene should be chosen because it works on spleen. |
+| `HUMAN_IMMUNE` | Human Immune Health Atlas, blood | 37 | Fills the human-immune slot so the species comparison can be checked on immune tissue as well as gut. |
+| `HABER_GUT` | Haber 2017, mouse small intestine (GSE92332) | 15 | The only well-annotated **mouse gut** data. Lets us compare immune vs gut *within mouse*, so species can't explain the difference. |
+| `GUT_HEALTHY_EPI` | Gut Cell Atlas, epithelial cells only | 12 | Haber is epithelium-only, so a human epithelium-only reference is needed to compare the two **like for like**. |
+| `GUT_HEALTHY` | Gut Cell Atlas, whole tissue | 72 | Healthy human gut, all compartments: epithelial, immune, stromal. |
+| `GUT_IBD` | metaplasia in inflammatory gut disease | 54 | Inflamed human gut. Tests whether findings survive disease. |
+| `GUT_CRC` | colorectal cancer immune hubs | 45 | Malignant human gut. Same purpose. |
+
+**Why so many gut ones?** A result from one dataset might be about that dataset. A result that holds
+across healthy, inflamed and malignant gut is about panel design.
+
+**Why the epithelium-only ones matter.** The exfoliome — what Foli-seq reads — is epithelium. The gut
+wall also contains immune and stromal cells, which is why whole-tissue references have 45–72 cell
+types and the epithelial ones have 12–15. Comparing an epithelium-only reference against a
+whole-tissue one mixes up "different species" with "different compartment," so both versions exist.
+
+All references except Haber come from the CELLxGENE Census, release 2025-11-08, primary data only so
+no cell is counted twice. Each is subsampled to 250 cells per cell type with types under 40 cells
+dropped, so common types don't swamp rare ones.
+
+---
+
+## 2. The two metrics
+
+**Cell-type identification (Q4).** The classifier procedure above. Gradient-boosted trees, 5-fold
+cross-validation. The confusion matrix is normalised per true cell type so a rare type counts as much
+as a common one, and its diagonal gives **one accuracy per cell type** — 15 numbers on Haber, 72 on
+the whole-tissue Gut Cell Atlas.
+
+**Redundancy (Q3).** Correlate every pair of genes within a panel. If two genes always rise and fall
+together, the second buys little. A pair counts as redundant at |r| ≥ 0.8.
+
+---
+
+## 3. Why accuracies can't be compared across references, and the two fixes
+
+Each reference is a different difficulty of problem. Guessing among 72 cell types is harder than
+among 12 — chance alone is 1/72 versus 1/12. So a panel scoring 70% on one reference and 85% on
+another tells you nothing on its own.
+
+**Fix one: lift.** Score every panel against a **random gene set of the same size, run on the same
+reference**:
+
+> **lift = panel accuracy − random-535 accuracy, on the same reference**
+
+That subtracts the problem's difficulty from both sides, and it is also how panel size is normalised
+— a 5,000-gene panel is compared against 5,000 random genes, not against a 300-gene panel.
+
+The baselines show the difficulties really do differ: random 535 genes score **57.9%** on mouse
+immune, **52.2%** on mouse gut epithelium, **63.2%** on human gut epithelium, **48.2%** on the
+72-type human gut. Note these don't simply track cell-type count, which is why an empirical baseline
+is needed instead of a formula.
+
+Lift is imperfect and we measured how: across references it correlates **+0.78** with the number of
+cell types, because a harder problem leaves more headroom for curation to fill. Figure 9 (section 4)
+is the control for that.
+
+**Fix two: ceiling fraction**, where a ceiling exists. The CosMx Whole Transcriptome panel measures
+essentially everything the instrument can, so its accuracy bounds what *any* panel on that platform
+could reach. With a floor and a ceiling:
+
+> **ceiling fraction = (panel − random) / (whole transcriptome − random)**
+
+0 means no better than random genes; 100 means as good as measuring everything. Unlike lift, this has
+a meaningful maximum.
+
+---
+
+## 4. Every figure
+
+### `v3_fig5h_accuracy_distribution_MM_SLN.png` — the histogram you asked for
+
+**What you're looking at.** One small panel per gene panel. X-axis is per-cell-type accuracy, 0–100%.
+Y-axis is how many cell types fall in each bin. Grey = random size-matched panels for comparison;
+blue = commercial panel; red = Foli-seq. The dashed vertical line is the mean — the single number the
+old fig5 plotted.
+
+**What it shows.** A mean hides shape. **Foli-seq hPS2 is bimodal here**: one group of cell types near
+55%, another near 85%. Its "70%" was an average of two different behaviours.
+
+**How to say it.** *"The bar chart gave one number per panel. Plotting the distribution shows hPS2
+isn't uniformly 70% — it's good on about half the cell types and poor on the other half. That's
+actionable in a way a mean isn't, because you can name the failing types and add markers for them."*
+
+**Companion figures** `..._GUT_HEALTHY.png`, `..._GUT_IBD.png`, `..._GUT_CRC.png` are the same plot
+on the three whole-tissue gut references. Worth mentioning that hPS2's bimodality is much weaker
+there — 11–24% of cell types below 60%, versus 38% on mouse immune — so the bimodality was partly
+about testing a human panel on mouse immune tissue.
+
+---
+
+### `v3_fig7_reference_robustness.png` — does the comparison survive changing the reference?
+
+**Three panels.**
+
+- **(a)** One violin per reference, showing the spread of per-cell-type accuracies pooled over the
+  shared panels. Reading down, the distributions **shift left** as references get harder.
+- **(b)** One line per reference. Panels along the y-axis ordered by mean accuracy; each line shows
+  where that reference puts them. Lines running roughly parallel = ordering preserved.
+- **(c)** Spearman rank correlation of per-panel mean accuracy between each pair of references:
+
+|  | MM_SLN | GUT_HEALTHY | GUT_IBD | GUT_CRC |
+| --- | --- | --- | --- | --- |
+| MM_SLN | — | 0.93 | 0.93 | 0.95 |
+| GUT_HEALTHY | 0.93 | — | 0.95 | 0.92 |
+| GUT_IBD | 0.93 | 0.95 | — | 0.97 |
+| GUT_CRC | 0.95 | 0.92 | 0.97 | — |
+
+**What it shows.** Absolute scores move a lot between references; the **ranking barely moves**, 0.92
+to 0.97 everywhere.
+
+**How to say it.** *"Changing the reference shifts every panel's score, because a reference with more
+cell types is a harder problem. But which panel beats which stays the same across immune, healthy
+gut, inflamed gut and cancer. So the comparison is about the panels, not about which dataset I
+happened to pick."*
+
+**Likely question — "then why bother with four references?"** Because that was the thing to check,
+and it could have come out the other way. If the ordering had scrambled, every panel conclusion would
+only have been valid for one dataset.
+
+---
+
+### `v3_fig4c_redundancy_normalised.png` — the correction to fig4
+
+**What you're looking at.** Two columns, one per reference (mouse spleen/lymph node, human PBMC). Two
+rows: the top plots **% of a panel's genes that have a redundant partner**, the bottom plots
+**redundant pairs per 1,000 possible pairs**. Each bar is annotated with the raw pair count and the
+panel's gene count, so the old and new quantities are both visible.
+
+**What it shows.** The old fig4 plotted the **raw count** of redundant pairs. Possible pairs grow as
+n(n−1)/2, so a 4,686-gene panel has ~340× more chances to produce one than a 330-gene panel — the
+count ranks panels mostly by size. Normalised, **the ordering inverts**: CosMx Human 6K has the most
+redundant pairs by raw count (31) and nearly the fewest per gene (0.47%), while the CosMx IO
+100-plex has 18 pairs but **18.2%** of its genes carrying a redundant partner, the highest of any
+panel.
+
+**How to say it.** *"The comment above that figure describes the Spapros definition — percent of genes
+with a redundant partner — and `q3_redundancy_summary.csv` already stores it. The figure was plotting
+raw pair counts instead, which scale with panel size. Normalised, the conclusion flips: the big
+discovery panels are the least redundant per gene and the small focused panels the most. Which makes
+biological sense — a 100-gene immuno-oncology panel is packed with co-regulated immune genes."*
+
+**Tone note.** Frame it as something you found while checking, not as a criticism. The right metric
+was already computed; only the plotted column was wrong.
+
+---
+
+### `v3_fig10_ceiling_fraction.png` — how close a panel gets to measuring everything
+
+**What you're looking at.** One horizontal bar pair per panel. Blue = mouse gut epithelium, green =
+human gut epithelium. X-axis is **% of the range from a random 535-gene set to the whole
+transcriptome**. The dashed line at 100 is the whole transcriptome. Foli-seq labels are in red.
+Negative bars mean the panel does worse than random genes.
+
+**What it shows.** On human gut epithelium the floor is 63.2% and the ceiling 87.5%, a 24.3-point
+usable range. **Foli-seq hPS2 reaches 90.3% of it with 543 genes** — 85.2% accuracy against the whole
+transcriptome's 87.5%. On mouse gut epithelium (floor 52.2%, ceiling 72.5%) the 5K/6K panels reach
+83–84% and mPS3 reaches 67.4%.
+
+**How to say it.** *"Adding the whole-transcriptome list gives an upper bound — nothing on that
+instrument beats measuring everything. On human gut epithelium hPS2 gets 90% of the way to that
+ceiling with 543 genes. Measuring the other 13,000 buys 2.3 accuracy points."*
+
+---
+
+### `v3_fig9_celltype_count_control.png` — the control for cell-type count
+
+**What you're looking at.** One bar pair per panel. Grey = tissue effect as originally measured (26
+immune cell types vs Haber's 15). Blue = the same effect with cell-type count **matched** at 15 on
+both sides. Error bars are the spread across 3 independent draws. Negative means the panel loses
+power moving from immune tissue to gut epithelium.
+
+**Why it exists.** Lift correlates +0.78 with cell-type count. The tissue comparison *reduces* cell
+types from 26 to 15, so the effect pointed in the same direction the artifact would. To separate
+them, `MM_SLN` was re-run restricted to a random 15 of its 26 types, matching Haber exactly.
+
+**What it shows.** The direction survives for all nine panels, but about a third of the magnitude was
+artifact. Panels built for other tissues still lose a lot — CosMx IO −21.2, MERSCOPE Brain −12.3 —
+while **the Foli-seq panels fall to near zero**: mPS3 −2.5 and hPS2 −0.3, whose interval includes
+zero.
+
+**How to say it.** *"The honest version isn't 'all panels are immune-weighted.' It's that panels
+curated for other tissues lose power on gut epithelium and ours don't."*
+
+---
+
+### `v3_fig8_species_vs_tissue.png` — separating species from tissue
+
+**Two panels.** **(a)** One line per panel, walking left to right through references so that **each
+step changes exactly one thing** — tissue, then species, then compartment, marked by the dotted
+vertical lines. Y-axis is lift. Foli-seq mPS3 is the thick red circle line, hPS2 the thick orange
+square line. **(b)** Per panel, the tissue effect and the species effect as separate bars.
+
+**Why it exists.** Originally every immune reference was mouse and every gut reference human, so
+"immune vs gut" and "mouse vs human" moved together and neither could be measured. Haber and the
+epithelium-matched human reference break that tie.
+
+**What it shows.** The crossing between red and orange at the species step: **each Foli-seq panel does
+better on its own species.** mPS3 beats hPS2 by +4.2 ± 2.2 on mouse gut epithelium and loses by
+−7.2 ± 2.6 on human — an 11.4-point swing.
+
+**How to say it.** *"Our two candidate panels swap places when you change species, by about 11 points.
+So mPS3's mouse validation shouldn't be assumed to carry over to human samples."*
+
+---
+
+### `v3_fig11_complete_grid.png` — the completed design and the replication check
+
+**Two panels.** **(a)** The four cells of the grid along the x-axis — mouse immune (26 types), human
+immune (37), mouse gut epithelium (15), human gut epithelium (12) — with lift on the y-axis and error
+bars where 5 seeds were run. Zero means no better than random. **(b)** A scatter: each effect
+estimated **twice**, once per row or column, plotted against itself. Points near the dotted diagonal
+replicate.
+
+**What it shows.** The **tissue effect replicates** — r = +0.97 between the mouse-only and human-only
+estimates, sign agreeing for 7 of 9 panels. A **general species effect does not** — r = −0.29.
+
+**How to say it.** *"With all four cells filled, each effect can be estimated twice with the other
+factor held fixed. The tissue effect replicates at 0.97. A species effect across panels in general
+does not — so the species result is specific to our two panels on gut tissue, not a general
+property."*
+
+**Only raise this if asked** how we know a result isn't an artifact of the chosen reference.
+
+---
+
+### Interface coverage — no figure, a table
+
+`results/v2/q11_interface_coverage.csv`. **This is the most on-target result and the hardest to argue
+with, because it involves no classifier, no normalisation and no metric choice. It is counting
+genes.**
+
+A 154-gene host-microbiome interface set — antimicrobial peptides, mucins, pattern-recognition
+receptors, tight junctions, IgA transport, trefoil/goblet, Paneth markers — denominated by what the
+CosMx Whole Transcriptome panel can see.
 
 | Panel | size | interface genes | **% of its own gene budget** |
 | --- | --- | --- | --- |
@@ -66,70 +283,55 @@ markers), denominated by what the CosMx Whole Transcriptome panel can see.
 | **Foli-seq mPS3** | **535** | **29** | **5.42** |
 | MERSCOPE PanNeuro | 812 | 3 | 0.37 |
 
-**The Foli-seq panels spend 5–8% of their budget on interface biology; every commercial panel spends
-0.4–2.9%** — roughly sevenfold higher density. hPS2 carries 42 interface genes in 543 slots where
-Xenium Human 5K carries 52 in 5,000.
+**55 of the 154 genes are on no targeted panel at all** — 30 of 45 antimicrobial peptides (nearly the
+whole beta-defensin family) and 13 of 21 mucins, including **MUC3A, MUC12, MUC13, MUC17**, the
+membrane-tethered mucins of the intestinal brush border.
 
-**55 of the 154 interface genes are on no targeted panel at all**, concentrated in:
-- 30 of 45 antimicrobial peptides — nearly the whole beta-defensin family
-- 13 of 21 mucins — including **MUC3A, MUC12, MUC13, MUC17**, the membrane-tethered mucins of the
-  intestinal brush border
+**And a gap in our own panels:** hPS2 carries **1 of 34** tight junction / barrier genes. mPS3 carries
+4. Xenium Mouse 5K carries 20.
 
-**One gap in our own panels:** hPS2 carries **1 of 34** tight junction / barrier genes; mPS3 carries
-4; Xenium Mouse 5K carries 20. For an assay reading cells shed from an epithelial barrier, that looks
-like the most actionable item for the next revision.
-
----
-
-## 4. A correction to fig4 that should be made before it goes anywhere
-
-**Figure:** `v3_fig4c_redundancy_normalised.png`
-
-The old fig4 plotted the **raw count** of gene pairs with |r| ≥ 0.8. Possible pairs grow as
-n(n−1)/2, so a 4,686-gene panel has roughly 340× more chances to produce one than a 330-gene panel —
-the count ranks panels mostly by size. The code comment above the figure already described the
-size-normalised Spapros definition, and `q3_redundancy_summary.csv` already stores it as
-`pct_genes_nonredundant`; it just wasn't the quantity plotted.
-
-**Normalised, the ordering inverts.** CosMx Human 6K has the most redundant pairs by raw count (31)
-and nearly the fewest per gene (0.47%). The CosMx IO 100-plex add-on looks unremarkable at 18 pairs
-but has **18.2%** of its genes carrying a redundant partner — the highest of any panel. Which makes
-sense: a small focused immuno-oncology panel is dense in co-regulated genes; a discovery panel
-spreads thin.
+**How to say it.** *"hPS2 carries 42 interface genes in 543 slots; Xenium Human 5K carries 52 in
+5,000. Our panels are about sevenfold denser in this biology. But 55 interface genes are on no
+targeted panel anywhere — including the brush-border mucins — and hPS2 has only one of 34 tight
+junction genes, which for an assay reading shed barrier cells is probably the thing to fix next."*
 
 ---
 
-## Questions
+## 5. Questions to ask
 
 1. **Which pathway database** for the Q2-style analysis — GO, Reactome, KEGG, MSigDB Hallmark?
-2. **Is the 154-gene interface set the right one?** It is my construction and is defined explicitly
-   in `scripts/25_interface_coverage.py`. Changing it changes the 55-gene gap list.
+2. **Is the 154-gene interface set right?** It's my construction, defined explicitly in
+   `scripts/25_interface_coverage.py`. Changing it changes the 55-gene gap list.
 3. **What resolution does Foli-seq need?** Fifteen-way epithelial subtyping may be finer than the
    assay requires, which would mean the identification metric is calibrated too strictly.
-4. **Mouse or human as primary?** It matters — see the reserve note below.
+4. **Mouse or human as primary?** The species result means this choice has consequences.
+5. **Is |r| ≥ 0.8 the intended redundancy threshold?** It's the Spapros convention, and only pairs
+   above it are stored, so the distribution below can't be recovered without recomputing.
 
 ---
 
-## Held in reserve (only if asked)
+## 6. If he asks why there's more here than he asked for
 
-- **"How do you know that isn't just the reference you chose?"** The design is now a 2×2 —
-  mouse/human × immune/gut — so each effect is estimated twice with the other factor fixed. The
-  tissue effect replicates (r = +0.97, sign agreeing 7/9). A general species effect does not
-  (r = −0.29).
-- **"Is that difference real?"** Classifiers now run at 5 seeds on three of the four grid cells;
-  standard errors are 1.4–2.6 points. Treat anything under ~3 points as noise.
-- **Species transfer.** mPS3 beats hPS2 by +4.2 ± 2.2 points on mouse gut epithelium and loses by
-  −7.2 ± 2.6 on human. An 11.4-point swing, ~3 combined SE. **mPS3's mouse validation should not be
-  assumed to transfer to human samples.**
-- **Two panels score below random on gut epithelium.** CosMx IO −14.1 ± 1.7 (mouse) and −19.7 ± 2.4
-  (human); MERSCOPE Brain similar. Not broken panels — specialised ones outside their domain. CosMx
-  IO scores 71.5% on human immune tissue with 94 genes.
-- **A targeted panel gets most of the way to measuring everything.** Against the CosMx Whole
-  Transcriptome ceiling, hPS2 reaches **90.3%** of the achievable range on human gut epithelium with
-  543 genes — 85.2% against the whole transcriptome's 87.5%.
-- **Cross-species caution.** Ortholog mapping collapses 19 mouse alpha-defensins into a single human
-  DEFA1, and MHC class I 15-to-1. Mucins, PRRs, tight junctions and IgA transport show no collapses,
-  so those comparisons are safe and antimicrobial-peptide comparisons are not.
-- **Two bugs in existing code.** `12_spapros_eval.py` caches confusion matrices without the reference
-  in the key, so a second reference run through it would silently reload the first one's results; and
-  it discards the classifier's standard-deviation output, which is why nothing had error bars.
+The honest answer is also the good one: **checking the original claim kept revealing confounds, and
+each had to be resolved before the claim could be stated.** The immune references were all mouse while
+the gut references were all human, so "immune vs gut" couldn't be separated from "mouse vs human."
+Fixing that revealed that Haber is epithelium-only while the human references are whole tissue.
+Fixing *that* revealed that the lift metric doesn't fully normalise for cell-type count. Scope grew
+because verification grew.
+
+Two bugs in existing code also turned up and are worth mentioning: `12_spapros_eval.py` caches
+confusion matrices without the reference in the key, so running a second reference through it would
+silently reload the first one's results; and it discards the classifier's standard-deviation output,
+which is why no number in the repo had an error bar until now.
+
+---
+
+## 7. Numbers worth having memorised
+
+- Panel ordering across references: **Spearman 0.92–0.97**
+- Random 330-gene baseline on gut: **43–47%**; Foli-seq mPS3: **70–78%**
+- Standard errors on 5-seed references: **1.4–2.6 points** — treat anything under ~3 points as noise
+- hPS2 reaches **90.3%** of the whole-transcriptome ceiling with **543** genes
+- Interface budget share: Foli-seq **5.4–7.7%**, commercial **0.4–2.9%**
+- **55 of 154** interface genes on no targeted panel; hPS2 has **1 of 34** tight junction genes
+- Foli-seq species swing: **11.4 points**, roughly 3 combined standard errors
