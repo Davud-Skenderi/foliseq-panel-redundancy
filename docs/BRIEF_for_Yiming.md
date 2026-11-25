@@ -69,6 +69,95 @@ the whole-tissue Gut Cell Atlas.
 **Redundancy (Q3).** Correlate every pair of genes within a panel. If two genes always rise and fall
 together, the second buys little. A pair counts as redundant at |r| ≥ 0.8.
 
+
+---
+
+## 2b. The classifier, in detail — and what "removing the other genes" means
+
+### Which genes get removed
+
+The universe is **every gene measured in that reference dataset**, after a light filter (a gene must
+appear in at least 10 cells). Not a fixed list, and not "the transcriptome" in the abstract — whatever
+that particular experiment detected.
+
+| Reference | genes measured | mPS3 genes present | hidden from the classifier |
+| --- | --- | --- | --- |
+| `HABER_GUT` | 12,090 | 304 | **11,786** |
+| `GUT_HEALTHY` / `GUT_HEALTHY_EPI` | 20,620 | 492 | **20,128** |
+| `HUMAN_IMMUNE` | 15,932 | 333 | **15,599** |
+
+On Haber the dataset measures 12,090 genes, mPS3 holds 304 of them, and the other 11,786 columns are
+deleted from the matrix. The classifier cannot see them, cannot use them, and does not know they
+exist.
+
+Two details that explain numbers elsewhere in the repo:
+
+- Haber's raw file has 13,487 gene columns but only 12,090 survive. That is the mouse-to-human symbol
+  mapping: about a thousand mouse genes have no human counterpart and are dropped, and several
+  hundred collapse together (19 mouse alpha-defensins become one human DEFA1).
+- mPS3 is a 535-gene panel but only 304 appear in Haber; the rest were never detected in that
+  experiment. This is why "panel size" and "genes actually used" differ, and why random baselines are
+  matched on **measured** size rather than nominal size.
+
+### What the classifier is
+
+A classifier learns to predict a label from measurements. Here the measurements are expression levels
+of the panel's genes in one cell; the label is that cell's annotated type.
+
+**XGBoost, gradient-boosted decision trees.** A decision tree asks a chain of yes/no questions about
+the numbers — "is LGR5 above 2.1? if so, is MUC2 below 0.4?" — until it reaches a guess. One tree is
+weak. Boosting builds many in sequence, each trained on the mistakes the previous ones made, and the
+final prediction is their weighted vote. Trees suit single-cell data because expression is sparse,
+zero-inflated and non-linear, and trees need no scaling or distributional assumptions.
+
+**Five-fold cross-validation.** The cells are split into five groups; the model trains on four and
+predicts the held-out one, rotating until every cell has been predicted by a model that never saw it.
+Without this the score would measure memorisation.
+
+**The confusion matrix.** Rows are the true cell type, columns the predicted one, each row normalised
+to sum to 1 — so a row reads "of the cells that really were goblet cells, what fraction did the model
+call goblet, what fraction enterocyte, and so on." Normalising per row is deliberate: a type with 60
+cells counts as much as one with 3,000.
+
+**The diagonal is what gets reported** — the fraction of each cell type correctly identified. One
+number per cell type: 15 on Haber, 72 on the whole-tissue Gut Cell Atlas. The old fig5 averaged them
+into one number per panel; the histogram shows all of them.
+
+**Five seeds.** The whole procedure is repeated with five random initialisations; the average is the
+result and the spread is the error bar. That spread is 1.4–2.6 points, which is why differences under
+about 3 points should not be called differences.
+
+**What it is not.** It is not a proposal for how Foli-seq data would be analysed. It is a probe for
+whether information is present. The labels are already known — they are the dataset's annotations.
+The question is whether a panel's genes are sufficient to *recover* them.
+
+### Important: this is not new work
+
+`scripts/12_spapros_eval.py` predates this round, and **`v2_fig5_identification_summary.png` and
+`v2_fig6_celltype_identification.png` are both its outputs**. The classifier was already in what was
+presented before — fig5 as the bar chart of mean accuracy, fig6 as the per-cell-type heatmap. Present
+it as the thing those figures were already doing, now explained and run against gut tissue rather
+than immune tissue only.
+
+---
+
+## 2c. What changed since the last update
+
+**Already in place:** Q1–Q6, six v2 figures, the classifier, the redundancy analysis, the MSigDB
+Hallmark pathway enrichment, the UpSet overlap plots, and both Foli-seq candidate panels.
+
+**New in this round:**
+
+- **Six references.** Three whole-tissue human gut (healthy, inflamed, malignant), Haber mouse gut, a
+  human epithelium-only subset, and a human immune atlas. Previously everything ran on immune tissue.
+- **Two panels** added to the matrix: the CosMx whole-transcriptome human and mouse lists.
+- **fig5 replotted as a distribution** (`v3_fig5h`) rather than a bar of means.
+- **fig4 corrected** (`v3_fig4c`): it had plotted raw redundant-pair counts, which rank by panel size.
+- **Five new analyses:** reference robustness, species versus tissue, the cell-type-count control, the
+  whole-transcriptome ceiling, and host-microbiome interface coverage.
+- **Error bars**, for the first time, from 5-seed runs.
+- **Two bugs found in pre-existing code** (see section 6).
+
 ---
 
 ## 3. Why accuracies can't be compared across references, and the two fixes
